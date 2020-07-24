@@ -5,6 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "npx wdio wdio.conf.js",
+    "20602": "npx wdio wdio.conf.js --suite 20602",
+    "20603": "npx wdio wdio.conf.js --suite 20603",
+    "20605": "npx wdio wdio.conf.js --suite 20605",
+    "20607": "npx wdio wdio.conf.js --suite 20607",
+    "20608": "npx wdio wdio.conf.js --suite 20608",
+    "20609": "npx wdio wdio.conf.js --suite 20609",
+    "20610": "npx wdio wdio.conf.js --suite 20610",
     "report": "allure generate allure-results --clean && allure open"
   },
   "repository": {

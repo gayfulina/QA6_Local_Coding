@@ -6,6 +6,16 @@ exports.config = {
         './test/specs/**/*.js'
     ],
 
+    suites: {
+        20602: ['./20602/specs/**/*.js'],
+        20603: ['./20603/specs/**/*.js'],
+        20605: ['./20605/specs/**/*.js'],
+        20607: ['./20607/specs/**/*.js'],
+        20608: ['./20608/specs/**/*.js'],
+        20609: ['./20609/specs/**/*.js'],
+        20610: ['./20610/specs/**/*.js']
+    },
+
     exclude: [
         // 'path/to/excluded/files'
     ],
