@@ -39,31 +39,35 @@ class RegisterPage extends BasePage {
     return $('button[type="submit"]');
   }
 
-  get eyeIconClosed () {
+  get eyeIconClosed() {
     return $('.anticon-eye-invisible');
   }
 
-  get agreementLabel () {
+  get lockIcon() {
+    return $('.anticon-lock');
+  }
+
+  get agreementLabel() {
     return $('.ant-checkbox-wrapper');
   }
 
-  get agreementDrawer () {
+  get agreementDrawer() {
     return $('div.ant-drawer-body');
   }
 
-  get drawerCloseBtn () {
+  get drawerCloseBtn() {
     return $('button[aria-label="Close"]');
   }
 
-  get promptLabel () {
+  get promptLabel() {
     return $('p');
   }
 
-  get loginLink () {
-    return $('a[href="/user/login"]')
+  get loginLink() {
+    return $('a[href="/user/login"]');
   }
 
-  get errorIncorrectEmail(){
+  get errorIncorrectEmail() {
     return $('.ant-form-item-explain  div');
   }
 
