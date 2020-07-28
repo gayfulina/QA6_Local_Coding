@@ -55,9 +55,9 @@ describe('TOP MENU', () => {
       expect(TopMenuPage.headerUniversal.getText()).eq(Expected.Users);
     });
 
-    xit('click on Challenges go to Challenge Page', function () {
+    it('click on Challenges go to Challenge Page', function () {
       TopMenuPage.challengesLink.click();
-      expect(TopMenuPage.headerUniversal.getText()).eq(Expected.Challenges);
+      expect(TopMenuPage.headerChallenge.getText()).eq(Expected.Challenges);
     });
 
     it('click on Telephony go to Telephony Page', function () {
@@ -71,21 +71,19 @@ describe('TOP MENU', () => {
     });
   });
 
-  describe('Coins and Achivments', () => {
+  describe('Coins and Achievments', () => {
     before(() => {
       LoginPage.open('/');
       LoginPage.login('adminqa6@admin.us', '123123'); // delete hardcode when data file would be created
     });
 
-    it('click on Coin go to Achivments Page', function () {
+    it('click on Coin go to Achievments Page', function () {
       TopMenuPage.coinImg.click();
-      browser.pause(5000);
       expect(TopMenuPage.headerUniversal.getText()).eq(Expected.Achievements);
     });
 
-    it('click on Orders go to Orders Page', function () {
-      TopMenuPage.achivementsLink.click();
-      browser.pause(5000);
+    it('click on Coin Quantity go to Achievments Page', function () {
+      TopMenuPage.achievementsLink.click();
       expect(TopMenuPage.headerUniversal.getText()).eq(Expected.Achievements);
     });
   });

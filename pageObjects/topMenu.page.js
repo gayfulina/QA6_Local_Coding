@@ -36,6 +36,7 @@ class TopMenuPage extends BasePage {
   get telephonyLink() {
     return $('[href="/telephony"]');
   }
+
   get ordersLink() {
     return $('[href="/orders"]');
   }
@@ -43,6 +44,7 @@ class TopMenuPage extends BasePage {
   get coinImg() {
     return $('.ml-auto img');
   }
+
   get achievementsLink() {
     return $('.ml-auto span');
   }
@@ -50,18 +52,23 @@ class TopMenuPage extends BasePage {
   get userAvatarImg() {
     return $('.ant-avatar');
   }
+
   get userAvatarName() {
     return $('.ant-dropdown-link');
   }
+
   get dropDownArrow() {
     return $('span.anticon.anticon-down');
   }
+
   get dropDownMenuProfile() {
     return $$('.ant-dropdown-menu-item-only-child');
   }
+
   get dropDownMenuSettings() {
     return $$('.ant-dropdown-menu-item-only-child')[1];
   }
+
   get dropDownMenuLogOut() {
     return $$('.ant-dropdown-menu-item-only-child')[2];
   }
@@ -69,14 +76,18 @@ class TopMenuPage extends BasePage {
   get loginLink() {
     return $('[href="/user/login"]');
   }
+
   get registerLink() {
     return $('[href="/user/register"]');
+  }
+
+  get headerChallenge() {
+    return $('.h4.mr-4');
   }
 
   get headerUniversal() {
     return $('h1');
   }
-
 }
 
 export default new TopMenuPage();
