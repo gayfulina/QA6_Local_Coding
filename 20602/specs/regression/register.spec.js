@@ -1,7 +1,6 @@
-//import RegisterPage from "../../pages/register.page";
-import HomePage from "../../../pageObjects/home.page"
+import HomePage from "../../../pageObjects/home.page";
 import expected from '../../data/expected.json';
-//import LoginPage from '../../pages/login.page';
+import LoginPage from "../../../pageObjects/login.page";
 import RegisterPage from "../../../pageObjects/register.page";
 import user from '../../data/users';
 
@@ -63,12 +62,6 @@ describe('TEST REGISTER PAGE ELEMENTS', () => {
     expect(RegisterPage.agreementDrawer.isDisplayed()).true;
   });
 
-  xit('should verify agreementDrawer disappears when drawerCloseBtn is clicked', function () {
-    browser.pause(3000);
-    RegisterPage.drawerCloseBtn.click();
-    browser.waitUntil(() => RegisterPage.agreementDrawer.isDisplayed() === false);
-  });
-
   it('should verify text of prompt label', function() {
     browser.refresh();
     expect(RegisterPage.promptLabel.getText()).eq(expected.registerPageData.promptLabel);
@@ -77,11 +70,11 @@ describe('TEST REGISTER PAGE ELEMENTS', () => {
   it('check that registration works', function() {
     browser.refresh();
     RegisterPage.registerUser(user);
-  })
+  });
 
-  xit('should verify login link is working', function() {
+  it('should verify login link is working', function() {
     RegisterPage.loginLink.click();
-    expect(LoginPage.header.getText()).eq(expected.loginPageData.header);
+    expect(LoginPage.headerLogin.getText()).eq(expected.loginPageData.header);
   });
 
 });
