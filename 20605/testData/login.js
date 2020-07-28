@@ -1,6 +1,8 @@
-const userAdmin = {
-  email: "admin20605@qa6.us",
-  password: "987456"
-}
+const invalidUserCredentials = {
+  email: 'adm12@qa6.us',
+  password: 'admindf'
+};
 
-export {userAdmin}
+const emptyField = '';
+
+export { invalidUserCredentials, emptyField };
