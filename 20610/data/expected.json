@@ -1,0 +1,20 @@
+{
+  "newUser": {
+    "h1": "Create an account"
+  },
+
+  "newUserStep2": {
+    "h5firstPart": "Dear",
+    "h5secondPart": "\nPlease complete these fields"
+  },
+
+  "loginPageHeader": {
+    "h1": "Welcome back!"
+  },
+
+  "userBadges": {
+    "admin": "admin",
+    "learner": "learner",
+    "student": "student"
+  }
+}

@@ -12,8 +12,16 @@ class LoginPage extends BasePage {
     return $('#normal_login_email');
   }
 
+  get mailIcon() {
+    return $('.anticon-mail');
+  }
+
   get inputPassword() {
     return $('#normal_login_password');
+  }
+
+  get lockIcon() {
+    return $('.anticon-lock');
   }
 
   get loginBtn() {
@@ -21,11 +29,11 @@ class LoginPage extends BasePage {
   }
 
   get loginGoogleBtn() {
-    return $$('#firebaseui_containerbutton')[0];
+    return $('.firebaseui-idp-google');
   }
 
   get loginFacebookBtn() {
-    return $$('#firebaseui_containerbutton')[1];
+    return $('.firebaseui-idp-facebook');
   }
 
   get registerLink() {
