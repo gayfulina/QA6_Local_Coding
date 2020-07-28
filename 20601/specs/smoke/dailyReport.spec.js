@@ -1,18 +1,16 @@
+import DailyReportsPage from '../../../pageObjects/dailyReports.page';
+import user from '../../../testData/user';
 import LoginPage from '../../../pageObjects/login.page';
-import ProfilePage from '../../pageObjects/profile.page';
 import { textProfile } from '../../data/profile.data';
 
-
-describe('VERIFY ', () => {
+describe('DAILY REPORT CREATED', () => {
   before(() => {
-    ProfilePage.openProfilePage();
+    LoginPage.open();
+    LoginPage.login(user.admin.email, user.admin.password);
   });
 
-  it('should Create day report', function () {
-    ProfilePage.returnToProfilePage()
-    ProfilePage.createDayReport();
-    expect(ProfilePage.daylyReportsHeader.getText()).contains(textProfile.daylyReportsHeaderText);
+  it('should Create daily report', function () {
+    DailyReportsPage.createDayReport();
+    expect(DailyReportsPage.lastDailyReportText.getText()).eq(textProfile.howWasYourDayText);
   });
-
-
 });
