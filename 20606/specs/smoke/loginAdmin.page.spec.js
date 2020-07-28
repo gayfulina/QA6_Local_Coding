@@ -9,7 +9,7 @@ describe('SUCCESSFUL LOGIN AS ADMIN', () => {
     LoginPage.open();
   });
 
-  it('Login as role: "ADMIN" (valid input)',  () => {
+  it('Login as role: "ADMIN" (valid input)', () => {
     LoginPage.validLogin(user.admin.email, user.admin.password);
     ProfilePage.badge.waitForDisplayed(wait_time_medium);
     expect(ProfilePage.getLoginConfirmation()).eq(`${user.admin.firstName} ${user.admin.lastName}`);
