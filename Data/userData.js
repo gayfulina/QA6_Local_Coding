@@ -1,10 +1,8 @@
 
 const userAdmin = {
-
   email : 'admin555@gmail.com',
   password : '123123',
   headerAdmin : 'admin adminovich'
-
 }
 
 const userNew = {
@@ -17,7 +15,15 @@ const userNew = {
 
 }
 
+const student = {
+  firstName: 'Mary',
+  lastName: 'Mary',
+  name: "Mary Mary",
+  email: 'mary@yahoo.com',
+  password: 'marymary',
+  passwordNew: 'marymary111',
+}
 
 
 
-module.exports = {userAdmin, userNew};
+module.exports = {userAdmin, userNew, student};
