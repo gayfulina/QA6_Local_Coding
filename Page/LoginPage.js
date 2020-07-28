@@ -16,10 +16,10 @@ class LoginPage extends BasePage{
     super.open('user/login');
   }
 
-  login() {
+  login(email, password) {
     this.open();
-    this.inputEmail.setValue(userData.userAdmin.email);
-    this.inputPassword.setValue(userData.userAdmin.password);
+    this.inputEmail.setValue(email);
+    this.inputPassword.setValue(password);
     this.loginBtn.click();
 
     // browser.pause(2000)

@@ -22,7 +22,7 @@ describe('check login page', () => {
     expect(LoginPage.linkCreateNewAccount.isDisplayed()).toEqual(true);
   });
 
-  it('should links be  clickable', () => {
+  it('should links be clickable', () => {
     expect(LoginPage.linkGoogle.isClickable()).toEqual(true)
     expect(LoginPage.linkCreateNewAccount.isClickable()).toEqual(true)
     expect(LoginPage.linkResetPassword.isClickable()).toEqual(true)
