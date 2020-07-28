@@ -1,6 +1,17 @@
 module.exports = {
 
-  new: {},
+  new: {
+    email: 'new@qa6.us',
+    password: 'newnew',
+    firstName: 'NewFirst',
+    lastName: 'NewLast',
+    phone: '17775551121',
+    about: 'QA Engineer',
+    goals: 'no goals',
+    englishLevel: 'Advanced',
+    countryName: 'USA'
+  },
+
   admin: {
     email: 'admin@qa6.us',
     password: 'admin',
@@ -13,6 +24,29 @@ module.exports = {
     countryName: 'USA'
   },
 
-  learner: {},
-  student: {}
+  learner: {
+    email: 'learner@qa6.us',
+    password: 'learner',
+    firstName: 'LearnerFirst',
+    lastName: 'LearnerLast',
+    phone: '17775551123',
+    about: 'QA Engineer',
+    goals: 'no goals',
+    englishLevel: 'Advanced',
+    countryName: 'USA'
+  },
+
+  student: {
+    email: 'student@qa6.us',
+    password: 'student',
+    firstName: 'StudentFirst',
+    lastName: 'StudentLast',
+    phone: '17775551124',
+    about: 'QA Engineer',
+    goals: 'no goals',
+    englishLevel: 'Advanced',
+    countryName: 'USA'
+  }
+
+
 };
