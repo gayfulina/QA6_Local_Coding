@@ -12,6 +12,20 @@ class ProfilePage extends BasePage {
   getLoginConfirmation() {
     return this.headerProfile.getText();
   }
+
+  get dropDownUserMenu() {
+    return $('[aria-label="down"]');
+  }
+
+  get logoutLink() {
+   return $$('.ant-dropdown-menu-item')[2];
+  }
+
+  logout() {
+    this.dropDownUserMenu.click();
+    this.logoutLink.click();
+  }
 }
 
 export default new ProfilePage();
+
