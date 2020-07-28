@@ -9,14 +9,14 @@ import WAIT_TIME_MEDIUM from "../../Data/waitTimes";
 describe( 'SETTINGS CHANGE PASSWORD', () => {
   before( () => {
     LoginPage.login(student.email, student.password);
-    browser.waitUntil( () => ProfilePage.header.getText() === student.name);
+    browser.waitUntil( () => ProfilePage.getLoginConfirmation() === student.name);
   });
-
+/*
   it('should go to correct profile', () => {
     const name = UserDropDownPage.userName.getText();
     expect(name).toEqual(student.name);
   });
-
+*/
   it('should go to Settings page', () => {
     UserDropDownPage.goToSettings();
     browser.waitUntil( () => SettingsPage.userMenuSettings.isDisplayed());

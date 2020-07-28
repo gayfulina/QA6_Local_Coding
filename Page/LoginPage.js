@@ -21,8 +21,6 @@ class LoginPage extends BasePage{
     this.inputEmail.setValue(email);
     this.inputPassword.setValue(password);
     this.loginBtn.click();
-
-    // browser.pause(2000)
   }
 }
 
