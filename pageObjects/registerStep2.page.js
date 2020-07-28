@@ -29,6 +29,25 @@ class RegisterStep2Page extends BasePage {
     this.SubmitBtn.click();
   }
 
+  get title() {
+    return $('.ant-drawer-title');
+    }
+
+  get skipBtn() {
+    return $('//span[text()="Skip"]');
+  }
+
+  get closeBtn() {
+    return $('button[aria-label="Close"]');
+  }
+
+  get countryLabel() {
+    return $('label[for="user_login_countryName"]');
+    }
+
+  get phoneLabel() {
+    return $('label[for="user_login_phone"]')
+  }
   open(path) {
     return super.open('user/register-step2');
   }
