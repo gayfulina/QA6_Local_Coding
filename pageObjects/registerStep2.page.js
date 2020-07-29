@@ -31,7 +31,7 @@ class RegisterStep2Page extends BasePage {
 
   get title() {
     return $('.ant-drawer-title');
-    }
+  }
 
   get skipBtn() {
     return $('//span[text()="Skip"]');
@@ -43,11 +43,12 @@ class RegisterStep2Page extends BasePage {
 
   get countryLabel() {
     return $('label[for="user_login_countryName"]');
-    }
+  }
 
   get phoneLabel() {
-    return $('label[for="user_login_phone"]')
+    return $('label[for="user_login_phone"]');
   }
+  
   open(path) {
     return super.open('user/register-step2');
   }
