@@ -13,7 +13,7 @@ before(() => {
     LinksPage.linksTab.click();
 });
 
-describe('TC-005 LINKS ELEMENTS ARE PRESENT AND DISPLAYED CORRECTLY', () => {
+describe('TC-005 LINKS TAB ELEMENTS ARE PRESENT AND DISPLAYED CORRECTLY', () => {
 
   it('#01 Links Resume Label Text is correct', function() {
     expect(LinksPage.resumeLabel.getText()).eq(expected.linksPageData.resumeText);
@@ -53,6 +53,14 @@ describe('TC-005 LINKS ELEMENTS ARE PRESENT AND DISPLAYED CORRECTLY', () => {
 
   it('#10 Links Codewars Field is present', function() {
     expect(LinksPage.codewarsField.isDisplayed()).true;
+  });
+
+  it('#11 Links Save Button Text is correct', function() {
+    expect(LinksPage.saveLinksBtn.getText).eq(expected.linksPageData.saveBtnText);
+  });
+
+  it('#12 Links Save Button is enabled', function() {
+    expect(LinksPage.saveLinksBtn.isEnabled()).true;
   });
 
 })

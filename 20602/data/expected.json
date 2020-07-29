@@ -22,6 +22,7 @@
     "GitHubText": "GitHub profile link",
     "Codewars": "https://www.codewars.com/users/Viktor%20Bogutskii",
     "CodewarsText": "Codewars profile link",
+    "saveBtnText": "Save",
     "successMSG": "User Links updated",
     "errorMSG": ""
 
