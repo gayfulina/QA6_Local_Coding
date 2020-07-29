@@ -10,7 +10,7 @@ describe('LOGIN', () => {
 
   it('TC-001 Successful login as an admin', () => {
     LoginPage.validLogin(user.admin.email, user.admin.password);
-    ProfilePage.badge.waitForDisplayed(WAIT_TIME_MEDIUM);
+    ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
     expect(ProfilePage.getLoginConfirmation()).eq(user.admin.firstName + ' ' + user.admin.lastName);
   });
 });
