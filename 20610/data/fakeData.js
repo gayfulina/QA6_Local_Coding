@@ -7,6 +7,6 @@ const newUser = {
   email: faker.internet.email(),
   password: "QA" + Math.trunc(new Date().getTime() / 10000) + "!$"
 
-}
+};
 
 export {newUser}
