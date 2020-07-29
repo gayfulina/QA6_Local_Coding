@@ -1,4 +1,4 @@
-import {headers, userNew} from '../data/registerData';
+import {headers, userNew} from '../../data/registerData';
 import RegisterPage from '../../../pageObjects/register.page'
 import RegisterPageStep2 from '../../../pageObjects/registerStep2.page';
 import LoginPage from '../../../pageObjects/login.page'

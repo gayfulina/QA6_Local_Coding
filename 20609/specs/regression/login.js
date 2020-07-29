@@ -1,5 +1,5 @@
 import LoginPage from '../../../pageObjects/login.page';
-import { header } from '../../../20609/specs/data/loginData';
+import { textLogin } from '../../data/loginData';
 
 describe('LOGIN', () => {
   before(() => {
@@ -7,7 +7,7 @@ describe('LOGIN', () => {
   });
 
   it('should have Welcome back header', () => {
-    expect(LoginPage.header.getText()).eq(header);
+    expect(LoginPage.header.getText()).eq(textLogin.headerLogin);
   });
 
   it('elements field and links is present', () => {
