@@ -7,11 +7,11 @@ describe('HOME PAGE  ELEMENTS', function () {
   before(() => {
     HomePage.open();
   })
-  it('header "local coding community" is displayed', function () {
+  it('header  is displayed', function () {
     expect(HomePage.header.isDisplayed()).true;
   });
 
-  it('header contains "local coding community" text', function () {
+  it('header  has the correct text', function () {
     expect(HomePage.header.getText()).eq(homePage.header);
   });
 
