@@ -8,7 +8,7 @@ class LoginPage extends BasePage {
     return $('h1');
   }
 
-  get inputUserEmail() {
+  get inputUsername() {
     return $('#normal_login_email');
   }
 
@@ -45,7 +45,7 @@ class LoginPage extends BasePage {
   }
 
   login(username, password) {
-    this.inputUserEmail.setValue(username);
+    this.inputUsername.setValue(username);
     this.inputPassword.setValue(password);
     this.loginBtn.click();
   }

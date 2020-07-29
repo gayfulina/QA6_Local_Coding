@@ -11,7 +11,7 @@ describe('LOGIN PAGE', function () {
   // });
 
   it('should log in by admin', function () {
-    LoginPage.inputUserEmail.setValue(userAdmin.email);
+    LoginPage.inputUsername.setValue(userAdmin.email);
     LoginPage.inputPassword.setValue(userAdmin.password);
     LoginPage.btnSubmit.click();
     // LoginPage.alert.waitForDisplayed();

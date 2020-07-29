@@ -12,7 +12,7 @@ describe('Login page tests', () => {
   });
 
   it('Check if the Email input has a placeholder text Email ', function () {
-    expect(LoginPage.inputUserEmail.getAttribute('placeholder')).eq(login.emailInput);
+    expect(LoginPage.inputUsername.getAttribute('placeholder')).eq(login.emailInput);
   });
 
   it('Check if the Password input has a placeholder text Password ', function () {
