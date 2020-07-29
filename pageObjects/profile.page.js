@@ -62,6 +62,10 @@ class ProfilePage extends BasePage {
     return $("//button[@class='ant-drawer-close']");
   }
 
+  get settingsLink() {
+    return $$('.ant-dropdown-menu-item')[1];
+  }
+
   createDayReport() {
     this.createDayReportBtn.click();
     this.createDayReportBtnClose.waitForClickable({ timeout: WAIT_TIME_MEDIUM });

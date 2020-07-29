@@ -9,5 +9,12 @@
   },
   "homePageData": {
     "header": "Local Coding community"
+  },
+
+  "settingsPasswordData": {
+    "TC-003-08-oldPasswordLabel": "Old password",
+    "TC-003-09-newPasswordLabel": "New password",
+    "TC-003-10-oldPasswordLabel": "Confirm new password",
+    "TC-003-11-oldPasswordLabel": "Update password"
   }
 }
