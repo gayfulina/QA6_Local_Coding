@@ -9,16 +9,16 @@ class ProfilePage extends BasePage {
     return $('.ant-badge');
   }
 
-  getLoginConfirmation() {
-    return this.headerProfile.getText();
-  }
-
   get dropDownUserMenu() {
     return $('[aria-label="down"]');
   }
 
   get logoutLink() {
-   return $$('.ant-dropdown-menu-item')[2];
+    return $$('.ant-dropdown-menu-item')[2];
+  }
+
+  getLoginConfirmation() {
+    return this.headerProfile.getText();
   }
 
   logout() {
