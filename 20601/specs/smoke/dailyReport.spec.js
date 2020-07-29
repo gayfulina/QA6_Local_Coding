@@ -2,7 +2,6 @@ import DailyReportsPage from '../../../pageObjects/dailyReports.page';
 import user from '../../../testData/user';
 import LoginPage from '../../../pageObjects/login.page';
 import { textProfile } from '../../data/profile.data';
-import WAIT_TIME_MEDIUM from '../../../testData/waitTimes';
 
 describe('DAILY REPORT CREATED', () => {
   before(() => {
@@ -12,8 +11,7 @@ describe('DAILY REPORT CREATED', () => {
 
   it('should Create daily report', function () {
     DailyReportsPage.createDayReport();
-    //DailyReportsPage.lastDailyReportText.waitForDisplayed(WAIT_TIME_MEDIUM);
-    browser.pause(3000);
+    DailyReportsPage.lastDailyReportText.waitForDisplayed();
     expect(DailyReportsPage.lastDailyReportText.getText()).eq(textProfile.howWasYourDayText);
   });
 });
