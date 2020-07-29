@@ -1,28 +1,44 @@
-//
-// describe('HOME PAGE MAIN ELEMENTS', function () {
-//   before(() => {
-//     HomePage.open();
-//   })
-//   it('header text Home Page ', function () {
-//     const text = HomePage.header.getText();
-//     expect(text).eq(homePage.header);
-//   });
-//   it('logo is displayed', function () {
-//     expect(HomePage.logo.isDisplayed()).eq(true);
-//   });
-//   it('login button is displayed', function () {
-//     expect(HomePage.loginBtn.isDisplayed()).eq(true);
-//   });
-//   it('register button is displayed', function () {
-//     expect(HomePage.registerBtn.isDisplayed()).eq(true);
-//   });
-//   it('contact.us button is displayed', function () {
-//     expect(HomePage.contactBtn.isDisplayed()).eq(true);
-//   });
-//   it('terms button is displayed', function () {
-//     expect(HomePage.termsBtn.isDisplayed()).eq(true);
-//   });
-//   it('privacy button is displayed', function () {
-//     expect(HomePage.privacyBtn.isDisplayed()).eq(true);
-//   });
-// });
+import HomePage from '../../../pageObjects/home.page';
+import { homePage } from "../../testResult/homePage";
+import { loginPage } from "../../testResult/login";
+import { registerPageTestResult } from "../../testResult/register";
+
+describe('HOME PAGE  ELEMENTS', function () {
+  before(() => {
+    HomePage.open();
+  })
+  it('header "local coding community" is displayed', function () {
+    expect(HomePage.header.isDisplayed()).true;
+  });
+
+  it('header contains "local coding community" text', function () {
+    expect(HomePage.header.getText()).eq(homePage.header);
+  });
+
+  it('local coding logo is displayed', function () {
+    expect(HomePage.homePageLink.isDisplayed()).eq(true);
+  });
+
+  it('login button is clickable', function () {
+    expect(HomePage.loginLink.isClickable());
+  });
+
+  it('header contains "welcome back!" text', function () {
+     HomePage.loginLink.click();
+     expect(HomePage.header.getText()).eq(loginPage.header);
+  });
+});
+
+describe('go back to home page and check register button and text on it ', function () {
+  before(() => {
+    HomePage.open();
+  })
+  it('register button is clickable', function () {
+    expect(HomePage.registerLink.isClickable());
+  });
+
+  it('header contains "create an account" text', function () {
+    HomePage.registerLink.click();
+    expect(HomePage.header.getText()).eq(registerPageTestResult.header);
+  });
+})
