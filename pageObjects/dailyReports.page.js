@@ -1,6 +1,7 @@
 import BasePage from './Base.page';
 import profileData from '../20601/data/profile.data'; // delete after general data generated
 import { textProfile } from '../20601/data/profile.data';
+import randomSelectorElements from '../20601/data/dairy.data';
 
 class DailyReportsPage extends BasePage {
   get createDayReportBtn() {
@@ -23,8 +24,8 @@ class DailyReportsPage extends BasePage {
     return $('#morale');
   }
 
-  get selectItemByContentMoral() {
-    return $$('.ant-select-item.ant-select-item-option');
+  get selectContentMoraleAndHours() {
+    return $$('.ant-select-item.ant-select-item-option'); //one selector for both fields
   }
 
   get inputHours() {
@@ -56,9 +57,9 @@ class DailyReportsPage extends BasePage {
     this.helpedClassMatesCheckbox.click();
     this.watchedLecturesCheckbox.click();
     this.inputMoral.click();
-    this.selectItemByContentMoral[5].click(); // will generate method after 8 hours of sleep
+    this.selectContentMoraleAndHours[randomSelectorElements.morale].click();
     this.inputHours.click();
-    this.selectItemByContentMoral[15].click();// will be improve after 8 hours of sleep
+    this.selectContentMoraleAndHours[randomSelectorElements.hours].click();
     this.howWasYourDayInput.setValue(textProfile.howWasYourDayText); // change general data  generated
     this.submitBtn.click();
   }
