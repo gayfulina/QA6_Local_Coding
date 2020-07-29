@@ -1,23 +1,16 @@
 import LoginPage from '../../../pageObjects/login.page';
 import ProfilePage from '../../pageObjects/profile.page';
-import { textLogin, Admin } from '../../data/registerAndLoginData';
-import { textProfile } from '../../data/profile.data';
+import user from '../../../testData/user';
+import WAIT_TIME_MEDIUM from '../../../testData/waitTimes';
 
-
-describe('VERIFY SUCCESSFUL LOGIN', () => {
-  it('should register new user and verify login is successful', function () {
+describe('LOGIN', () => {
+  before(() => {
     LoginPage.open();
-    LoginPage.loginAs(Admin);
-    browser.pause(3000);
-    // browser.waitUntil(() => ProfilePage.profilePageHeader.isDisplayed());
-    expect(ProfilePage.profilePageHeader.getText()).contains(textProfile.header);
-  });
+  })
 
-  it('should logout from Main Page and return to the Log In Page', function () {
-    ProfilePage.dropDownLink.click();
-    browser.pause(3000);
-    ProfilePage.dropDownItems[2].click();
-    browser.pause(3000);
-    expect(LoginPage.header.getText()).contains(textLogin.header);
+  it('TC-001 Successful login as an admin', () => {
+    LoginPage.validLogin(user.admin.email, user.admin.password);
+    ProfilePage.badge.waitForDisplayed(WAIT_TIME_MEDIUM);
+    expect(ProfilePage.getLoginConfirmation()).eq(user.admin.firstName + ' ' + user.admin.lastName);
   });
 });
