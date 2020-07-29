@@ -56,7 +56,7 @@ describe('TC-005 LINKS TAB ELEMENTS ARE PRESENT AND DISPLAYED CORRECTLY', () => 
   });
 
   it('#11 Links Save Button Text is correct', function() {
-    expect(LinksPage.saveLinksBtn.getText).eq(expected.linksPageData.saveBtnText);
+    expect(LinksPage.saveLinksBtn.getText()).eq(expected.linksPageData.saveBtnText);
   });
 
   it('#12 Links Save Button is enabled', function() {
