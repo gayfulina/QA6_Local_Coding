@@ -11,7 +11,14 @@
     "header": "Local Coding community"
   },
 
-  "linksPageData": {
+  "settingsPasswordData": {
+    "TC-003-08-oldPasswordLabel": "Old password",
+    "TC-003-09-newPasswordLabel": "New password",
+    "TC-003-10-oldPasswordLabel": "Confirm new password",
+    "TC-003-11-oldPasswordLabel": "Update password"
+  }
+
+"linksPageData": {
     "resumeLink": "https://docs.google.com/document/d/10YxY2G35iNST-Ht1qWY-DWYRUiZtWlR4mFoE-cNZrjM/edit#",
     "resumeText": "Google Doc resume link",
     "LinkedIn": "https://www.linkedin.com/in/bogutskii/",
@@ -25,6 +32,5 @@
     "saveBtnText": "Save",
     "successMSG": "User Links updated",
     "errorMSG": ""
-
   }
 }

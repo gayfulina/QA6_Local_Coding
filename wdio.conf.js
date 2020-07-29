@@ -26,6 +26,9 @@ exports.config = {
     {
       maxInstances: 1,
       browserName: 'chrome',
+      'goog:chromeOptions': {
+        excludeSwitches: ["enable-automation"]
+      }
     },
   ],
 

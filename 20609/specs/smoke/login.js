@@ -12,7 +12,7 @@ describe('LOGIN ADMIN', () => {
     LoginPage.inputUsername.setValue(admin.email);
     LoginPage.inputPassword.setValue(admin.password);
     LoginPage.loginBtn.click();
-    ProfilePage.badge.waitForDisplayed(WAIT_TIME_MEDIUM);
+    ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
     expect(ProfilePage.getLoginConfirmation()).equal(admin.firstName + ' ' + admin.lastName);
   });
 });
