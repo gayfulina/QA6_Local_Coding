@@ -1,4 +1,6 @@
 import HomePage from '../../../pageObjects/home.page';
+import LoginPage from  '../../../pageObjects/login.page';
+import RegisterPage from  '../../../pageObjects/register.page';
 import { homePage } from "../../testResult/homePage";
 import { loginPage } from "../../testResult/login";
 import { registerPageTestResult } from "../../testResult/register";
@@ -25,16 +27,16 @@ describe('HOME PAGE  ELEMENTS', function () {
 
   it('TC-005 redirect to login page ', function () {
     HomePage.loginLink.click();
-    expect(HomePage.header.getText()).eq(loginPage.header);
+    expect(LoginPage.header.getText()).eq(loginPage.header);
   });
 
   it('TC-006 register button is clickable', function () {
-    browser.refresh();
+    HomePage.open();
     expect(HomePage.registerLink.isClickable());
   });
 
   it('TC-007 redirect to register page', function () {
     HomePage.registerLink.click();
-    expect(HomePage.header.getText()).eq(registerPageTestResult.header);
+    expect(RegisterPage.header.getText()).eq(registerPageTestResult.header);
   });
 })
