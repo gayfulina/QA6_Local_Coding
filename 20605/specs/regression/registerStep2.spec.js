@@ -44,7 +44,7 @@ describe('REGISTER PAGE STEP 2', function () {
       expect(RegisterStep2Page.openDropdown.isDisplayed());
     });
 
-    it('Country field has checkbox', function () {
+    it('Country field has dropdown', function () {
       expect(RegisterStep2Page.openDropdown.isExisting());
     });
 
@@ -58,7 +58,7 @@ describe('REGISTER PAGE STEP 2', function () {
     });
 
     it('Submit Btn has correct text', function () {
-      expect(RegisterStep2Page.SubmitBtn.getText()).eq(registerPageTestResult.submitLink);
+      expect(RegisterStep2Page.SubmitBtn.getText()).eq(registerPageTestResult.submitBtn);
     });
 
     it('Skip Btn should be displayed', function () {

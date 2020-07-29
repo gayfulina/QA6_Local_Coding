@@ -4,7 +4,7 @@ const registerPageTestResult = {
   lastNamePlaceholder: 'Last Name',
   phoneNumberPlaceholder: 'phone number',
   countryPlaceholder: 'United States',
-  submitLink: 'Submit',
+  submitBtn: 'Submit',
   skipBtn: 'Skip',
   countryLabel: 'Country',
   phoneLabel: 'Phone',
