@@ -48,6 +48,10 @@ describe('REGISTER PAGE STEP 2', function () {
       expect(RegisterStep2Page.openDropdown.isExisting());
     });
 
+    it('Country label is displayed', function () {
+      expect(RegisterStep2Page.countryLabel.isDisplayed());
+    });
+
     it('Country label has correct text', function () {
       expect(RegisterStep2Page.countryLabel.getText()).eq(
         registerPageTestResult.countryLabel);
