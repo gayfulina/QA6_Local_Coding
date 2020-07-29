@@ -10,11 +10,11 @@
 
   "login": {
     "header": "Welcome back!",
-    "email": "Email",
-    "password": "Password",
-    "noAccount": "Don't have an account?",
-    "newAccount": "Create one.",
-    "forgotPassword": "Forgot your password?"
+    "emailInput": "Email",
+    "passwordInput": "Password",
+    "registerLink": "Create one",
+    "resetLink": "Reset it",
+    "loginBtn": "Log in"
   }
 }
 
