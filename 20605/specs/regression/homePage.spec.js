@@ -7,37 +7,33 @@ describe('HOME PAGE  ELEMENTS', function () {
   before(() => {
     HomePage.open();
   })
-  it('header  is displayed', function () {
+  it('TC-001 header  is displayed', function () {
     expect(HomePage.header.isDisplayed()).true;
   });
 
-  it('header  has the correct text', function () {
+  it('TC-002 header  has the correct text', function () {
     expect(HomePage.header.getText()).eq(homePage.header);
   });
 
-  it('local coding logo is displayed', function () {
+  it('TC-003 local coding logo is displayed', function () {
     expect(HomePage.homePageLink.isDisplayed()).eq(true);
   });
 
-  it('login button is clickable', function () {
+  it('TC-004 login button is clickable', function () {
     expect(HomePage.loginLink.isClickable());
   });
 
-  it('header contains "welcome back!" text', function () {
-     HomePage.loginLink.click();
-     expect(HomePage.header.getText()).eq(loginPage.header);
+  it('TC-005 redirect to login page ', function () {
+    HomePage.loginLink.click();
+    expect(HomePage.header.getText()).eq(loginPage.header);
   });
-});
 
-describe('go back to home page and check register button and text on it ', function () {
-  before(() => {
-    HomePage.open();
-  })
-  it('register button is clickable', function () {
+  it('TC-006 register button is clickable', function () {
+    browser.refresh();
     expect(HomePage.registerLink.isClickable());
   });
 
-  it('header contains "create an account" text', function () {
+  it('TC-007 redirect to register page', function () {
     HomePage.registerLink.click();
     expect(HomePage.header.getText()).eq(registerPageTestResult.header);
   });
