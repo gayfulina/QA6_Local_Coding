@@ -1,6 +1,12 @@
 import BasePage from './Base.page';
+// import TopMenuPage from './topMenu.page';
 
 class LinksPage extends BasePage {
+
+  get linksTab() {
+    return $$('.ant-menu-item')[3];
+  }
+
   get resumeLabel() {
     return $('[for="resume"]');
   }
@@ -45,7 +51,7 @@ class LinksPage extends BasePage {
     return $('[type="submit"]');
   }
 
-  saveLink() {
+  saveLinks() {
     this.saveLinksBtn.click();
   }
 }

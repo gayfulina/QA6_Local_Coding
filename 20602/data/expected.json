@@ -9,5 +9,21 @@
   },
   "homePageData": {
     "header": "Local Coding community"
+  },
+
+  "linksPageData": {
+    "resumeLink": "https://docs.google.com/document/d/10YxY2G35iNST-Ht1qWY-DWYRUiZtWlR4mFoE-cNZrjM/edit#",
+    "resumeText": "Google Doc resume link",
+    "LinkedIn": "https://www.linkedin.com/in/bogutskii/",
+    "LinkedInText": "LinkedIn profile link",
+    "Facebook": "https://www.facebook.com/groups/185538711998736/",
+    "FacebookText": "Facebook profile link",
+    "GitHub": "https://github.com/bogutski",
+    "GitHubText": "GitHub profile link",
+    "Codewars": "https://www.codewars.com/users/Viktor%20Bogutskii",
+    "CodewarsText": "Codewars profile link",
+    "successMSG": "User Links updated",
+    "errorMSG": ""
+
   }
 }
