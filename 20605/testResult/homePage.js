@@ -1,5 +1,5 @@
 const homePage = {
-  header: "Local Coding community"
+  header: "Adaptive learning platform"
 }
 
  export{homePage}
