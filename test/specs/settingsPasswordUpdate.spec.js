@@ -1,3 +1,4 @@
+import {expect} from "chai";
 import LoginPage from "../../Page/LoginPage";
 import {student} from "../../Data/userData";
 import SettingsPasswordUpdatePage from "../../Page/SettingsPasswordUpdatePage";
@@ -14,7 +15,7 @@ describe( 'SETTINGS CHANGE PASSWORD', () => {
 /*
   it('should go to correct profile', () => {
     const name = UserDropDownPage.userName.getText();
-    expect(name).toEqual(student.name);
+    expect(name).eq(student.name);
   });
 */
   it('should go to Settings page', () => {
@@ -38,7 +39,7 @@ describe( 'SETTINGS CHANGE PASSWORD', () => {
   it('should user login with new password', () => {
     LoginPage.login(student.email, student.passwordNew);
     ProfilePage.badge.waitForDisplayed(WAIT_TIME_MEDIUM);
-    expect( ProfilePage.getLoginConfirmation()).toEqual(student.name);
+    expect( ProfilePage.getLoginConfirmation()).eq(student.name);
   });
 
   it('should user restore old password', () => {
@@ -53,7 +54,7 @@ describe( 'SETTINGS CHANGE PASSWORD', () => {
   it('should user login with old password', () => {
     LoginPage.login(student.email, student.password);
     ProfilePage.badge.waitForDisplayed(WAIT_TIME_MEDIUM);
-    expect( ProfilePage.getLoginConfirmation()).toEqual(student.name);
+    expect( ProfilePage.getLoginConfirmation()).eq(student.name);
   });
 
 });

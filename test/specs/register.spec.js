@@ -1,3 +1,4 @@
+import {expect} from 'chai';
 import RegisterPage from '../../Page/RegisterPage';
 import userData from '../../Data/userData';
 import LoginPage from '../../Page/LoginPage';
@@ -10,7 +11,7 @@ describe('register user', () => {
   });
 
   it('should check header', () => {
-    expect($(RegisterPage.header).getText()).toEqual(headers.headerRegister)
+    expect($(RegisterPage.header).getText()).eq(headers.headerRegister)
   });
 
   it('should fill out filds and click submit btn', () => {
@@ -25,11 +26,11 @@ describe('register user', () => {
   });
 
   it('should have correct header on page step 2', () => {
-    expect(RegisterPage.headerRegister.getText()).toEqual(headers.headerStep2Page)
+    expect(RegisterPage.headerRegister.getText()).eq(headers.headerStep2Page)
   });
 
   it('should skip btn be clickable ', () => {
-    expect(RegisterPage.skipBtn.isClickable()).toEqual(true)
+    expect(RegisterPage.skipBtn.isClickable()).eq(true)
   });
 
   it('should fill out form', () => {
