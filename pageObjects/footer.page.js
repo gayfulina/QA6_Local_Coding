@@ -2,7 +2,7 @@ import BasePage from './../pageObjects/Base.page';
 
 class FooterPage extends BasePage {
   get footer() {
-    return $('[class="mt-auto mb-15rem"]').getText();
+    return $('[class="mt-auto mb-15rem"]');
   }
 
   get contactUs() {
@@ -35,4 +35,3 @@ class FooterPage extends BasePage {
 }
 
 export default new FooterPage();
-
