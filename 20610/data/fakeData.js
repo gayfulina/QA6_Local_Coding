@@ -5,8 +5,8 @@ const newUser = {
   lastName: faker.name.lastName(),
   about: faker.name.jobArea(),
   email: faker.internet.email(),
-  password: "QA" + Math.trunc(new Date().getTime() / 10000) + "!$"
-
+  password: "QA" + Math.trunc(new Date().getTime() / 10000) + "!$",
+  phone: 2157777577
 };
 
 export {newUser}
