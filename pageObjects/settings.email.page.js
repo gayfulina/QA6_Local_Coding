@@ -14,7 +14,6 @@ class SettingsEmailPage extends BasePage {
     return $('//label[@for="confirmEmail"]');
   }
 
-
   get oldEmailField() {
     return $('//input[@id="oldEmail"]');
   }
