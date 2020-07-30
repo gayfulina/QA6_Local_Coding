@@ -1,11 +1,13 @@
 import BasePage from './Base.page';
-import profileData from '../20601/data/profile.data'; // delete after general data generated
-import { textProfile } from '../20601/data/profile.data';
-import randomSelectorElements from '../20601/data/dairy.data';
+import randomData from '../20601/data/daily.data';
 
 class DailyReportsPage extends BasePage {
   get createDayReportBtn() {
     return $('.mb-1rem');
+  }
+
+  get checkbox() {
+    return $$('.ant-checkbox-input');
   }
 
   get iUnderstoodEverythingCheckbox() {
@@ -47,20 +49,15 @@ class DailyReportsPage extends BasePage {
   get lastDailyReportText() {
     return $('.ant-row.mb-4');
   }
-  // openProfilePageAdmin() {
-  //   super.open(`/profile/${user.admin.id}`);
-  // }
 
-  createDayReport() {
+  createRandomDayReport() {
     this.createDayReportBtn.click();
-    this.iUnderstoodEverythingCheckbox.click();
-    this.helpedClassMatesCheckbox.click();
-    this.watchedLecturesCheckbox.click();
+    this.checkbox[randomData.checkbox].click(); // click on random checkboxes
     this.inputMoral.click();
-    this.selectContentMoraleAndHours[randomSelectorElements.morale].click();
+    this.selectContentMoraleAndHours[randomData.moraleSelectorIndex].click(); // click on random morale
     this.inputHours.click();
-    this.selectContentMoraleAndHours[randomSelectorElements.hours].click();
-    this.howWasYourDayInput.setValue(textProfile.howWasYourDayText); // change general data  generated
+    this.selectContentMoraleAndHours[randomData.hoursSelectorIndex].click(); // click on random hours
+    this.howWasYourDayInput.setValue(randomData.text); // creating  random  text for daily report
     this.submitBtn.click();
   }
 }

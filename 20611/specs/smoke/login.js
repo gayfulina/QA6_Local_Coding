@@ -1,35 +1,43 @@
 import LoginPage from '../../../pageObjects/login.page';
-const login = require('../testData/expected.json').login;
+//const login = require('../testData/expected.json').login;
 import ProfilePage from '../../../pageObjects/profile.page';
-import WAIT_TIME_MEDIUM from '../../../testData/waitTimes';
+import { WAIT_TIME_MEDIUM, WAIT_TIME_LONGEST } from '../../../testData/waitTimes';
 import user from '../../../testData/user';
 
 describe('New user registration page', () => {
-  before(() => {
+  beforeEach(() => {
     LoginPage.open();
   });
 
-  it('Check the header', function () {
-    expect(LoginPage.headerLogin.getText()).eq(login.header);
+  describe('LOGIN NEW USER', function () {
+    it('should Successful login as a new user', () => {
+      LoginPage.validLogin(user.new.email, user.new.password);
+      ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
+      expect(ProfilePage.getLoginConfirmation()).eq(user.new.firstName + ' ' + user.new.lastName);
+    });
   });
 
-  it('Check if the Email input has a placeholder text Email ', function () {
-    expect(LoginPage.inputUsername.getAttribute('placeholder')).eq(login.emailInput);
+  describe('LOGIN ADMIN', function () {
+    it('should Successful login as an Admin', () => {
+      LoginPage.validLogin(user.admin.email, user.admin.password);
+      ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
+      expect(ProfilePage.getLoginConfirmation()).eq(user.admin.firstName + ' ' + user.admin.lastName);
+    });
   });
 
-  it('Check if the Password input has a placeholder text Password ', function () {
-    expect(LoginPage.inputPassword.getAttribute('placeholder')).eq(login.passwordInput);
+  describe('LOGIN LEARNER', function () {
+    it('should Successful login as a learner', () => {
+      LoginPage.validLogin(user.learner.email, user.learner.password);
+      ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
+      expect(ProfilePage.getLoginConfirmation()).eq(user.learner.firstName + ' ' + user.learner.lastName);
+    });
   });
 
-  it('Check if the Register link has text Create one ', function () {
-    expect(LoginPage.registerLink.getText()).eq(login.registerLink);
-  });
-
-  it('Check if the Reset link has text Reset it ', function () {
-    expect(LoginPage.resetLink.getText()).eq(login.resetLink);
-  });
-
-  it('Check if the Login Button has text Log in ', function () {
-    expect(LoginPage.loginBtn.getText()).eq(login.loginBtn);
+  describe('LOGIN NEW STUDENT', function () {
+    it('should Successful login as a student', () => {
+      LoginPage.validLogin(user.student.email, user.student.password);
+      ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
+      expect(ProfilePage.getLoginConfirmation()).eq(user.student.firstName + ' ' + user.student.lastName);
+    });
   });
 });

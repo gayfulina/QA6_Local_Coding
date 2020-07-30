@@ -1,5 +1,4 @@
 module.exports = {
-
   new: {
     email: 'new@qa6.us',
     password: 'newnew',
@@ -9,7 +8,7 @@ module.exports = {
     about: 'QA Engineer',
     goals: 'no goals',
     englishLevel: 'Advanced',
-    countryName: 'USA'
+    countryName: 'USA',
   },
 
   admin: {
@@ -22,7 +21,7 @@ module.exports = {
     goals: 'no goals',
     englishLevel: 'Advanced',
     countryName: 'USA',
-    id: '5f1e82dc303ca500ed657484'
+    id: '5f1e82dc303ca500ed657484',
   },
 
   learner: {
@@ -34,7 +33,7 @@ module.exports = {
     about: 'QA Engineer',
     goals: 'no goals',
     englishLevel: 'Advanced',
-    countryName: 'USA'
+    countryName: 'USA',
   },
 
   student: {
@@ -46,8 +45,6 @@ module.exports = {
     about: 'QA Engineer',
     goals: 'no goals',
     englishLevel: 'Advanced',
-    countryName: 'USA'
-  }
-
-
+    countryName: 'USA',
+  },
 };
