@@ -1,7 +1,5 @@
 import BasePage from './Base.page';
-import profileData from '../20601/data/profile.data'; // delete after general data generated
-import { textProfile } from '../20601/data/profile.data';
-import randomSelectorElements from '../20601/data/dairy.data';
+import randomData from '../20601/data/dairy.data';
 
 class DailyReportsPage extends BasePage {
   get createDayReportBtn() {
@@ -47,20 +45,17 @@ class DailyReportsPage extends BasePage {
   get lastDailyReportText() {
     return $('.ant-row.mb-4');
   }
-  // openProfilePageAdmin() {
-  //   super.open(`/profile/${user.admin.id}`);
-  // }
 
-  createDayReport() {
+  createRandomDayReport() {
     this.createDayReportBtn.click();
     this.iUnderstoodEverythingCheckbox.click();
     this.helpedClassMatesCheckbox.click();
     this.watchedLecturesCheckbox.click();
     this.inputMoral.click();
-    this.selectContentMoraleAndHours[randomSelectorElements.morale].click();
+    this.selectContentMoraleAndHours[randomData.moraleSelectorIndex].click();
     this.inputHours.click();
-    this.selectContentMoraleAndHours[randomSelectorElements.hours].click();
-    this.howWasYourDayInput.setValue(textProfile.howWasYourDayText); // change general data  generated
+    this.selectContentMoraleAndHours[randomData.hoursSelectorIndex].click();
+    this.howWasYourDayInput.setValue(randomData.text);
     this.submitBtn.click();
   }
 }
