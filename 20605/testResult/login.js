@@ -1,5 +1,7 @@
 const loginPage = {
-  header: "Welcome back!"
+  header: "Welcome back!",
+  emailPlaceholder: "Email",
+  passwordPlaceholder: "Password"
 }
 
 export {loginPage}

@@ -1,28 +1,42 @@
-//
-// describe('HOME PAGE MAIN ELEMENTS', function () {
-//   before(() => {
-//     HomePage.open();
-//   })
-//   it('header text Home Page ', function () {
-//     const text = HomePage.header.getText();
-//     expect(text).eq(homePage.header);
-//   });
-//   it('logo is displayed', function () {
-//     expect(HomePage.logo.isDisplayed()).eq(true);
-//   });
-//   it('login button is displayed', function () {
-//     expect(HomePage.loginBtn.isDisplayed()).eq(true);
-//   });
-//   it('register button is displayed', function () {
-//     expect(HomePage.registerBtn.isDisplayed()).eq(true);
-//   });
-//   it('contact.us button is displayed', function () {
-//     expect(HomePage.contactBtn.isDisplayed()).eq(true);
-//   });
-//   it('terms button is displayed', function () {
-//     expect(HomePage.termsBtn.isDisplayed()).eq(true);
-//   });
-//   it('privacy button is displayed', function () {
-//     expect(HomePage.privacyBtn.isDisplayed()).eq(true);
-//   });
-// });
+import HomePage from '../../../pageObjects/home.page';
+import LoginPage from  '../../../pageObjects/login.page';
+import RegisterPage from  '../../../pageObjects/register.page';
+import { homePage } from "../../testResult/homePage";
+import { loginPage } from "../../testResult/login";
+import { registerPageTestResult } from "../../testResult/register";
+
+describe('HOME PAGE  ELEMENTS', function () {
+  before(() => {
+    HomePage.open();
+  })
+  it('TC-001 header  is displayed', function () {
+    expect(HomePage.header.isDisplayed()).true;
+  });
+
+  it('TC-002 header  has the correct text', function () {
+    expect(HomePage.header.getText()).eq(homePage.header);
+  });
+
+  it('TC-003 local coding logo is displayed', function () {
+    expect(HomePage.homePageLink.isDisplayed()).eq(true);
+  });
+
+  it('TC-004 login button is clickable', function () {
+    expect(HomePage.loginLink.isClickable());
+  });
+
+  it('TC-005 redirect to login page ', function () {
+    HomePage.loginLink.click();
+    expect(LoginPage.header.getText()).eq(loginPage.header);
+  });
+
+  it('TC-006 register button is clickable', function () {
+    HomePage.open();
+    expect(HomePage.registerLink.isClickable());
+  });
+
+  it('TC-007 redirect to register page', function () {
+    HomePage.registerLink.click();
+    expect(RegisterPage.header.getText()).eq(registerPageTestResult.header);
+  });
+})

@@ -1,0 +1,15 @@
+{
+  "pagesHeaders":
+  {
+    "MainPageHeader" : "Adaptive learning platform",
+    "CoursesPage": "Courses",
+    "Cards": "Flash Cards",
+    "Diary": "Daily reports",
+    "Groups": "Groups",
+    "Users": "Users",
+    "Challenges": "Challenge",
+    "Telephony": "Telephony",
+    "Orders": "Orders",
+    "Achievements": "Achievements"
+  }
+}

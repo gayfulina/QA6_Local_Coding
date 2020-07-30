@@ -1,0 +1,50 @@
+module.exports = {
+  new: {
+    email: 'new@qa6.us',
+    password: 'newnew',
+    firstName: 'NewFirst',
+    lastName: 'NewLast',
+    phone: '17775551121',
+    about: 'QA Engineer',
+    goals: 'no goals',
+    englishLevel: 'Advanced',
+    countryName: 'USA',
+  },
+
+  admin: {
+    email: 'admin@qa6.us',
+    password: 'admin',
+    firstName: 'AdminFirst',
+    lastName: 'AdminLast',
+    phone: '17775551122',
+    about: 'QA Engineer',
+    goals: 'no goals',
+    englishLevel: 'Advanced',
+    countryName: 'USA',
+    id: '5f1e82dc303ca500ed657484',
+  },
+
+  learner: {
+    email: 'learner@qa6.us',
+    password: 'learner',
+    firstName: 'LearnerFirst',
+    lastName: 'LearnerLast',
+    phone: '17775551123',
+    about: 'QA Engineer',
+    goals: 'no goals',
+    englishLevel: 'Advanced',
+    countryName: 'USA',
+  },
+
+  student: {
+    email: 'student@qa6.us',
+    password: 'student',
+    firstName: 'StudentFirst',
+    lastName: 'StudentLast',
+    phone: '17775551124',
+    about: 'QA Engineer',
+    goals: 'no goals',
+    englishLevel: 'Advanced',
+    countryName: 'USA',
+  },
+};
