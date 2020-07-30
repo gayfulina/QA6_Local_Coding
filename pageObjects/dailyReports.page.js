@@ -1,9 +1,13 @@
 import BasePage from './Base.page';
-import randomData from '../20601/data/dairy.data';
+import randomData from '../20601/data/daily.data';
 
 class DailyReportsPage extends BasePage {
   get createDayReportBtn() {
     return $('.mb-1rem');
+  }
+
+  get checkbox() {
+    return $$('.ant-checkbox-input');
   }
 
   get iUnderstoodEverythingCheckbox() {
@@ -48,14 +52,12 @@ class DailyReportsPage extends BasePage {
 
   createRandomDayReport() {
     this.createDayReportBtn.click();
-    this.iUnderstoodEverythingCheckbox.click();
-    this.helpedClassMatesCheckbox.click();
-    this.watchedLecturesCheckbox.click();
+    this.checkbox[randomData.checkbox].click(); // click on random checkboxes
     this.inputMoral.click();
-    this.selectContentMoraleAndHours[randomData.moraleSelectorIndex].click();
+    this.selectContentMoraleAndHours[randomData.moraleSelectorIndex].click(); // click on random morale
     this.inputHours.click();
-    this.selectContentMoraleAndHours[randomData.hoursSelectorIndex].click();
-    this.howWasYourDayInput.setValue(randomData.text);
+    this.selectContentMoraleAndHours[randomData.hoursSelectorIndex].click(); // click on random hours
+    this.howWasYourDayInput.setValue(randomData.text); // creating  random  text for daily report
     this.submitBtn.click();
   }
 }
