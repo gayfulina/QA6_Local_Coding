@@ -6,5 +6,5 @@ module.exports = {
   bracketSpacing: true,
   arrowParens: 'avoid',
   parser: 'babel',
-  printWidth: 120,
+  printWidth: 130,
 };
