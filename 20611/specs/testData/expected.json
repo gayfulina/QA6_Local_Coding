@@ -7,7 +7,6 @@
     "email": "Email",
     "password": "Password"
   },
-
   "login": {
     "header": "Welcome back!",
     "emailInput": "Email",
@@ -15,7 +14,22 @@
     "registerLink": "Create one",
     "resetLink": "Reset it",
     "loginBtn": "Log in"
-  }
+  },
+  "correctEmail": {
+    "email": "test@qa6.us"
+  },
+  "incorrectEmail": {
+    "email": "qwerty@qwerty.net"
+  },
+  "error": {
+    "errorMessage": "User not found"
+  },
+
+  "header": {
+    "headerRegister": "Create an account"
+  },
+
+  "text": {
+    "headerText": "Welcome back!"
 }
-
-
+}
