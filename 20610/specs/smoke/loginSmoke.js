@@ -25,9 +25,6 @@ describe('POSITIVE LEARNER LOGIN', () => {
     LoginPage.validLogin(user.learner.email, user.learner.password);
     expect(ProfilePage.badgeRole.getText()).eq(expected.userBadges.learner);
     expect(ProfilePage.getLoginConfirmation()).eq(`${user.learner.firstName} ${user.learner.lastName}`);
-    if (LoginPage.errorMessageCloseBtn.isDisplayed()) {
-      LoginPage.closeMessage();
-    }
     ProfilePage.logout();
   });
 });
@@ -37,9 +34,6 @@ describe('POSITIVE STUDENT LOGIN', () => {
     LoginPage.validLogin(user.student.email, user.student.password);
     expect(ProfilePage.badgeRole.getText()).eq(expected.userBadges.student);
     expect(ProfilePage.getLoginConfirmation()).eq(`${user.student.firstName} ${user.student.lastName}`);
-    if (LoginPage.errorMessageCloseBtn.isDisplayed()) {
-      LoginPage.closeMessage();
-    }
     ProfilePage.logout();
   });
 });
