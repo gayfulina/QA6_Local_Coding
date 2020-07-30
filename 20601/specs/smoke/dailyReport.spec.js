@@ -2,7 +2,7 @@ import DailyReportsPage from '../../../pageObjects/dailyReports.page';
 import user from '../../../testData/user';
 import LoginPage from '../../../pageObjects/login.page';
 //import { textProfile } from '../../data/profile.data';
-import randomData from '../../data/dairy.data';
+import randomData from '../../data/daily.data';
 import { textHome } from '../../data/home.data';
 
 describe('DAILY REPORT CREATED', () => {
@@ -13,7 +13,6 @@ describe('DAILY REPORT CREATED', () => {
 
   it('should Create daily report', function () {
     DailyReportsPage.createRandomDayReport();
-    const res = DailyReportsPage.lastDailyReportText.getText();
-    expect(res).eq(randomData.text);
+    expect(DailyReportsPage.lastDailyReportText.getText()).eq(randomData.text);
   });
 });
