@@ -1,6 +1,9 @@
 import BasePage from './Base.page';
 
 class SettingsEmailPage extends BasePage {
+  get emailTab() {
+    return $$('.ant-menu-item')[2];
+  }
 
   get oldEmailTitle() {
     return $('//label[@for="oldEmail"]');
@@ -29,7 +32,6 @@ class SettingsEmailPage extends BasePage {
   get submitButton() {
     return $('//button[@type="submit"]');
   }
-
 }
 
 export default new SettingsEmailPage();
