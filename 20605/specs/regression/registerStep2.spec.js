@@ -3,6 +3,7 @@ import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
 import { registerPageTestResult } from '../../testResult/register';
 import { newUser } from '../../testData/register';
 
+
 describe('REGISTER PAGE STEP 2', function () {
   before(() => {
     RegisterStep2Page.open();
@@ -73,6 +74,7 @@ describe('REGISTER PAGE STEP 2', function () {
       expect(RegisterStep2Page.skipBtn.getText()).eq(registerPageTestResult.skipBtn);
     });
   });
+
 
 });
 
