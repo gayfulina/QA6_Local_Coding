@@ -15,7 +15,7 @@ class ProfilePage extends BasePage {
   }
 
   get logoutLink() {
-    return $$('.ant-dropdown-menu-item')[2];
+    return $$('.ant-dropdown-menu-item')[3];
   }
 
   get linkLocal() {
@@ -66,7 +66,7 @@ class ProfilePage extends BasePage {
     return $$('.ant-dropdown-menu-item')[1];
   }
 
-  createDayReport() {
+    createDayReport() {
     this.createDayReportBtn.click();
     this.createDayReportBtnClose.waitForClickable({ timeout: WAIT_TIME_MEDIUM });
     this.createDayReportBtnClose.click();

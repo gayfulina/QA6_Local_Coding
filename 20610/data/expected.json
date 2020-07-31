@@ -27,6 +27,7 @@
   "userBadges": {
     "admin": "admin",
     "learner": "learner",
-    "student": "student"
+    "student": "student",
+    "new": "new"
   }
 }
