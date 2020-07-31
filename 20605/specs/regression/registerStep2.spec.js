@@ -6,7 +6,9 @@ import { newUser } from '../../testData/register';
 
 describe('REGISTER PAGE STEP 2', function () {
   before(() => {
-    RegisterStep2Page.open();
+    RegisterPage.open();
+    RegisterPage.registerUser(newUser);
+    browser.maximizeWindow();
   });
 
   describe('HEADER', function () {
@@ -15,8 +17,6 @@ describe('REGISTER PAGE STEP 2', function () {
     });
 
     it('header has correct text', function () {
-      RegisterPage.open();
-      RegisterPage.registerUser(newUser);
       expect(RegisterStep2Page.headerRegisterStep2.getText()).eq(
         `Dear ${newUser.firstName} ${newUser.lastName}!\nPlease complete these fields`);
     });
@@ -43,10 +43,6 @@ describe('REGISTER PAGE STEP 2', function () {
 
     it('Country field should be displayed', function () {
       expect(RegisterStep2Page.openDropdown.isDisplayed());
-    });
-
-    it('Country field has dropdown', function () {
-      expect(RegisterStep2Page.openDropdown.isExisting());
     });
 
     it('Country label is displayed', function () {

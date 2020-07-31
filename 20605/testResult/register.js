@@ -3,7 +3,7 @@ const registerPageTestResult = {
   firstNamePlaceholder: 'First Name',
   lastNamePlaceholder: 'Last Name',
   phoneNumberPlaceholder: 'phone number',
-  countryPlaceholder: 'United States',
+  countryDefault: 'United States',
   submitBtn: 'Submit',
   skipBtn: 'Skip',
   countryLabel: 'Country',
