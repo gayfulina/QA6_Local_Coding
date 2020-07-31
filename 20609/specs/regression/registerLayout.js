@@ -17,19 +17,19 @@ describe('USER REGISTER step 1', () => {
   });
 
   it('should agreement check box is present', () => {
-    expect(browser.$('//span[text()="I have read"]').isDisplayed()).true;
+    expect((RegisterPage.agreementLabel).isDisplayed()).true;
+  });
+
+  it('should agreement check box is clickable', () => {
+    expect((RegisterPage.agreementLabel).isClickable()).true;
+  });
+
+  it('should agreement check box have correct text', () => {
+    expect((RegisterPage.agreementLabel).getText()).eq(dataRegression.readTerms);
   });
 
   it('should agreement check box is enabled', () => {
     expect(RegisterPage.agreementCheckBox.isEnabled()).true;
-  });
-
-  it('should agreement check box is clickable', () => {
-    expect(browser.$('//span[text()="I have read"]').isClickable()).true;
-  });
-
-  it('should have correct text term agreement', () => {
-    expect(browser.$('//span[text()="I have read"]').getText()).eq(dataRegression.readTerms);
   });
 
   it('should  register btn is not clickable', () => {
@@ -41,7 +41,7 @@ describe('USER REGISTER step 1', () => {
   });
 
   it('should login link have correct text', () => {
-    expect($('p').getText()).eq(dataRegression.textParagraf);
+    expect((RegisterPage.promptLabel).getText()).eq(dataRegression.textParagraf);
   });
 
   it('should  input first  name is present', () => {
@@ -123,7 +123,7 @@ describe('USER REGISTER STEP 2', () => {
   });
 
   it('should have correct country by default', () => {
-    expect($('.ant-select-selection-item').getAttribute('title')).eq(dataRegression.countryInput);
+    expect((RegisterStep2Page.countryCurrent).getAttribute('title')).eq(dataRegression.countryInput);
   });
 
   it('should phone label present', () => {
