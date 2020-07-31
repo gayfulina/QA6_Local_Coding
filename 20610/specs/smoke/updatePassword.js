@@ -17,10 +17,7 @@ describe('NEW USER PASSWORD UPDATE', function () {
   });
 
   it('user should be able to update his password', function () {
-    SettingsPasswordPage.oldPasswordInput.setValue(newUser.password);
-    SettingsPasswordPage.newPasswordInput.setValue(newUser.newPassword);
-    SettingsPasswordPage.confirmNewPasswordInput.setValue(newUser.newPassword);
-    SettingsPasswordPage.updatePasswordButton.click();
+    SettingsPasswordPage.updatePassword(newUser.password, newUser.newPassword);
     ProfilePage.logout();
   });
 

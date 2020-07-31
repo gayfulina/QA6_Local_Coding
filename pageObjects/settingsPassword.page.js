@@ -1,4 +1,5 @@
 import BasePage from './Base.page';
+import { newUser } from '../20610/data/fakeData';
 
 class SettingsPasswordPage extends BasePage {
   get passwordTab() {
@@ -43,6 +44,13 @@ class SettingsPasswordPage extends BasePage {
 
   get confirmNewPasswordLabel() {
     return $('[for="confirmPassword"]');
+  }
+
+  updatePassword(password, newPassword){
+    this.oldPasswordInput.setValue(password);
+    this.newPasswordInput.setValue(newPassword);
+    this.confirmNewPasswordInput.setValue(newPassword);
+    this.updatePasswordButton.click();
   }
 }
 
