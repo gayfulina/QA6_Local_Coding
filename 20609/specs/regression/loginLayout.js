@@ -1,5 +1,6 @@
 import LoginPage from '../../../pageObjects/login.page';
 import { textLogin } from '../../data/loginData';
+import TopMenuPage from '../../../pageObjects/topMenu.page';
 
 describe('LOGIN', () => {
   before(() => {
@@ -8,6 +9,18 @@ describe('LOGIN', () => {
 
   it('should have Welcome back header', () => {
     expect(LoginPage.header.getText()).eq(textLogin.headerLogin);
+  });
+
+  it('should verify link home page is present', function () {
+    expect(TopMenuPage.label.isDisplayed()).eq(true);
+  });
+
+  it('should  verify link home page is clickable', function () {
+    expect(TopMenuPage.label.isClickable()).eq(true);
+  });
+
+  it('should verify link home page has right name', function () {
+    expect(TopMenuPage.label.getText()).eq(textLogin.linkLocalCoding);
   });
 
   it('should verify icon mail is present', function () {
