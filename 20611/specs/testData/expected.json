@@ -1,4 +1,7 @@
 {
+ "main" : {
+   "header": "Adaptive learning platform"
+ },
   "registration": {
     "title": "Local Coding",
     "header": "Create an account",
