@@ -8,17 +8,17 @@ describe ("LOGIN NEGATIVE", () => {
   });
 
   it('TC should enter wrong email', () => {
-    LoginPage.login(userNegativeData.emailInvalid, admin.password);
+    LoginPage.login(userNegativeData.emailWrong, admin.password);
     browser.waitUntil( () => LoginPage.errorMessageCloseBtn.isDisplayed());
   });
 
   it('TC should enter wrong password', () => {
-    LoginPage.login(admin.email, userNegativeData.passwordInvalid);
+    LoginPage.login(admin.email, userNegativeData.passwordWrong);
     browser.waitUntil( () => LoginPage.errorMessageCloseBtn.isDisplayed());
   });
 
   it('TC should enter wrong email and password', () => {
-    LoginPage.login(userNegativeData.emailInvalid, userNegativeData.passwordInvalid);
+    LoginPage.login(userNegativeData.emailWrong, userNegativeData.passwordWrong);
     browser.waitUntil( () => LoginPage.errorMessageCloseBtn.isDisplayed());
   });
 

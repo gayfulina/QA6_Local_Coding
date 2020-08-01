@@ -1,5 +1,4 @@
 import LoginPage from '../../../pageObjects/login.page';
-//const login = require('../testData/expected.json').login;
 import ProfilePage from '../../../pageObjects/profile.page';
 import { WAIT_TIME_MEDIUM, WAIT_TIME_LONGEST } from '../../../testData/waitTimes';
 import user from '../../../testData/user';

@@ -50,11 +50,11 @@ describe('ALL ELEMENTS IS PRESENT CORRECTLY', () => {
   });
 
   it('TC-003-10 Label of Confirm New password IF = Confirm new password', function () {
-    expect(SettingsPassword.confirmNewPasswordLabel.getText()).eq(expected.settingsPasswordData['TC-003-10-oldPasswordLabel']);
+    expect(SettingsPassword.confirmNewPasswordLabel.getText()).eq(expected.settingsPasswordData['TC-003-10-confirmNewPasswordLabel']);
   });
 
   it('TC-003-11 Update password button = Update Password', function () {
-    expect(SettingsPassword.updatePasswordButton.getText()).eq(expected.settingsPasswordData['TC-003-11-oldPasswordLabel']);
+    expect(SettingsPassword.updatePasswordButton.getText()).eq(expected.settingsPasswordData['TC-003-11-updatePasswordButton']);
   });
 
   it('TC-003-12 Update password button is disabled by default', function () {

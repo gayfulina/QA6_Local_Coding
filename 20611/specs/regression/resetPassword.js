@@ -1,8 +1,6 @@
 import LoginPage from '../../../pageObjects/login.page';
 import RegistrationPage from '../../../pageObjects/register.page';
 import ResetPasswordPage from '../../../pageObjects/reset.password';
-import ProfilePage from '../../../pageObjects/profile.page';
-import { WAIT_TIME_MEDIUM } from '../../../testData/waitTimes';
 
 const testData = require('../testData/expected.json');
 
