@@ -32,5 +32,10 @@
     "saveBtnText": "Save",
     "successMSG": "User Links updated",
     "errorMSG": ""
+  },
+
+  "termsAndAgreements": {
+    "drawerTitle": "Terms and agreements",
+    "lastModified": "This Agreement was last modified on 05/22/2020"
   }
 }
