@@ -26,7 +26,7 @@ describe('New user registration page', () => {
   });
 
   describe('LOGIN LEARNER', function () {
-    it('should Successful login as a learner', () => {
+    it('should Successfuly login as a learner', () => {
       LoginPage.validLogin(user.learner.email, user.learner.password);
       ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
       expect(ProfilePage.getLoginConfirmation()).eq(user.learner.firstName + ' ' + user.learner.lastName);

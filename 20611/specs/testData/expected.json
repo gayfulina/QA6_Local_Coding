@@ -9,11 +9,11 @@
   },
   "login": {
     "header": "Welcome back!",
-    "emailInput": "Email",
-    "passwordInput": "Password",
-    "registerLink": "Create one",
-    "resetLink": "Reset it",
-    "loginBtn": "Log in"
+    "email": "Email",
+    "password": "Password",
+    "noAccount": "Don't have an account?",
+    "newAccount": "Create one.",
+    "forgotPassword": "Forgot your password?"
   },
   "correctEmail": {
     "email": "test@qa6.us"
@@ -31,5 +31,15 @@
 
   "text": {
     "headerText": "Welcome back!"
-}
+},
+
+  "registrationPage2": {
+    "title": "Dear \nPlease complete these fields",
+    "countryLabel": "Country:",
+    "countryInputField": "United States",
+    "phoneLabel": "Phone:",
+    "submitBtn": "Submit",
+    "skipLink": "Skip"
+
+  }
 }
