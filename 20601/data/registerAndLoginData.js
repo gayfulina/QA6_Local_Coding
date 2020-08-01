@@ -1,3 +1,5 @@
+const faker = require('faker');
+
 const email = Math.random().toFixed(6) + '@gmail.com';
 
 const textStep1 = {
@@ -11,6 +13,8 @@ const textStep2 = {
 
 const textLogin = {
   header: 'Welcome back!',
+  email: 'Email',
+  password: 'Password'
 };
 
 const data = {
@@ -30,4 +34,13 @@ const Admin = {
   passwordAdmin: '123123',
 };
 
-export { textStep1, textLogin, textStep2, userStep2, Admin, data };
+const newUser = {
+  firstName: faker.name.firstName,
+  lastName: faker.name.lastName,
+  email: faker.internet.email,
+  password: faker.nternet.password,
+  phone: faker.phone.phoneNumber
+}
+
+
+export { textStep1, textLogin, textStep2, userStep2, Admin, data, newUser };
