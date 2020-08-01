@@ -1,9 +1,7 @@
 import LoginPage from '../../../pageObjects/login.page';
 import ProfilePage from '../../../pageObjects/profile.page';
 import TopMenuPage from '../../../pageObjects/topMenu.page';
-import {admin} from '../../../testData/user.js';
-import {learner} from '../../../testData/user.js';
-import {student} from '../../../testData/user.js';
+import user from '../../../testData/user';
 import {WAIT_TIME_SHORT} from '../../../testData/waitTimes';
 
 describe('LOGIN FUNCTIONALITY', function() {
@@ -12,24 +10,31 @@ describe('LOGIN FUNCTIONALITY', function() {
     LoginPage.open();
   });
 
+  it('should verify that user can login as NEW USER', function() {
+    LoginPage.open();
+    LoginPage.login(user.new.email, user.new.password);
+    TopMenuPage.userAvatarName.waitForDisplayed({WAIT_TIME_SHORT});
+    expect((ProfilePage.headerProfile).getText()).eq(user.new.firstName + ' ' + user.new.lastName);
+  });
+
   it('should verify that user can login as ADMIN', function() {
     LoginPage.open();
-    LoginPage.login(admin.email, admin.password);
+    LoginPage.login(user.admin.email, user.admin.password);
     TopMenuPage.userAvatarName.waitForDisplayed({WAIT_TIME_SHORT});
-    expect((ProfilePage.headerProfile).getText()).eq(admin.firstName + ' ' + admin.lastName);
+    expect((ProfilePage.headerProfile).getText()).eq(user.admin.firstName + ' ' + user.admin.lastName);
   });
 
   it('should verify that user can login as LEARNER', function() {
     LoginPage.open();
-    LoginPage.login(learner.email, learner.password);
+    LoginPage.login(user.learner.email, user.learner.password);
     TopMenuPage.userAvatarName.waitForDisplayed({WAIT_TIME_SHORT});
-    expect((ProfilePage.headerProfile).getText()).eq(learner.firstName + ' ' + learner.lastName);
+    expect((ProfilePage.headerProfile).getText()).eq(user.learner.firstName + ' ' + user.learner.lastName);
   });
 
   it('should verify that user can login as STUDENT', function() {
     LoginPage.open();
-    LoginPage.login(student.email, student.password);
+    LoginPage.login(user.student.email, user.student.password);
     TopMenuPage.userAvatarName.waitForDisplayed({WAIT_TIME_SHORT});
-    expect((ProfilePage.headerProfile).getText()).eq(student.firstName + ' ' + student.lastName);
+    expect((ProfilePage.headerProfile).getText()).eq(user.student.firstName + ' ' + user.student.lastName);
   });
 });

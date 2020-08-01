@@ -1,6 +1,18 @@
 {
   "newUser": {
-    "h1": "Create an account"
+    "h1": "Create an account",
+    "firstNamePlaceholder": "First Name",
+    "lastNamePlaceholder": "Last Name",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password",
+    "promptText": "Already have an account? Just click Log in."
+  },
+
+  "errorMsgs": {
+    "fieldErrorRequired": "Required",
+    "emailInvalidInput": "dasv",
+    "emailInvalidInputErrorMsg": "'email' is not a valid email"
+
   },
 
   "newUserStep2": {
@@ -15,6 +27,7 @@
   "userBadges": {
     "admin": "admin",
     "learner": "learner",
-    "student": "student"
+    "student": "student",
+    "new": "new"
   }
 }

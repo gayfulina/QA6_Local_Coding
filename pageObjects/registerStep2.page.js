@@ -14,8 +14,16 @@ class RegisterStep2Page extends BasePage {
     return $$('.ant-select-item-option-content')[2];
   }
 
+  get countryCurrent(){
+    return $('.ant-select-selection-item');
+  }
+
   get phoneNumber() {
     return $('#user_login_phone');
+  }
+
+  get phoneNumberPrefix(){
+    return $('.ant-input-prefix');
   }
 
   get SubmitBtn() {

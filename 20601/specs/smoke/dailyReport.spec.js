@@ -1,7 +1,9 @@
 import DailyReportsPage from '../../../pageObjects/dailyReports.page';
 import user from '../../../testData/user';
 import LoginPage from '../../../pageObjects/login.page';
-import { textProfile } from '../../data/profile.data';
+//import { textProfile } from '../../data/profile.data';
+import randomData from '../../data/daily.data';
+import { textHome } from '../../data/home.data';
 
 describe('DAILY REPORT CREATED', () => {
   before(() => {
@@ -10,8 +12,7 @@ describe('DAILY REPORT CREATED', () => {
   });
 
   it('should Create daily report', function () {
-    DailyReportsPage.createDayReport();
-    DailyReportsPage.lastDailyReportText.waitForDisplayed();
-    expect(DailyReportsPage.lastDailyReportText.getText()).eq(textProfile.howWasYourDayText);
+    DailyReportsPage.createRandomDayReport();
+    expect(DailyReportsPage.lastDailyReportText.getText()).eq(randomData.text);
   });
 });
