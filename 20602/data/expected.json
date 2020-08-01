@@ -8,15 +8,15 @@
     "header": "Welcome back!"
   },
   "homePageData": {
-    "header": "Local Coding community"
+    "header": "Adaptive learning platform"
   },
 
   "settingsPasswordData": {
     "TC-003-08-oldPasswordLabel": "Old password",
     "TC-003-09-newPasswordLabel": "New password",
-    "TC-003-10-oldPasswordLabel": "Confirm new password",
-    "TC-003-11-oldPasswordLabel": "Update password"
-  }
+    "TC-003-10-confirmNewPasswordLabel": "Confirm new password",
+    "TC-003-11-updatePasswordButton": "Update Password"
+  },
 
 "linksPageData": {
     "resumeLink": "https://docs.google.com/document/d/10YxY2G35iNST-Ht1qWY-DWYRUiZtWlR4mFoE-cNZrjM/edit#",
