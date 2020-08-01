@@ -97,7 +97,6 @@ describe('REGISTER USER - NEGATIVE', () => {
     browser.waitUntil(() => ResetPasswordPage.errorMessage.isDisplayed());
   });
 
-
   it('should check that by deleting data in the First Name field (making it empty) message ""Required" will appear under the field', () => {
     browser.refresh();
     RegisterPage.firstNameInput.setValue(userNegativeData.oneLetterInvalidName);

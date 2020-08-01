@@ -14,5 +14,9 @@ const invalidFirstNameData = ['Henry1111', 'aaaaaaaaaaaaaaaaaaaaa', '111111','  
 const invalidLastNameData = ['222222', 'White2222', 'bbbbbbbbbbbbbbbbbbb', '          ', '!@#$%^^/-', 'White White'];
 const invalidEmailData = ['#@%^%#$@#$@#.com', '@example.com', 'email.@example.com', 'あいうえお@example.com', 'email@111.222.333.44444', 'Abc..123@example.com'];
 
-export {userNegativeData, invalidFirstNameData, invalidLastNameData, invalidEmailData};
+const userStep2NegativeData = {
+    invalidPhoneNumber: '1',
+    symbolsInvalidPhoneNumber: "$$$$$$$$$$$"
+}
+export {userNegativeData, invalidFirstNameData, invalidLastNameData, invalidEmailData, userStep2NegativeData};
 
