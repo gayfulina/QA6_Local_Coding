@@ -8,15 +8,15 @@ describe('New user registration page', () => {
     RegisterPage.open();
   });
 
-  it('Check if user is able to move to Register Step 2 page', function() {
+  it('Check if user is able to move to Register Step 2 page', function () {
     RegisterPage.registerUser(user);
     expect(RegisterPageStep2.headerRegisterStep2.getText()).eq(
       `Dear ${user.firstName} ${user.lastName}!\nPlease complete these fields`,
     );
   });
-  it('Check if user is able to complete the registration process', function() {
+
+  it('Check if user is able to complete the registration process', function () {
     RegisterPageStep2.registerUserStep2(user);
     expect(Profile.getLoginConfirmation()).eq(`${user.firstName} ${user.lastName}`);
   });
-
 });
