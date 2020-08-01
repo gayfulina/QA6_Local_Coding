@@ -3,8 +3,8 @@ const userNegativeData = {
     email30Symbols: 'aaaaa@aaaaa.aaaaaaaaaaaaaaaaaa',
     incorrectEmail: 'admin@qa6.usasdfghjkl',
     password30Symbols: '123456789012345678901234567890',
-    emailInvalid: 'invalid@email.com',
-    passwordInvalid: 'invalidPassword',
+    emailWrong: 'wrong@email.com',
+    passwordWrong: 'wrongPassword',
     invalidPassword: '1111',
     firstNameInvalid:  '!@#$%^^/-',
     oneLetterInvalidName: 'a'

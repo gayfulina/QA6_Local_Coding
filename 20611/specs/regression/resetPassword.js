@@ -11,23 +11,23 @@ describe('CHECK RESET PASSWORD PAGE', () => {
     ResetPasswordPage.open();
   });
 
-  it('should Send the request to reset Password', function () {
-    ResetPasswordPage.requestLinkToResetPassword(testData.correctEmail.email);
-  });
-
-  it('should Check the invalid request', function () {
-    browser.refresh();
-    expect(ResetPasswordPage.invalidRequest(testData['incorrectEmail'].email)).eq(testData['error'].errorMessage);
-  });
-
-  it('should Check the link to Register Page', function () {
-    ResetPasswordPage.goToRegisterPage();
-    expect(RegistrationPage.headerRegister.getText()).eq(testData.header.headerRegister);
-  });
-
-  it('should Check the link to Login Page', function () {
-    ResetPasswordPage.open();
-    ResetPasswordPage.goToLoginPage();
-    expect(LoginPage.getLogoutConfirmation()).eq(testData.text.headerText);
-  });
+  // it('should Send the request to reset Password', function () {
+  //   ResetPasswordPage.requestLinkToResetPassword(testData.correctEmail.email);
+  // });
+  //
+  // it('should Check the invalid request', function () {
+  //   browser.refresh();
+  //   expect(ResetPasswordPage.invalidRequest(testData['incorrectEmail'].email)).eq(testData['error'].errorMessage);
+  // });
+  //
+  // it('should Check the link to Register Page', function () {
+  //   ResetPasswordPage.goToRegisterPage();
+  //   expect(RegistrationPage.headerRegister.getText()).eq(testData.header.headerRegister);
+  // });
+  //
+  // it('should Check the link to Login Page', function () {
+  //   ResetPasswordPage.open();
+  //   ResetPasswordPage.goToLoginPage();
+  //   expect(LoginPage.getLogoutConfirmation()).eq(testData.text.headerText);
+  // });
 });
