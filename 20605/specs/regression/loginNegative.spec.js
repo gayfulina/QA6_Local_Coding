@@ -32,7 +32,7 @@ describe('LOGIN PAGE (NEGATIVE SCENARIOS)', function() {
     LoginPage.errorMessageCloseBtn.waitForDisplayed({ timeout: WAIT_TIME_SHORT });
     expect(LoginPage.errorMessageCloseBtn.isDisplayed()).true;
   });
-  it('user is not able to log in with valid email and epmty password field', function() {
+  it('user is not able to log in with valid email and empty password field', function() {
     LoginPage.login(admin.email, emptyField);
     expect(LoginPage.loginBtn.isEnabled()).false;
   });

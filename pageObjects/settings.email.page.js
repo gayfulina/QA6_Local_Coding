@@ -1,6 +1,10 @@
 import BasePage from './Base.page';
+import { newUser } from '../20610/data/fakeData';
 
 class SettingsEmailPage extends BasePage {
+  get emailTab() {
+    return $$('.ant-menu-item')[2];
+  }
 
   get oldEmailTitle() {
     return $('//label[@for="oldEmail"]');
@@ -30,6 +34,12 @@ class SettingsEmailPage extends BasePage {
     return $('//button[@type="submit"]');
   }
 
+  updateEmail(email, newEmail){
+    this.oldEmailField.setValue(email);
+    this.newEmailField.setValue(newEmail);
+    this.confirmEmailField.setValue(newEmail);
+    this.submitButton.click();
+  }
 }
 
 export default new SettingsEmailPage();
