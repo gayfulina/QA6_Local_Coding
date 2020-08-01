@@ -13,9 +13,12 @@ describe('LOGIN', () => {
     expect(LoginPage.headerLogin.getText()).contains(textLogin.header);
   });
 
-  it('should ', function() {
-    
+  it('TC-006 verify that placeholder of Email Field is "Email!"', function() {
+    expect(LoginPage.inputUsername.getAttribute('placeholder')).eq(textLogin.email);
   });
 
+  it('TC-007 verify that placeholder of Password Field is "Password!"', function() {
+    expect(LoginPage.inputUsername.getAttribute('placeholder')).eq(textLogin.password);
+  });
 
 });
