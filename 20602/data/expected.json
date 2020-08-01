@@ -16,6 +16,7 @@
     "TC-003-09-newPasswordLabel": "New password",
     "TC-003-10-confirmNewPasswordLabel": "Confirm new password",
     "TC-003-11-updatePasswordButton": "Update Password"
+
   },
 
 "linksPageData": {
@@ -32,5 +33,13 @@
     "saveBtnText": "Save",
     "successMSG": "User Links updated",
     "errorMSG": ""
+  },
+
+  "termsAndAgreements": {
+    "drawerTitle": "Terms and agreements",
+    "lastModified": "This Agreement was last modified on 05/22/2020"
   }
+
+
+
 }

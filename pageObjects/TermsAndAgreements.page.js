@@ -30,4 +30,3 @@ class TermsAndAgreementsPage extends BasePage {
   }
 }
 export default new TermsAndAgreementsPage();
-
