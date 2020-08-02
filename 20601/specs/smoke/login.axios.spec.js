@@ -28,7 +28,7 @@ describe('LOGIN', () => {
   it('API check the new user', async () => {
     const arr = await axios({
       method: 'get',
-      url: `${host}/user/email/${newUser.email}`,
+      url: `${host}/user/email/${newRole.email}`,
       headers: {
         Authorization: token,
       },
@@ -36,12 +36,12 @@ describe('LOGIN', () => {
       .then(res => res.data)
       .catch(err => err.response.data);
     console.log(arr);
-    expect(arr.payload.name).eq(`${newUser.firstName} ${newUser.lastName}`);
+    expect(arr.payload.name).eq(`${newRole.firstName} ${newRole.lastName}`);
   });
   after(async () => {
     const delUser = await axios({
       method: 'delete',
-      url: `${host}/user/email/${newUser.email}`,
+      url: `${host}/user/email/${newRole.email}`,
       headers: {
         Authorization: token,
       },

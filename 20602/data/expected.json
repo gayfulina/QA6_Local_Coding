@@ -15,8 +15,10 @@
     "TC-003-08-oldPasswordLabel": "Old password",
     "TC-003-09-newPasswordLabel": "New password",
     "TC-003-10-confirmNewPasswordLabel": "Confirm new password",
-    "TC-003-11-updatePasswordButton": "Update Password"
-
+    "TC-003-11-updatePasswordButton": "Update Password",
+    "TC-003-17-18-19-TypeInput": "text",
+    "TC-003-21-popUpMsg": "User Settings Update: Error",
+    "TC-003-24-errorMsg": "New passwords do not match."
   },
 
 "linksPageData": {
