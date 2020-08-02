@@ -62,6 +62,34 @@ class ProfilePage extends BasePage {
     return $("//button[@class='ant-drawer-close']");
   }
 
+  // get resumeIcon() {
+  //   return $('//a[@class="mr-3"]');
+  // }
+
+  get resumeIcon() {
+    return $("//div[@class='ant-row mb-3']//a[contains(@href, 'doc')]");
+  }
+
+  get FacebookIcon() {
+    return $("//div[@class='ant-row mb-3']//a[contains(@href, 'facebook')]");
+  }
+
+  get LinkedInIcon() {
+    return $("//div[@class='ant-row mb-3']//a[contains(@href, 'linkedin')]");
+  }
+
+  get GitHubIcon() {
+    return $("//div[@class='ant-row mb-3']//a[contains(@href, 'github')]");
+  }
+
+  get CodewarsIcon() {
+    return $("//div[@class='ant-row mb-3']//a[contains(@href, 'codewars')]");
+  }
+
+  get profile() {
+    return $$('.ant-dropdown-menu-item')[0];
+  }
+
   get settingsLink() {
     return $$('.ant-dropdown-menu-item')[1];
   }
@@ -80,6 +108,11 @@ class ProfilePage extends BasePage {
     this.dropDownUserMenu.click();
     this.logoutLink.click();
   }
+
+  resumeDoc() {
+    this.resumeIcon.getAttribute('href');
+  }
+
 }
 
 export default new ProfilePage();
