@@ -44,8 +44,16 @@ class LoginPage extends BasePage {
     return $('a[href="/user/password/reset"]');
   }
 
+  get errorMessage() {
+    return $('.ant-notification-notice');
+  }
+
   get errorMessageCloseBtn() {
     return $('.ant-notification-notice-close');
+  }
+
+  get errorMessageRedCircle() {
+    return $('.anticon-close-circle');
   }
 
   get txtCreateOne() {
@@ -53,7 +61,7 @@ class LoginPage extends BasePage {
   }
 
   get txtResetIt() {
-    return $$('//div[@class="ant-form-item-control-input-content"]/p')[1]
+    return $$('//div[@class="ant-form-item-control-input-content"]/p')[1];
   }
 
   get txtEmailNotValid() {

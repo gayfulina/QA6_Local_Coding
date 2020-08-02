@@ -116,50 +116,72 @@ describe('TEST LOGIN PAGE EMAIL, PASSWORD NOTES', () => {
 
   it('TC-01-021 Verify that when Email is invalid the text "emai is not a valid email" appears', function () {
     LoginPage.inputUsername.setValue('asd');
-    browser.pause(1000);
     expect(LoginPage.txtEmailNotValid.getText()).eq("'email' is not a valid email");
   });
 
   it('TC-01-022 Verify that when Email was deleted text "Required" appears', function () {
     LoginPage.inputUsername.clearValue();
-    browser.pause(2000);
-    expect(LoginPage.txtEmailNotValid.getText).eq('Required');
+    expect(LoginPage.txtEmailNotValid.getText()).eq('Required');
   });
 
   it('TC-01-023 Verify that after entering valid Email button "Log in" is still inactive', function () {
-    expect(true).true;
+    LoginPage.open();
+    LoginPage.inputUsername.setValue('abc@gmail.com');
+    expect(LoginPage.loginBtn.isClickable()).false;
   });
 
   it('TC-01-024 Verify that when Password was deleted text "Required" appears', function () {
-    expect(true).true;
+    LoginPage.inputPassword.setValue('1234');
+    browser.pause(1000);
+    LoginPage.inputPassword.clearValue();
+    browser.pause(1000);
+    expect(LoginPage.txtEmailNotValid.getText()).eq('Required');
   });
 
   it('TC-01-025 Verify that when valid email and password is entered button "Log in" is active', function () {
-    expect(true).true;
+    LoginPage.open();
+    LoginPage.inputUsername.setValue('abc@gmail.com');
+    LoginPage.inputPassword.setValue('1234')
+    expect(LoginPage.loginBtn.isClickable()).true;
   });
 
-  it('TC-01-026 Verify that if Email is not right Error Notification pops up', function () {
-    expect(true).true;
-  });
 });
 
 
 describe('OTHERS', () => {
+  before(() => {
+    LoginPage.open();
+  });
+
+  it('TC-01-026 Verify that if Email is not right Error Notification pops up', function () {
+    LoginPage.inputUsername.setValue('new@qa6.us');
+    LoginPage.inputPassword.setValue('1234')
+    LoginPage.loginBtn.click();
+    browser.pause(1000)
+    expect(LoginPage.errorMessage.isDisplayed()).true;
+  });
 
   it('TC-01-027 Verify that if Password is not right Error Notification pops up', function () {
-    expect(true).true;
+    LoginPage.open();
+    LoginPage.inputUsername.setValue('new@qa66.us');
+    LoginPage.inputPassword.setValue('newnew')
+    LoginPage.loginBtn.click();
+    browser.pause(1000)
+    expect(LoginPage.errorMessage.isDisplayed()).true;
   });
 
   it('TC-01-028 Verify that Error Notification has text "Auth failed"', function () {
-    expect(true).true;
+    expect(LoginPage.errorMessage.getText()).eq('Auth failed');
   });
 
   it('TC-01-029 Verify that Error Notification has red circle icon', function () {
-    expect(true).true;
+    expect(LoginPage.errorMessageRedCircle.isDisplayed()).true;
   });
 
   it('TC-01-030 Verify that Error Notification disappears when press sign "X"', function () {
-    expect(true).true;
+    LoginPage.errorMessageCloseBtn.click();
+    browser.pause(1000);
+    expect(LoginPage.errorMessage.isDisplayed()).false;
   });
 });
 
