@@ -64,3 +64,84 @@ describe('TC-005 LINKS TAB ELEMENTS ARE PRESENT AND DISPLAYED CORRECTLY', () => 
   });
 
 })
+
+describe('TC-005 LINKS TAB ELEMENTS ACCEPT CORRECT INPUT AND SAVE CHANGES', () => {
+
+  it('#13 Links Resume Input accepts and saves data', function() {
+
+    const inputRes = expected.linksPageData.resumeLink;
+
+    LinksPage.resumeField.setValue(inputRes);
+    LinksPage.saveLinks();
+    ProfilePage.dropDownUserMenu.click();
+    ProfilePage.profile.click();
+    expect(ProfilePage.resumeIcon.getAttribute("href")).include(expected.linksPageData.resumeLink);
+  });
+
+// BUG: Message should appear:  "User Links updated"
+
+  it('#14 Links Facebook Input accepts and saves data', function() {
+
+    const inputFacebook = expected.linksPageData.Facebook;
+
+    ProfilePage.dropDownUserMenu.click();
+    TopMenuPage.dropDownMenuSettings.click();
+    LinksPage.linksTab.click();
+
+    LinksPage.facebookField.setValue(inputFacebook);
+    LinksPage.saveLinks();
+    ProfilePage.dropDownUserMenu.click();
+    ProfilePage.profile.click();
+
+    expect(ProfilePage.FacebookIcon.getAttribute("href")).include(inputFacebook);
+  });
+
+  it('#15 Links LinkedIn Input accepts and saves data', function() {
+
+    const inputLin = expected.linksPageData.LinkedIn;
+
+    ProfilePage.dropDownUserMenu.click();
+    TopMenuPage.dropDownMenuSettings.click();
+    LinksPage.linksTab.click();
+
+    LinksPage.linkedInField.setValue(inputLin);
+    LinksPage.saveLinks();
+    ProfilePage.dropDownUserMenu.click();
+    ProfilePage.profile.click();
+
+    expect(ProfilePage.LinkedInIcon.getAttribute("href")).include(inputLin);
+  });
+
+  it('#16 Links GitHub Input accepts and saves data', function() {
+
+    const inputGitHub = expected.linksPageData.GitHub;
+
+    ProfilePage.dropDownUserMenu.click();
+    TopMenuPage.dropDownMenuSettings.click();
+    LinksPage.linksTab.click();
+
+    LinksPage.gitHubField.setValue(inputGitHub);
+    LinksPage.saveLinks();
+    ProfilePage.dropDownUserMenu.click();
+    ProfilePage.profile.click();
+
+    expect(ProfilePage.GitHubIcon.getAttribute("href")).include(inputGitHub);
+  });
+
+  it('#17 Links Codewars Input accepts and saves data', function() {
+
+    const inputCodewars = expected.linksPageData.Codewars;
+
+    ProfilePage.dropDownUserMenu.click();
+    TopMenuPage.dropDownMenuSettings.click();
+    LinksPage.linksTab.click();
+
+    LinksPage.codewarsField.setValue(inputCodewars);
+    LinksPage.saveLinks();
+    ProfilePage.dropDownUserMenu.click();
+    ProfilePage.profile.click();
+
+    expect(ProfilePage.CodewarsIcon.getAttribute("href")).include(inputCodewars);
+  });
+
+})
