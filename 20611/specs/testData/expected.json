@@ -48,5 +48,17 @@
     "submitBtn": "Submit",
     "skipLink": "Skip"
 
+  },
+
+  "profile": {
+    "paragraph1": "About",
+    "paragraph2": "Goals",
+    "paragraph3": "Completed Codewars Katas",
+    "paragraph4": "Daily reports0",
+    "updateListBtn": "Update List",
+    "createDayReportBtn": "Create day report",
+    "contactUsLink": "contact us.",
+    "termsOfServiceLink": "Terms of Service",
+    "privacyPolicyLink": "Privacy Policy"
   }
 }

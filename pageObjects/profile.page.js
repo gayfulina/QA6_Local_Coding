@@ -23,7 +23,15 @@ class ProfilePage extends BasePage {
   }
 
   get goalsText() {
-    return $('h3');
+    return $$('h3')[1];
+  }
+
+  get aboutText() {
+    return $$('h3')[0];
+  }
+
+  get completedCodeWarsText() {
+    return $$('h3')[2];
   }
 
   get goalsAchievementsLink() {
@@ -94,7 +102,7 @@ class ProfilePage extends BasePage {
     return $$('.ant-dropdown-menu-item')[1];
   }
 
-    createDayReport() {
+  createDayReport() {
     this.createDayReportBtn.click();
     this.createDayReportBtnClose.waitForClickable({ timeout: WAIT_TIME_MEDIUM });
     this.createDayReportBtnClose.click();
@@ -112,7 +120,6 @@ class ProfilePage extends BasePage {
   resumeDoc() {
     this.resumeIcon.getAttribute('href');
   }
-
 }
 
 export default new ProfilePage();
