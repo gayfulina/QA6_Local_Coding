@@ -28,10 +28,10 @@ describe(' USER REGISTER STEP 2 - NEGATIVE', () => {
     expect(RegisterStep2Page.SubmitBtn.isEnabled()).eq(false)
   });
 
-  it('should check is displayed the correct error message when symbols are entered into the Phone field', () => {
+  it('should check that the correct error message "This entry must only contain numbers" is displayed when symbols are entered into the Phone field', () => {
     browser.refresh()
     RegisterStep2Page.phoneNumber.setValue(userStep2NegativeData.symbolsInvalidPhoneNumber);
-    expect( RegisterPage.inputFieldErrorMessages[0].getText()).eq(errorMessagesSRegisterStep2Page.symbolPhoneNumberErrorMessage);
+    browser.waitUntil(() => RegisterPage.inputFieldErrorMessages[0].getText() === errorMessagesSRegisterStep2Page.symbolPhoneNumberErrorMessage );
   });
 
 });
