@@ -18,7 +18,14 @@
     "TC-003-011-updatePasswordButton": "Update Password",
     "TC-003-017-08-019-TypeInput": "text",
     "TC-003-021-popUpMsg": "User Settings Update: Error",
-    "TC-003-024-errorMsg": "New passwords do not match."
+    "TC-003-025-errorMsg": "New passwords do not match."
+  },
+
+  "userBadges": {
+    "admin": "admin",
+    "learner": "learner",
+    "student": "student",
+    "new": "new"
   },
 
 "linksPageData": {
