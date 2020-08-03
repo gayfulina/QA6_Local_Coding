@@ -3,7 +3,7 @@ import { WAIT_TIME_MEDIUM } from '../testData/waitTimes';
 
 class ProfilePage extends BasePage {
   get headerProfile() {
-    return $('h1');
+    return $('//div[@class="ant-col ant-col-24"]//h1');
   }
 
   get badgeRole() {
@@ -114,6 +114,7 @@ class ProfilePage extends BasePage {
 
   logout() {
     this.dropDownUserMenu.click();
+    this.logoutLink.waitForDisplayed({ timeout: WAIT_TIME_MEDIUM });
     this.logoutLink.click();
   }
 
