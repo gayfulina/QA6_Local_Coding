@@ -46,11 +46,29 @@ class SettingsPasswordPage extends BasePage {
     return $('[for="confirmPassword"]');
   }
 
-  updatePassword(password, newPassword){
+  get errorMsgPasswordNotMatch() {
+    return $('.ant-alert-message');
+  }
+
+  get popUpWrongOldPwrd() {
+    return $('.ant-notification-notice-message');
+  }
+
+  get popUpWrongOldPwrdClose() {
+    return $('.anticon-close');
+  }
+
+  updatePassword(password, newPassword) {
     this.oldPasswordInput.setValue(password);
     this.newPasswordInput.setValue(newPassword);
     this.confirmNewPasswordInput.setValue(newPassword);
     this.updatePasswordButton.click();
+  }
+
+  updatePasswordNegative(password, newPassword, confirmNewPassword) {
+    this.oldPasswordInput.setValue(password);
+    this.newPasswordInput.setValue(newPassword);
+    this.confirmNewPasswordInput.setValue(confirmNewPassword);
   }
 }
 
