@@ -5,7 +5,7 @@ const lastName = faker.name.lastName();
 const email = faker.internet.email();
 const password = faker.internet.password();
 const phone = 9165338877;
-const registerNew = {
+const registerNew ={
   firstName,
   lastName,
   email,

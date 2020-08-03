@@ -4,7 +4,7 @@ import {registerNew} from '../../testData/register_new';
 import ProfilePage from '../../../pageObjects/profile.page';
 before(() => {
   RegisterPage.open();
-  browser.maximizeWindow()
+  browser.maximizeWindow();
 });
 describe('REGISTER NEW USER POSITIVE skip second page',function() {
   it('TC-02 Register New User ', function() {
