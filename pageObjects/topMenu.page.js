@@ -9,6 +9,10 @@ class TopMenuPage extends BasePage {
     return $('.site-name');
   }
 
+  get baseLink() {
+    return $('[href="/base"]');
+  }
+
   get coursesLink() {
     return $('[href="/course"]');
   }
@@ -37,8 +41,12 @@ class TopMenuPage extends BasePage {
     return $('[href="/telephony"]');
   }
 
+  get shopLink() {
+    return $('[href="/shop"]');
+  }
+
   get ordersLink() {
-    return $('[href="/orders"]');
+    return $('[href="/admin-order"]');
   }
 
   get coinImg() {
@@ -62,15 +70,19 @@ class TopMenuPage extends BasePage {
   }
 
   get dropDownMenuProfile() {
-    return $$('.ant-dropdown-menu-item-only-child');
+    return $('//a[contains(@href,"profile")]');
   }
 
   get dropDownMenuSettings() {
-    return $$('.ant-dropdown-menu-item-only-child')[1];
+    return $('//a[contains(@href,"settings")]');
+  }
+
+  get dropDownMenuOrders() {
+    return $('//a[contains(@href,"orders")]');
   }
 
   get dropDownMenuLogOut() {
-    return $$('.ant-dropdown-menu-item-only-child')[2];
+    return $$('.ant-dropdown-menu-item-only-child')[3];
   }
 
   get loginLink() {
@@ -80,6 +92,7 @@ class TopMenuPage extends BasePage {
   get registerLink() {
     return $('[href="/user/register"]');
   }
+
 
   get headerChallenge() {
     return $('.h4.mr-4');
