@@ -10,3 +10,4 @@ export const newUser = {
   newPassword: "PASV" + Math.trunc(new Date().getTime() / 1000) + "&$",
   phone: 2157777577
 };
+

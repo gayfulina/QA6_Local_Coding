@@ -21,7 +21,12 @@
   },
 
   "loginPageHeader": {
-    "h1": "Welcome back!"
+    "h1": "Welcome back!",
+    "siteName": "Local Coding"
+  },
+
+  "resetPassword": {
+    "h1": "Reset password"
   },
 
   "userBadges": {
