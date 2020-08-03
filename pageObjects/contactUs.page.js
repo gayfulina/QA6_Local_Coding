@@ -76,3 +76,4 @@ class ContactUsPage extends BasePage {
 }
 
 export default new ContactUsPage();
+
