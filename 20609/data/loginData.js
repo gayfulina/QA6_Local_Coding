@@ -11,6 +11,14 @@ const textLogin = {
     linkBtnFacebook: 'Sign in with Facebook'
 };
 
-export  { textLogin };
+const loginResetPasswordData = {
+    header: 'Reset password',
+    emailPlaceholder: 'Email',
+    resetBtn: 'Send password reset link',
+    loginLink: 'Login',
+    registerLink: 'Create one'
+};
+
+export  { textLogin, loginResetPasswordData };
 
 
