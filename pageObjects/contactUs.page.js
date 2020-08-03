@@ -70,7 +70,7 @@ class ContactUsPage extends BasePage {
     return $('p');
   }
 
-  open(path) {
+  open() {
     return super.open('/contact');
   }
 }
