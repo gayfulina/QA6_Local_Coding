@@ -4,7 +4,7 @@ const textProfile = {
   moralState: '10 – I am pleased with everything!',
   hoursPerDay: '5',
   howWasYourDayText: 'Today my day was busy. There was a lot of coding practice, quizzes and lectures.',
-  daylyReportsHeaderText: 'Daily reports'
+  dailyReportsHeaderText: 'Daily reports'
 };
 
 export { textProfile };

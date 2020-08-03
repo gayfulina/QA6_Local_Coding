@@ -1,6 +1,14 @@
 {
   "pagesHeaders":
   {
+    "homePageHeader": "Home Page",
+    "contactUsHeader": "Contact us",
+    "privacyPolicyHeader": "PASV Privacy Policy",
+    "RegisterPageHeader": "Create an account",
+    "RegisterStep2PageHeader": "Please complete these fields",
+    "LoginHeader": "Welcome back!",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password",
     "MainPageHeader" : "Adaptive learning platform",
     "CoursesPage": "Courses",
     "Cards": "Flash Cards",
