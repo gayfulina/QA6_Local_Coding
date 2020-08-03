@@ -5,5 +5,14 @@ const newUser = {
   email: `${Math.random().toFixed(10)}@gmail.com`,
   password: 'abc123'
 };
-export {newUser}
+
+const inputRegisterStep1 ={
+  firstLastNameMin: 'A',
+  firstLastNameMax: `${'a'.repeat(20)}`,
+  firstLastName3: 'a\'sssa-',
+  email: 'Asdfgh@mail.us',
+  password: 'Azxcvb@123'
+}
+
+export {newUser, inputRegisterStep1}
 

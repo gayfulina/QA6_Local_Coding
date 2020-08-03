@@ -16,5 +16,12 @@ const registerPageTestResult = {
   registerBtn: 'Register',
   loginPromptLabel: 'Already have an account? Just click',
 };
+const expectedRegisterStep1 = {
+  firstLastNameMin: 'A',
+  firstLastNameMax: `${'a'.repeat(20)}`,
+  firstLastName3: 'a\'sssa-',
+  email: 'Asdfgh@mail.us',
+  password: 'Azxcvb@123'
+}
 
-export { registerPageTestResult };
+export { registerPageTestResult, expectedRegisterStep1 };

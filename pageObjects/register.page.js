@@ -43,6 +43,10 @@ class RegisterPage extends BasePage {
     return $('.anticon-eye-invisible');
   }
 
+  get eyeIconOpen() {
+    return $('.anticon-eye');
+  }
+
   get lockIcon() {
     return $('.anticon-lock');
   }
