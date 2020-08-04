@@ -9,10 +9,6 @@ class TopMenuPage extends BasePage {
     return $('.site-name');
   }
 
-  get BaseLink() {
-    return $('[href="/base"]');
-  }
-
   get coursesLink() {
     return $('[href="/course"]');
   }
@@ -39,6 +35,12 @@ class TopMenuPage extends BasePage {
 
   get telephonyLink() {
     return $('[href="/telephony"]');
+  }
+  get shopLink() {
+    return $('[href="/shop"]');
+  }
+  get adminOrderLink() {
+    return $('[href="/admin-order"]');
   }
 
   get ordersLink() {
