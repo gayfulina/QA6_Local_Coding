@@ -13,12 +13,22 @@ const negativeRegisterStep1 = {
   invalidPassword: '12',
 };
 
-const inputRegisterStep1 ={
-  firstLastNameMin: 'A',
-  firstLastNameMax: `${'a'.repeat(20)}`,
-  firstLastName3: 'a\'sssa-',
-  email: 'Asdfgh@mail.us',
-  password: 'Azxcvb@123'
+const inputRegisterStep1 = {
+    firstLastNameMin: 'A',
+    firstLastNameMax: `${'a'.repeat(20)}`,
+    firstLastName3: 'a\'sssa-',
+    email: 'Asdfgh@mail.us',
+    password: 'Azxcvb@123'
 }
 
-export {newUser, inputRegisterStep1, negativeRegisterStep1}
+const negativeRegisterStep2 = {
+    invalidPhoneNumberMin: `${'5'.repeat(9)}`,
+    invalidPhoneNumberMax: `${'5'.repeat(12)}`,
+    symbolsInvalidPhoneNumber: `${'#'.repeat(10)}`,
+    lettersUppInvalidPhoneNumber: `${'C'.repeat(12)}`,
+    lettersLowerInvalidPhoneNumber: `${'a'.repeat(10)}`,
+    invalidPhoneNumberBackSpace: `${' '.repeat(10)}`,
+    invalidPhoneNumberEmpty: ''
+};
+
+export {newUser, inputRegisterStep1, negativeRegisterStep1, negativeRegisterStep2}
