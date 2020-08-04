@@ -1,7 +1,7 @@
 import BasePage from '../pageObjects/Base.page';
 import ProfilePage from '../pageObjects/profile.page';
 import RegistrationPage from '../pageObjects/register.page';
-import ResetPasswordPage from '../pageObjects/reset.password';
+import ResetPasswordPage from './resetPassword.page';
 
 class LoginPage extends BasePage {
   get headerLogin() {

@@ -1,5 +1,5 @@
 import RegisterPage from '../../../pageObjects/register.page';
-import TermsAndAgreementsPage from '../../../pageObjects/TermsAndAgreements.page';
+import TermsAndAgreementsPage from '../../../pageObjects/termsAndAgreements.page';
 import expected from '../../data/expected.json';
 
 before(() => {

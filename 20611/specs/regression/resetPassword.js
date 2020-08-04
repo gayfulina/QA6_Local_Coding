@@ -1,6 +1,6 @@
 import LoginPage from '../../../pageObjects/login.page';
 import RegistrationPage from '../../../pageObjects/register.page';
-import ResetPasswordPage from '../../../pageObjects/reset.password';
+import ResetPasswordPage from '../../../pageObjects/resetPassword.page';
 
 const testData = require('../testData/expected.json');
 

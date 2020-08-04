@@ -1,7 +1,7 @@
 import LoginPage from '../../../pageObjects/login.page';
 import expected from '../../data/expected.json';
 import RegisterPage from '../../../pageObjects/register.page';
-import ResetPasswordPage from '../../../pageObjects/reset.password';
+import ResetPasswordPage from '../../../pageObjects/resetPassword.page';
 
 before(() => {
   LoginPage.open();
