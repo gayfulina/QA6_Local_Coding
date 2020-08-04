@@ -14,12 +14,12 @@ describe('TOP MENU', () => {
     });
 
     it('should check label is displayed', function () {
-      TopMenuPage.label.isDisplayed().true;
+      TopMenuPage.homePageLink.isDisplayed().true;
     });
 
     it('click on Logo/label go to main page', function () {
       browser.waitUntil(() => TopMenuPage.logo.isClickable());
-      TopMenuPage.label.click();
+      TopMenuPage.homePageLink.click();
       expect(TopMenuPage.headerUniversal.getText()).eq(Expected.MainPageHeader);
     });
   });

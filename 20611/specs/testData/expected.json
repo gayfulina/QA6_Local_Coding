@@ -8,7 +8,8 @@
     "firstName": "First Name",
     "lastName": "Last Name",
     "email": "Email",
-    "password": "Password"
+    "password": "Password",
+    "termsOfAgreement": "Terms and agreements"
   },
   "login": {
     "header": "Welcome back!",
@@ -44,11 +45,12 @@
 
   "registrationPage2": {
     "title": "Dear \nPlease complete these fields",
-    "countryLabel": "Country:",
+    "countryLabel": "Country",
     "countryInputField": "United States",
-    "phoneLabel": "Phone:",
+    "phoneLabel": "Phone",
     "submitBtn": "Submit",
-    "skipLink": "Skip"
+    "skipLink": "Skip",
+    "phonePlaceHolder": "phone number"
 
   },
 

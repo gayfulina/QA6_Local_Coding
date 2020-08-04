@@ -8,7 +8,7 @@ describe('New user registration page', () => {
     RegisterPage.open();
   });
 
-  it('Check if user is able to move to Register Step 2 page', function () {
+  it('TC-017 Check if user is able to move to Register Step 2 page', function () {
     RegisterPage.registerUser(user);
     expect(RegisterPageStep2.headerRegisterStep2.getText()).eq(
       `Dear ${user.firstName} ${user.lastName}!\nPlease complete these fields`,

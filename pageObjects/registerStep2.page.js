@@ -46,19 +46,23 @@ class RegisterStep2Page extends BasePage {
   }
 
   get closeBtn() {
-    return $('button[aria-label="Close"]');
+      return $('button[aria-label="Close"]');
   }
 
-  get countryLabel() {
-    return $('label[for="user_login_countryName"]');
-  }
+    get countryLabel() {
+        return $('label[for="user_login_countryName"]');
+    }
 
-  get phoneLabel() {
-    return $('label[for="user_login_phone"]');
-  }
-  
-  open(path) {
-    return super.open('user/register-step2');
-  }
+    get phoneLabel() {
+        return $('label[for="user_login_phone"]');
+    }
+
+    get errorMessages() {
+        return $$('.ant-form-item-explain');
+    }
+
+    open(path) {
+        return super.open('user/register-step2');
+    }
 }
 export default new RegisterStep2Page();

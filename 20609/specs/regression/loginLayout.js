@@ -12,15 +12,15 @@ describe('LOGIN', () => {
   });
 
   it('TC-060 should verify link home page is present', function () {
-    expect(TopMenuPage.label.isDisplayed()).eq(true);
+    expect(TopMenuPage.homePageLink.isDisplayed()).eq(true);
   });
 
   it('TC-061 should  verify link home page is clickable', function () {
-    expect(TopMenuPage.label.isClickable()).eq(true);
+    expect(TopMenuPage.homePageLink.isClickable()).eq(true);
   });
 
   it('TC-062 should verify link home page has right name', function () {
-    expect(TopMenuPage.label.getText()).eq(textLogin.linkLocalCoding);
+    expect(TopMenuPage.homePageLink.getText()).eq(textLogin.linkLocalCoding);
   });
 
   it('TC-063 should verify icon mail is present', function () {

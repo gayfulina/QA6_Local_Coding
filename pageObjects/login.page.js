@@ -8,6 +8,10 @@ class LoginPage extends BasePage {
     return $('h1');
   }
 
+  get siteName(){
+    return $('.site-name');
+  }
+
   get inputUsername() {
     return $('#normal_login_email');
   }
