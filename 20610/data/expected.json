@@ -20,8 +20,15 @@
     "h5secondPart": "\nPlease complete these fields"
   },
 
-  "loginPageHeader": {
-    "h1": "Welcome back!"
+  "loginPage": {
+    "h1": "Welcome back!",
+    "siteName": "Local Coding",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password"
+  },
+
+  "resetPassword": {
+    "h1": "Reset password"
   },
 
   "userBadges": {

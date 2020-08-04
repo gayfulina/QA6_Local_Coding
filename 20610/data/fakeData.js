@@ -14,3 +14,4 @@ export const newUser = {
   shippingCity: faker.address.city(),
   shippingPostalCode: faker.address.zipCode()
 };
+
