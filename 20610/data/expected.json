@@ -75,6 +75,19 @@
     "shortEmail": "g@",
     "dailyReportDifference": 1,
     "": ""
+  },
+
+  "topMenuDashboards": {
+    "courses": "Courses",
+    "cards": "Flash Cards",
+    "diary": "Daily reports",
+    "groups": "Groups",
+    "users": "Users",
+    "challenge": "Challenge",
+    "shop": "Products",
+    "orders": "Orders",
+    "telephony": "Telephony",
+    "achievements": "Achievements"
   }
 }
 
