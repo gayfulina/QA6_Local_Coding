@@ -55,6 +55,39 @@
     "codewarsLink": "",
     "successMessage": "User Links updated",
     "errorMessage": ""
+  },
+
+  "contactUsElementsDisplayed": {
+    "contactUsh1": "Contact us",
+    "textParagraph": "If you have any questions to us, please fill out and submit the following form",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "phonePlaceholder": "Cell phone number '17775551122' ",
+    "messagePlaceholder": "Message",
+    "submitBtn": "Submit",
+    "emptyNameFieldWarning": "Required",
+    "emailError": "'email' is not a valid email",
+    "emptyPhoneFieldWarning": "Required"
+  },
+
+  "ContactUsValues": {
+    "inputNameFieldValue": "Alex",
+    "shortEmail": "g@",
+    "dailyReportDifference": 1,
+    "": ""
+  },
+
+  "topMenuDashboards": {
+    "courses": "Courses",
+    "cards": "Flash Cards",
+    "diary": "Daily reports",
+    "groups": "Groups",
+    "users": "Users",
+    "challenge": "Challenge",
+    "shop": "Products",
+    "orders": "Orders",
+    "telephony": "Telephony",
+    "achievements": "Achievements"
   }
 }
 
