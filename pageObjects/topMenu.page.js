@@ -5,8 +5,12 @@ class TopMenuPage extends BasePage {
     return $$('img')[0];
   }
 
-  get label() {
+  get homePageLink() {
     return $('.site-name');
+  }
+
+  get BaseLink() {
+    return $('[href="/base"]');
   }
 
   get coursesLink() {
