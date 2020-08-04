@@ -1,5 +1,5 @@
 {
- "main" : {
+ "main": {
    "header": "Adaptive learning platform"
  },
   "registration": {
@@ -25,9 +25,11 @@
   "correctEmail": {
     "email": "test@qa6.us"
   },
+
   "incorrectEmail": {
     "email": "qwerty@qwerty.net"
   },
+
   "error": {
     "errorMessage": "User not found"
   },
@@ -60,5 +62,13 @@
     "contactUsLink": "contact us.",
     "termsOfServiceLink": "Terms of Service",
     "privacyPolicyLink": "Privacy Policy"
+  },
+
+  "footer": {
+    "homePageData": "Local Coding community",
+    "footerText": "If you have any questions or concerns, please contact us.\nTerms of Service Privacy Policy",
+    "contactUsPage": "Contact us",
+    "termsOfServicePage": "Terms of Service",
+    "privacyPolicyPage": "PASV Privacy Policy"
   }
 }
