@@ -3,6 +3,7 @@ import LoginPage from "./login.page.js";
 import user from '../testData/user';
 import TopMenuPage from './topMenu.page';
 import users from '../20602/data/users';
+import ProfilePage from './profile.page';
 
 class ShippingAddressPage extends BasePage{
     get fullNameLabel() {
@@ -50,7 +51,7 @@ class ShippingAddressPage extends BasePage{
     }
 
     get postalCodeField() {
-        return $('#stazipCodete');
+        return $('#zipCode');
     }
 
     get contactPhoneLabel() {
@@ -74,7 +75,7 @@ class ShippingAddressPage extends BasePage{
     }
 
     get shippingAddressLink() {
-        return $('a[href="/settings/5f1e82dc303ca500ed657484/delivery"]');
+        return $('//li[text()="Shipping address"]');
     }
 
     get countryValues(){
@@ -88,6 +89,7 @@ class ShippingAddressPage extends BasePage{
     goToShippingAddressPageAsAdmin() {
         LoginPage.open();
         LoginPage.login(user.admin.email, user.admin.password);
+        ProfilePage.dropDownUserMenu.click();
         TopMenuPage.dropDownMenuSettings.click();
         this.shippingAddressLink.click();
     }
