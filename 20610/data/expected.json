@@ -29,5 +29,21 @@
     "learner": "learner",
     "student": "student",
     "new": "new"
+  },
+
+  "linksData": {
+    "resumeText": "Google Doc resume link",
+    "linkedInText": "LinkedIn profile link",
+    "facebookText": "Facebook profile link",
+    "gitHubText": "GitHub profile link",
+    "codewarsText": "Codewars profile link",
+    "saveBtnText": "Save",
+    "resumeLink": "",
+    "linkedInLink": "",
+    "facebookLink": "",
+    "gitHubLink": "",
+    "codewarsLink": "",
+    "successMessage": "User Links updated",
+    "errorMessage": ""
   }
 }
