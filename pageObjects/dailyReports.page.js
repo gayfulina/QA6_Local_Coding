@@ -50,6 +50,10 @@ class DailyReportsPage extends BasePage {
     return $('.ant-row.mb-4');
   }
 
+  get reportQty() {
+    return $('.small.ml-2');
+  }
+
   createRandomDayReport() {
     this.createDayReportBtn.click();
     this.checkbox[randomData.checkbox].click(); // click on random checkboxes
