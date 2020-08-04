@@ -3,7 +3,7 @@ import { newUser } from '../20610/data/fakeData';
 
 class SettingsPasswordPage extends BasePage {
   get passwordTab() {
-    return $$('.ant-menu-item')[1];
+    return $('//li[text()="Password"]');
   }
 
   get oldPasswordInput() {
@@ -46,11 +46,29 @@ class SettingsPasswordPage extends BasePage {
     return $('[for="confirmPassword"]');
   }
 
-  updatePassword(password, newPassword){
+  get errorMsgPasswordNotMatch() {
+    return $('.ant-alert-message');
+  }
+
+  get popUpWrongOldPwrd() {
+    return $('.ant-notification-notice-message');
+  }
+
+  get popUpWrongOldPwrdClose() {
+    return $('.anticon-close');
+  }
+
+  updatePassword(password, newPassword) {
     this.oldPasswordInput.setValue(password);
     this.newPasswordInput.setValue(newPassword);
     this.confirmNewPasswordInput.setValue(newPassword);
     this.updatePasswordButton.click();
+  }
+
+  updatePasswordNegative(password, newPassword, confirmNewPassword) {
+    this.oldPasswordInput.setValue(password);
+    this.newPasswordInput.setValue(newPassword);
+    this.confirmNewPasswordInput.setValue(confirmNewPassword);
   }
 }
 

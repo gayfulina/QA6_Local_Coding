@@ -3,7 +3,7 @@ import { WAIT_TIME_MEDIUM } from '../testData/waitTimes';
 
 class ProfilePage extends BasePage {
   get headerProfile() {
-    return $('h1');
+    return $('//div[@class="ant-col ant-col-24"]//h1');
   }
 
   get badgeRole() {
@@ -23,7 +23,15 @@ class ProfilePage extends BasePage {
   }
 
   get goalsText() {
-    return $('h3');
+    return $$('h3')[1];
+  }
+
+  get aboutText() {
+    return $$('h3')[0];
+  }
+
+  get completedCodeWarsText() {
+    return $$('h3')[2];
   }
 
   get goalsAchievementsLink() {
@@ -62,11 +70,39 @@ class ProfilePage extends BasePage {
     return $("//button[@class='ant-drawer-close']");
   }
 
+  // get resumeIcon() {
+  //   return $('//a[@class="mr-3"]');
+  // }
+
+  get resumeIcon() {
+    return $("//div[@class='ant-row mb-3']//a[contains(@href, 'doc')]");
+  }
+
+  get FacebookIcon() {
+    return $("//div[@class='ant-row mb-3']//a[contains(@href, 'facebook')]");
+  }
+
+  get LinkedInIcon() {
+    return $("//div[@class='ant-row mb-3']//a[contains(@href, 'linkedin')]");
+  }
+
+  get GitHubIcon() {
+    return $("//div[@class='ant-row mb-3']//a[contains(@href, 'github')]");
+  }
+
+  get CodewarsIcon() {
+    return $("//div[@class='ant-row mb-3']//a[contains(@href, 'codewars')]");
+  }
+
+  get profile() {
+    return $$('.ant-dropdown-menu-item')[0];
+  }
+
   get settingsLink() {
     return $$('.ant-dropdown-menu-item')[1];
   }
 
-    createDayReport() {
+  createDayReport() {
     this.createDayReportBtn.click();
     this.createDayReportBtnClose.waitForClickable({ timeout: WAIT_TIME_MEDIUM });
     this.createDayReportBtnClose.click();
@@ -78,7 +114,12 @@ class ProfilePage extends BasePage {
 
   logout() {
     this.dropDownUserMenu.click();
+    this.logoutLink.waitForDisplayed({ timeout: WAIT_TIME_MEDIUM });
     this.logoutLink.click();
+  }
+
+  resumeDoc() {
+    this.resumeIcon.getAttribute('href');
   }
 }
 

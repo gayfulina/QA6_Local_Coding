@@ -1,6 +1,6 @@
 import LoginPage from '../../../pageObjects/login.page';
 import ProfilePage from '../../pageObjects/profile.page';
-import { textLogin, Admin } from '../../data/registerAndLoginData';
+import { textLogin, Admin } from '../../data/fakerData';
 import { textProfile } from '../../data/profile.data';
 
 
@@ -25,7 +25,7 @@ xdescribe('VERIFY SUCCESSFUL LOGIN', () => {
   it('should Create day report', function () {
     ProfilePage.returnToProfilePage()
     ProfilePage.createDayReport();
-    expect(ProfilePage.daylyReportsHeader.getText()).contains(textProfile.daylyReportsHeaderText);
+    expect(ProfilePage.daylyReportsHeader.getText()).contains(textProfile.dailyReportsHeaderText);
   });
 
   xit('should logout from Profile Page and return to the Log In Page', function () {

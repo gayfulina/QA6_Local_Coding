@@ -1,8 +1,7 @@
 import RegisterStep2Page from '../../../pageObjects/register.page';
-import LoginPage from "../../../pageObjects/login.page";
-import ProfilePage from '../../pageObjects/profile.page';
-import { textStep1, userStep1, textStep2, userStep2, textLogin } from '../../data/registerAndLoginData';
-
+import ProfilePage from '../../../pageObjects/profile.page';
+import RegisterPage from '../../../pageObjects/register.page';
+import newUser from '../../data/fakerData';
 
 describe('USER REGISTER STEP2', () => {
   before(() => {
@@ -10,13 +9,17 @@ describe('USER REGISTER STEP2', () => {
   });
 
   it('should populate fields and submit form', () => {
-    RegisterStep2Page.registerUser(data);
-    //expect(ProfilePage.profilePageHeader.getText()).contains(data.firstName);
+    RegisterPage.open();
+    RegisterPage.registerUser(newUser);
+    RegisterStep2Page.registerUserStep2(newUser);
+    expect((ProfilePage.headerProfile).getText()).eq(newUser.firstName + ' ' + newUser.lastName);
   });
 
   xit('should skip the Registration Step2 and open Main Page', function () {
     RegisterStep2Page.open();
     RegisterStep2Page.skipBtn.click();
-    //expect(ProfilePage.profilePageHeader.getText()).contains(data.firstName);
+    expect(ProfilePage.headerProfile.getText()).contains(newUser.firstName);
   });
 });
+
+

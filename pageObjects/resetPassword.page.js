@@ -3,6 +3,11 @@ import RegistrationPage from '../pageObjects/register.page';
 import LoginPage from '../pageObjects/login.page';
 
 class ResetPasswordPage extends BasePage {
+
+  get resetHeader () {
+    return $('h1');
+  }
+
   get email() {
     return $('#user_password_reset_email');
   }

@@ -1,11 +1,15 @@
 import BasePage from '../pageObjects/Base.page';
 import ProfilePage from '../pageObjects/profile.page';
 import RegistrationPage from '../pageObjects/register.page';
-import ResetPasswordPage from '../pageObjects/reset.password';
+import ResetPasswordPage from './resetPassword.page';
 
 class LoginPage extends BasePage {
   get headerLogin() {
     return $('h1');
+  }
+
+  get siteName(){
+    return $('.site-name');
   }
 
   get inputUsername() {
@@ -44,9 +48,30 @@ class LoginPage extends BasePage {
     return $('a[href="/user/password/reset"]');
   }
 
+  get errorMessage() {
+    return $('.ant-notification-notice');
+  }
+
   get errorMessageCloseBtn() {
     return $('.ant-notification-notice-close');
   }
+
+  get errorMessageRedCircle() {
+    return $('.anticon-close-circle');
+  }
+
+  get txtCreateOne() {
+    return $$('//div[@class="ant-form-item-control-input-content"]/p')[0];
+  }
+
+  get txtResetIt() {
+    return $$('//div[@class="ant-form-item-control-input-content"]/p')[1];
+  }
+
+  get txtEmailNotValid() {
+    return $('//div[@class="ant-form-item-explain"]/div');
+  }
+
 
   open() {
     return super.open('user/login');
