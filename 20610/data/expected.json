@@ -23,6 +23,9 @@
   "loginPageHeader": {
     "h1": "Welcome back!"
   },
+  "HomePageHeader": {
+    "h1": "Adaptive learning platform"
+  },
 
   "userBadges": {
     "admin": "admin",
