@@ -88,7 +88,7 @@ class TopMenuPage extends BasePage {
   }
 
   get dropDownMenuLogOut() {
-    return $$('.ant-dropdown-menu-item-only-child')[3];
+    return $('[data-qa="logout"]');
   }
 
   get loginLink() {

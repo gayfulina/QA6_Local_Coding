@@ -16,11 +16,11 @@ describe('TOPMENU LAYOUT', function () {
     });
 
     it('label is displayed', function () {
-      expect(topMenuPage.label.isDisplayed());
+      expect(topMenuPage.homePageLink.isDisplayed());
     });
 
     it('label has correct text', function () {
-      expect(topMenuPage.label.getText()).eq(topMenu.label);
+      expect(topMenuPage.homePageLink.getText()).eq(topMenu.label);
     });
 
     it('Base Link is displayed', function () {
@@ -135,9 +135,9 @@ describe('TOPMENU LAYOUT', function () {
       expect(topMenuPage.dropDownMenuOrders.isDisplayed());
     });
 
-    // it('DropDownMenuLogOut is displayed', function () {   //waiting for selector
-    //   expect(topMenuPage.dropDownMenuLogOut.isDisplayed());
-    // });
+    it('DropDownMenuLogOut is displayed', function () {   //waiting for selector
+      expect(topMenuPage.dropDownMenuLogOut.isDisplayed());
+    });
 
   });
 });
