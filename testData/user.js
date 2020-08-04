@@ -29,11 +29,11 @@ module.exports = {
     password: 'learner',
     firstName: 'LearnerFirst',
     lastName: 'LearnerLast',
-    phone: '17775551123',
+    phone: '111234567890',
     about: 'QA Engineer',
     goals: 'no goals',
     englishLevel: 'Advanced',
-    countryName: 'USA',
+    countryName: 'United States',
   },
 
   student: {

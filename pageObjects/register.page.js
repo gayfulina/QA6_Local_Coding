@@ -43,6 +43,10 @@ class RegisterPage extends BasePage {
     return $('.anticon-eye-invisible');
   }
 
+  get eyeIconOpen() {
+    return $('.anticon-eye');
+  }
+
   get lockIcon() {
     return $('.anticon-lock');
   }
@@ -71,6 +75,10 @@ class RegisterPage extends BasePage {
     return $$('.ant-form-item-explain');
   }
 
+  get errorMessage() {
+    return $('.ant-notification-notice-message');
+  }
+
   termsAndAgreements() {
     this.agreementCheckBox.click();
     this.termsAndAgreementsLink.click();
@@ -83,7 +91,8 @@ class RegisterPage extends BasePage {
     this.lastNameInput.setValue(data.lastName);
     this.email.setValue(data.email);
     this.password.setValue(data.password);
-    this.termsAndAgreements();
+    this.agreementCheckBox.click();
+    // this.termsAndAgreements();
     this.registerBtn.click();
   }
 
