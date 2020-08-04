@@ -3,7 +3,7 @@ import { newUser } from '../20610/data/fakeData';
 
 class SettingsPasswordPage extends BasePage {
   get passwordTab() {
-    return $$('.ant-menu-item')[1];
+    return $('//li[text()="Password"]');
   }
 
   get oldPasswordInput() {

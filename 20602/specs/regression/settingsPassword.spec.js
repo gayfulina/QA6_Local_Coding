@@ -3,17 +3,17 @@ import ProfilePage from '../../../pageObjects/profile.page';
 import SettingsPasswordPage from '../../../pageObjects/settingsPassword.page';
 import expected from '../../data/expected.json';
 import { newRole, admin } from '../../data/settingsPasswordData';
+import user from '../../data/users';
 
 before(() => {
   LoginPage.open();
   LoginPage.login(newRole.email, newRole.oldPassword);
   ProfilePage.dropDownUserMenu.click();
   ProfilePage.settingsLink.click();
-  SettingsPasswordPage.passwordTab.click()
-
+  SettingsPasswordPage.passwordTab.click();
 });
 
-describe('ALL ELEMENTS IS PRESENT CORRECTLY', () => {
+describe('ALL ELEMENTS IS PRESENT CORRECTLY BY DEFAULT', () => {
   it('TC-003-001 Old password IF is present ', function () {
     expect(SettingsPasswordPage.oldPasswordInput.isDisplayed()).true;
   });
@@ -57,13 +57,47 @@ describe('ALL ELEMENTS IS PRESENT CORRECTLY', () => {
   });
 
   it('TC-003-011 Update password button = Update Password', function () {
-    expect(SettingsPasswordPage.updatePasswordButton.getText()).eq(expected.settingsPasswordData['TC-003-011-updatePasswordButton']);
+    expect(SettingsPasswordPage.updatePasswordButton.getText()).eq(
+      expected.settingsPasswordData['TC-003-011-updatePasswordButton'],
+    );
   });
 
   it('TC-003-012 Update password button is disabled by default', function () {
     expect(SettingsPasswordPage.updatePasswordButton.isEnabled()).false;
   });
+});
 
+describe('CORRECT FUNCTIONALITY', () => {
+  it('TC-003-016 Update password button enabled when all fields are filled in', function () {
+    browser.refresh();
+    SettingsPasswordPage.updatePasswordNegative(newRole.oldPassword, newRole.newPassword, newRole.confirmNewPassword);
+    expect(SettingsPasswordPage.updatePasswordButton.isEnabled()).true;
+  });
+
+  it('TC-003-017 Old password eye icon is works', function () {
+    SettingsPasswordPage.oldPasswordInput.setValue(newRole.oldPassword);
+    SettingsPasswordPage.oldPasswordEyeIcon.click();
+    expect(SettingsPasswordPage.oldPasswordInput.getAttribute('type')).eq(
+      expected.settingsPasswordData['TC-003-017-018-019-TypeInput'],
+    );
+  });
+
+  it('TC-003-018 New password eye icon is works', function () {
+    SettingsPasswordPage.newPasswordInput.setValue(newRole.newPassword);
+    SettingsPasswordPage.newPasswordEyeIcon.click();
+    expect(SettingsPasswordPage.newPasswordInput.getAttribute('type')).eq(
+      expected.settingsPasswordData['TC-003-017-018-019-TypeInput'],
+    );
+  });
+
+  it('TC-003-019 Confirm new password eye icon is works', function () {
+    SettingsPasswordPage.confirmNewPasswordInput.setValue(newRole.newPassword);
+    SettingsPasswordPage.confirmNewPasswordEyeIcon.click();
+    expect(SettingsPasswordPage.confirmNewPasswordInput.getAttribute('type')).eq(expected.settingsPasswordData['TC-003-017-018-019-TypeInput']);
+  });
+});
+
+describe('NEGATIVE FUNCTIONALITY', () => {
   it('TC-003-013 Update password button disabled until all fields are filled in (Confirm new password = empty)', function () {
     SettingsPasswordPage.updatePasswordNegative(newRole.oldPassword, newRole.newPassword, newRole.confirmNewPasswordEmpty);
     expect(SettingsPasswordPage.updatePasswordButton.isEnabled()).false;
@@ -79,32 +113,6 @@ describe('ALL ELEMENTS IS PRESENT CORRECTLY', () => {
     browser.refresh();
     SettingsPasswordPage.updatePasswordNegative(newRole.oldPasswordEmpty, newRole.newPasswordEmpty, newRole.confirmNewPassword);
     expect(SettingsPasswordPage.updatePasswordButton.isEnabled()).false;
-  });
-
-  it('TC-003-016 Update password button enabled when all fields are filled in', function () {
-    browser.refresh();
-    SettingsPasswordPage.updatePasswordNegative(newRole.oldPassword, newRole.newPassword, newRole.confirmNewPassword);
-    expect(SettingsPasswordPage.updatePasswordButton.isEnabled()).true;
-  });
-
-  it('TC-003-017 Old password eye icon is works', function () {
-    SettingsPasswordPage.oldPasswordInput.setValue(newRole.oldPassword);
-    SettingsPasswordPage.oldPasswordEyeIcon.click();
-    expect(SettingsPasswordPage.oldPasswordInput.getAttribute('type')).eq(expected.settingsPasswordData['TC-003-017-08-019-TypeInput']);
-  });
-
-  it('TC-003-018 New password eye icon is works', function () {
-    SettingsPasswordPage.newPasswordInput.setValue(newRole.newPassword);
-    SettingsPasswordPage.newPasswordEyeIcon.click();
-    expect(SettingsPasswordPage.newPasswordInput.getAttribute('type')).eq(expected.settingsPasswordData['TC-003-017-08-019-TypeInput']);
-  });
-
-  it('TC-003-019 Confirm new password eye icon is works', function () {
-    SettingsPasswordPage.confirmNewPasswordInput.setValue(newRole.newPassword);
-    SettingsPasswordPage.confirmNewPasswordEyeIcon.click();
-    expect(SettingsPasswordPage.confirmNewPasswordInput.getAttribute('type')).eq(
-      expected.settingsPasswordData['TC-003-017-08-019-TypeInput'],
-    );
   });
 
   it('TC-003-020 Wrong old password: pop-up error message will appear ', function () {
@@ -126,14 +134,13 @@ describe('ALL ELEMENTS IS PRESENT CORRECTLY', () => {
     expect(SettingsPasswordPage.popUpWrongOldPwrd.isDisplayed()).false;
   });
 
-  it('TC-003-023  pop-up error window can be closed by clicking icon cross', function() {
+  it('TC-003-023  pop-up error window can be closed by clicking icon cross', function () {
     SettingsPasswordPage.updatePassword(newRole.oldPasswordIncorrect, newRole.newPassword);
     SettingsPasswordPage.popUpWrongOldPwrd.waitForDisplayed();
     SettingsPasswordPage.popUpWrongOldPwrdClose.click();
     browser.waitUntil(() => SettingsPasswordPage.popUpWrongOldPwrd.isDisplayed() === false);
     expect(SettingsPasswordPage.popUpWrongOldPwrd.isDisplayed()).false;
   });
-
 
   it('TC-003-024 "New password mismatch: error message is appears', function () {
     browser.refresh();
@@ -146,4 +153,22 @@ describe('ALL ELEMENTS IS PRESENT CORRECTLY', () => {
     SettingsPasswordPage.updatePasswordNegative(newRole.oldPassword, newRole.newPassword, newRole.confirmNewPasswordIncorrect);
     expect(SettingsPasswordPage.errorMsgPasswordNotMatch.getText()).eq(expected.settingsPasswordData['TC-003-025-errorMsg']);
   });
+
+  it('TC-003-030 User can not log in using the old password', function() {
+    browser.refresh();
+    SettingsPasswordPage.updatePassword(newRole.oldPassword, newRole.newPassword)
+    ProfilePage.logout();
+    LoginPage.login(newRole.email, newRole.oldPassword);
+    LoginPage.errorMessage.waitForDisplayed();
+    expect(LoginPage.errorMessage.isDisplayed()).true;
+  });
+});
+
+after(() => {
+  LoginPage.open();
+  LoginPage.login(newRole.email, newRole.newPassword);
+  ProfilePage.dropDownUserMenu.click();
+  ProfilePage.settingsLink.click();
+  SettingsPasswordPage.passwordTab.click();
+  SettingsPasswordPage.updatePassword(newRole.newPassword, newRole.oldPassword)
 });
