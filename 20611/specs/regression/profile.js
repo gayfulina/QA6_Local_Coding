@@ -3,6 +3,7 @@ import user from '../../../testData/user';
 import ProfilePage from '../../../pageObjects/profile.page';
 import { WAIT_TIME_MEDIUM } from '../../../testData/waitTimes';
 const profile = require('../testData/expected.json').profile;
+import SettingsProfile from '../../../pageObjects/settingsProfile.page';
 
 describe('Verify that header is present', () => {
   it('should register new user and verify header', function () {
@@ -43,4 +44,39 @@ describe('Verify that header is present', () => {
   it('Verify privacy policy link text', function () {
     expect(ProfilePage.privacyPolicy.getText()).eq(profile.privacyPolicyLink);
   });
+
+  it('Check Profile -> First Name value ', function() {
+    ProfilePage.dropDownUserMenu.click();
+    ProfilePage.settingsLink.click();
+    expect(SettingsProfile.firstNameIF.getValue()).to.equal(user.learner.firstName);
+  });
+
+  it('Check Profile -> Last Name value ', function() {
+    expect(SettingsProfile.lastNameIF.getValue()).to.equal(user.learner.lastName);
+  });
+
+  it('Check Profile -> Phone value ', function() {
+    expect(SettingsProfile.phoneIF.getValue()).to.equal(user.learner.phone);
+  });
+
+  it('Check Profile -> About value ', function() {
+    expect(SettingsProfile.aboutFieldRIF.getValue()).to.equal(user.learner.about);
+  });
+
+  it('Check Profile -> My Goals value ', function() {
+    expect(SettingsProfile.myGoalsRIF.getValue()).to.equal(user.learner.goals);
+  });
+
+  it('Check Profile -> Country value ', function() {
+    expect(SettingsProfile.countryFieldDDB.getAttribute('title')).to.equal(user.learner.countryName);
+  });
+
+  it('Check Profile -> English Level value ', function() {
+    expect(SettingsProfile.englishLevelDDB.getAttribute('title')).to.equal(user.learner.englishLevel);
+  });
+
+  it('Check Profile -> T-Shirt Size field exists ', function() {
+    expect(SettingsProfile.tShirtSizeDDB).to.exist;
+  });
+
 });

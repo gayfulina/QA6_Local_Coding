@@ -20,13 +20,13 @@ class settingsProfilePage extends BasePage {
     return $('#editProfile_goals');
   }
   get countryFieldDDB() {
-    return $('#editProfile_countryName');
+    return $$('.ant-select-selection-item')[0];
   }
   get englishLevelDDB() {
-    return $('#editProfile_englishLevel');
+    return $$('.ant-select-selection-item')[1];
   }
   get tShirtSizeDDB() {
-    return $('#editProfile_tShirtSize');
+    return $$('.ant-select-selection-item')[2];
   }
   get saveBTN() {
     return $('.ant-btn.ant-btn-primary');
