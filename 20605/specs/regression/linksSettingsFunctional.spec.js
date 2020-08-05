@@ -1,5 +1,5 @@
 import LoginPage from '../../../pageObjects/login.page';
-import { userProfile } from '../../testData/linksSettings';
+import { userProfile } from '../../testData/userForUpdate';
 import ProfilePage from '../../../pageObjects/profile.page';
 import TopMenuPage from '../../../pageObjects/topMenu.page';
 import LinksPage from '../../../pageObjects/links.page';
@@ -48,7 +48,6 @@ describe('LINKS FIELD ACCEPT INPUT DATA', function () {
     LinksPage.saveLinks();
     expect(LinksPage.saveLinksBtn.isClickable()).true;
   });
-
 });
 
 
