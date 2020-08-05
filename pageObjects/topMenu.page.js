@@ -76,15 +76,15 @@ class TopMenuPage extends BasePage {
   }
 
   get dropDownMenuProfile() {
-    return $('//a[contains(@href,"profile")]');
+    return $('[data-qa="profile"]');
   }
 
   get dropDownMenuSettings() {
-    return $('//a[contains(@href,"settings")]');
+    return $('[data-qa="settings"]');
   }
 
   get dropDownMenuOrders() {
-    return $('//a[contains(@href,"orders")]');
+    return $('[data-qa="orders"]');
   }
 
   get dropDownMenuLogOut() {
