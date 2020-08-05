@@ -9,7 +9,7 @@ describe('New user registration page', () => {
   });
 
   describe('LOGIN NEW USER', function () {
-    it('should Successful login as a new user', () => {
+    it('TC-039 should Successful login as a new user', () => {
       LoginPage.validLogin(user.new.email, user.new.password);
       ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
       expect(ProfilePage.getLoginConfirmation()).eq(user.new.firstName + ' ' + user.new.lastName);
@@ -17,7 +17,7 @@ describe('New user registration page', () => {
   });
 
   describe('LOGIN ADMIN', function () {
-    it('should Successful login as an Admin', () => {
+    it('TC-040 should Successful login as an Admin', () => {
       LoginPage.validLogin(user.admin.email, user.admin.password);
       ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
       expect(ProfilePage.getLoginConfirmation()).eq(user.admin.firstName + ' ' + user.admin.lastName);
@@ -25,7 +25,7 @@ describe('New user registration page', () => {
   });
 
   describe('LOGIN LEARNER', function () {
-    it('should Successfuly login as a learner', () => {
+    it('TC-041 should Successfuly login as a learner', () => {
       LoginPage.validLogin(user.learner.email, user.learner.password);
       ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
       expect(ProfilePage.getLoginConfirmation()).eq(user.learner.firstName + ' ' + user.learner.lastName);
@@ -33,7 +33,7 @@ describe('New user registration page', () => {
   });
 
   describe('LOGIN NEW STUDENT', function () {
-    it('should Successful login as a student', () => {
+    it('TC-042 should Successful login as a student', () => {
       LoginPage.validLogin(user.student.email, user.student.password);
       ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
       expect(ProfilePage.getLoginConfirmation()).eq(user.student.firstName + ' ' + user.student.lastName);
