@@ -22,5 +22,16 @@
     "Telephony": "Telephony",
     "Orders": "Orders",
     "Achievements": "Achievements"
+  },
+  "profile":
+  {
+    "firstNameIF": "First Name",
+    "lastNameIF": "Last Name",
+    "phone": "Phone",
+    "about": "About",
+    "myGoals": "My goals",
+    "country": "Country",
+    "englishLevel": "English level",
+    "t-ShirtSize": "T-Shirt size"
   }
 }
