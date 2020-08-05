@@ -8,8 +8,8 @@ describe('TOPMENU LAYOUT', function () {
     LoginPage.open();
     LoginPage.login(admin.email, admin.password);
     topMenuPage.userAvatarName.isDisplayed();
-
   });
+
   describe('MAIN ELEMENTS ARE DISPLAYED FOR ADMIN', function () {
     it('logo is displayed', function () {
       expect(topMenuPage.logo.isDisplayed());
@@ -135,9 +135,8 @@ describe('TOPMENU LAYOUT', function () {
       expect(topMenuPage.dropDownMenuOrders.isDisplayed());
     });
 
-    it('DropDownMenuLogOut is displayed', function () {   //waiting for selector
+    it('DropDownMenuLogOut is displayed', function () {
       expect(topMenuPage.dropDownMenuLogOut.isDisplayed());
     });
-
   });
 });

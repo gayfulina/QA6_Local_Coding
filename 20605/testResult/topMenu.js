@@ -10,8 +10,6 @@ const topMenu = {
   telephonyLink: 'Telephony',
   shopLink: 'Shop',
   ordersLink: 'Orders',
-  // cardsBtn: '',
-  // cardsBtn: '',
 };
 
 export { topMenu };
