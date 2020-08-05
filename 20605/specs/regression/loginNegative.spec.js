@@ -8,35 +8,35 @@ describe('LOGIN PAGE (NEGATIVE SCENARIOS)', function() {
   beforeEach(() => {
     LoginPage.open();
   });
-  it('user is not able to log in with invalid email and password', function() {
+  it('TC-038 user is not able to log in with invalid email and password', function() {
     LoginPage.login(invalidUserCredentials.email, invalidUserCredentials.password);
     LoginPage.loginBtn.click();
     LoginPage.errorMessageCloseBtn.waitForDisplayed({ timeout: WAIT_TIME_SHORT });
     expect(LoginPage.errorMessageCloseBtn.isDisplayed()).true;
   });
-  it('user is not able to log in with valid email and invalid password', function() {
+  it('TC-039 user is not able to log in with valid email and invalid password', function() {
     LoginPage.login(admin.email, invalidUserCredentials.password);
     LoginPage.loginBtn.click();
     LoginPage.errorMessageCloseBtn.waitForDisplayed({ timeout: WAIT_TIME_SHORT });
     expect(LoginPage.errorMessageCloseBtn.isDisplayed()).true;
   });
-  it('user is not able to log in with invalid email and valid password', function() {
+  it('TC-040 user is not able to log in with invalid email and valid password', function() {
     LoginPage.login(invalidUserCredentials.email, admin.password);
     LoginPage.loginBtn.click();
     LoginPage.errorMessageCloseBtn.waitForDisplayed({ timeout: WAIT_TIME_SHORT });
     expect(LoginPage.errorMessageCloseBtn.isDisplayed()).true;
   });
-  it('user is not able to log in with valid email and password that doesnt match to the account', function() {
+  it('TC-041 user is not able to log in with valid email and password that doesnt match to the account', function() {
     LoginPage.login(admin.email, learner.password);
     LoginPage.loginBtn.click();
     LoginPage.errorMessageCloseBtn.waitForDisplayed({ timeout: WAIT_TIME_SHORT });
     expect(LoginPage.errorMessageCloseBtn.isDisplayed()).true;
   });
-  it('user is not able to log in with valid email and empty password field', function() {
+  it('TC-042 user is not able to log in with valid email and empty password field', function() {
     LoginPage.login(admin.email, emptyField);
     expect(LoginPage.loginBtn.isEnabled()).false;
   });
-  it('user is not able to log in with empty email field and valid password ', function() {
+  it('TC-043 user is not able to log in with empty email field and valid password ', function() {
     LoginPage.login(emptyField, learner.password);
     expect(LoginPage.loginBtn.isEnabled()).false;
   });
