@@ -1,7 +1,7 @@
 {
   "pagesHeaders":
   {
-    "homePageHeader": "Home Page",
+    "homePageHeader": "Adaptive learning platform",
     "contactUsHeader": "Contact us",
     "privacyPolicyHeader": "PASV Privacy Policy",
     "RegisterPageHeader": "Create an account",
@@ -9,6 +9,9 @@
     "LoginHeader": "Welcome back!",
     "emailPlaceholder": "Email",
     "passwordPlaceholder": "Password",
+    "notValidEmailMessage": "'email' is not a valid email",
+    "Required": "Required",
+    "resetPasswordHeader": "Reset password",
     "MainPageHeader" : "Adaptive learning platform",
     "CoursesPage": "Courses",
     "Cards": "Flash Cards",
@@ -19,5 +22,16 @@
     "Telephony": "Telephony",
     "Orders": "Orders",
     "Achievements": "Achievements"
+  },
+  "profile":
+  {
+    "firstNameIF": "First Name",
+    "lastNameIF": "Last Name",
+    "phone": "Phone",
+    "about": "About",
+    "myGoals": "My goals",
+    "country": "Country",
+    "englishLevel": "English level",
+    "t-ShirtSize": "T-Shirt size"
   }
 }

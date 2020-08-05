@@ -1,5 +1,5 @@
 import LoginPage from "../../../pageObjects/login.page";
-import LoginResetPasswordPage from "../../../pageObjects/reset.password";
+import LoginResetPasswordPage from "../../../pageObjects/resetPassword.page";
 import {loginResetPasswordData} from "../../data/loginData";
 
 describe( "RESET PASSWORD LAYOUT", () => {

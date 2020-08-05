@@ -13,4 +13,11 @@ const anySymbols = {
   password: '#!$%&’*+-/=?^_`{}|~',
 };
 
-export { uppercaseLowercaseLetters, anyNumbers, anySymbols };
+const incorrectInput = {
+  email: 'vasya@mailru',
+  email2: 'vasya@mail.ru',
+  email3: 'vasyamail.ru',
+  password: '111222333',
+};
+
+export { uppercaseLowercaseLetters, anyNumbers, anySymbols, incorrectInput };

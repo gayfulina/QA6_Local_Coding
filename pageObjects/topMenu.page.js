@@ -5,7 +5,7 @@ class TopMenuPage extends BasePage {
     return $$('img')[0];
   }
 
-  get label() {
+  get homePageLink() {
     return $('.site-name');
   }
 
@@ -35,6 +35,12 @@ class TopMenuPage extends BasePage {
 
   get telephonyLink() {
     return $('[href="/telephony"]');
+  }
+  get shopLink() {
+    return $('[href="/shop"]');
+  }
+  get adminOrderLink() {
+    return $('[href="/admin-order"]');
   }
 
   get ordersLink() {

@@ -8,5 +8,12 @@ export const newUser = {
   newEmail: faker.internet.email().toLowerCase(),
   password: "QA" + Math.trunc(new Date().getTime() / 10000) + "!$",
   newPassword: "PASV" + Math.trunc(new Date().getTime() / 1000) + "&$",
-  phone: 2157777577
+  message:  faker.lorem.sentences(faker.random.number({ min: 4, max: 10 })),
+  index1: faker.random.number(10),
+  index2: faker.random.number(11),
+  phone: 2157777577,
+  shippingStreetAddress: faker.address.streetAddress(),
+  shippingCity: faker.address.city(),
+  shippingPostalCode: faker.address.zipCode()
 };
+

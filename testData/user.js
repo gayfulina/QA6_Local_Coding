@@ -1,4 +1,4 @@
-module.exports = {
+const user = {
   new: {
     email: 'new@qa6.us',
     password: 'newnew',
@@ -48,3 +48,5 @@ module.exports = {
     countryName: 'USA',
   },
 };
+
+export default user;

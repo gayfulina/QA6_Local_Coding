@@ -4,9 +4,28 @@
     "agreementLabel":"I have readTerms and agreements",
     "promptLabel": "Already have an account? Just click Log in."
   },
+
   "loginPageData": {
-    "header": "Welcome back!"
+    "header": "Welcome back!",
+    "title": "Local Coding",
+    "email": "Email",
+    "password": "Password",
+    "txtNoAccount": "Don’t have an account? Create one.",
+    "txtForgotPassword": "Forgot your password? Reset it.",
+    "txtGoogleBtn": "Sign in with Google",
+    "txtFacebookBtn": "Sign in with Facebook",
+    "notValidEmail": "'email' is not a valid email",
+    "required": "Required",
+    "authFailed": "Auth failed",
+    "valueForFields": "a",
+    "invalidEmail": "abc@gmail.com",
+    "invalidPassword": "1234"
   },
+
+  "resetPasswordData": {
+    "header": "Reset password"
+  },
+
   "homePageData": {
     "header": "Adaptive learning platform"
   },
@@ -16,7 +35,7 @@
     "TC-003-009-newPasswordLabel": "New password",
     "TC-003-010-confirmNewPasswordLabel": "Confirm new password",
     "TC-003-011-updatePasswordButton": "Update Password",
-    "TC-003-017-08-019-TypeInput": "text",
+    "TC-003-017-018-019-TypeInput": "text",
     "TC-003-021-popUpMsg": "User Settings Update: Error",
     "TC-003-025-errorMsg": "New passwords do not match."
   },
@@ -50,14 +69,14 @@
   },
 
   "shippingAddressTab": {
-    "fullNameLabel": "Full Name:",
-    "countryLabel": "Country:",
-    "streetAddressLabel": "Street address:",
+    "fullNameLabel": "Full Name",
+    "countryLabel": "Country",
+    "streetAddressLabel": "Street address",
     "streetAddressPlaceholder": "e.g. 3425 Stone Street, Apt. 2A",
-    "cityLabel": "City:",
-    "stateProviceLabel": "State/Province:",
+    "cityLabel": "City",
+    "stateProviceLabel": "State/Province",
     "postalCodeLabel": "Postal Code",
-    "contactPhoneLabel": "Contact Phone:",
+    "contactPhoneLabel": "Contact Phone",
     "contactPhoneFieldNote": "May be used to assist delivery",
     "submitButtonText": "Save Address",
     "errorInvalidValueInContactPhoneField": "This entry must only contain numbers",
