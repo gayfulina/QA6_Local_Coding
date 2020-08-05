@@ -58,6 +58,10 @@ class SettingsPasswordPage extends BasePage {
     return $('.anticon-close');
   }
 
+  open(userId) {
+    super.open('settings/`${userId}`/password');
+  }
+
   updatePassword(password, newPassword) {
     this.oldPasswordInput.setValue(password);
     this.newPasswordInput.setValue(newPassword);
