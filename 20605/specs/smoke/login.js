@@ -10,25 +10,25 @@ describe('LOGIN FUNCTIONALITY', function() {
     LoginPage.open();
   });
 
-  it('should verify that user can login as NEW USER', function() {
+  it('TC-029 should verify that user can login as NEW USER', function() {
     LoginPage.login(user.new.email, user.new.password);
     TopMenuPage.userAvatarName.waitForDisplayed({ WAIT_TIME_SHORT });
     expect(ProfilePage.getLoginConfirmation()).eq(user.new.firstName + ' ' + user.new.lastName);
   });
 
-  it('should verify that user can login as ADMIN', function() {
+  it('TC-028 should verify that user can login as ADMIN', function() {
     LoginPage.login(user.admin.email, user.admin.password);
     TopMenuPage.userAvatarName.waitForDisplayed({ WAIT_TIME_SHORT });
     expect(ProfilePage.getLoginConfirmation()).eq(user.admin.firstName + ' ' + user.admin.lastName);
   });
 
-  it('should verify that user can login as LEARNER', function() {
+  it('TC-030 should verify that user can login as LEARNER', function() {
     LoginPage.login(user.learner.email, user.learner.password);
     TopMenuPage.userAvatarName.waitForDisplayed({ WAIT_TIME_SHORT });
     expect(ProfilePage.getLoginConfirmation()).eq(user.learner.firstName + ' ' + user.learner.lastName);
   });
 
-  it('should verify that user can login as STUDENT', function() {
+  it('TC-031 should verify that user can login as STUDENT', function() {
     LoginPage.login(user.student.email, user.student.password);
     TopMenuPage.userAvatarName.waitForDisplayed({ WAIT_TIME_SHORT });
     expect(ProfilePage.getLoginConfirmation()).eq(user.student.firstName + ' ' + user.student.lastName);

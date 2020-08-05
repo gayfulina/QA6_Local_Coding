@@ -9,7 +9,7 @@ describe('LOGOUT FUNCTIONALITY', function() {
     LoginPage.open();
   });
 
-  it('should verify that NEW USER can logout to Login Page', function() {
+  it('TC-052 should verify that NEW USER can logout to Login Page', function() {
     LoginPage.login(user.new.email, user.new.password);
     TopMenuPage.userAvatarName.waitForDisplayed({WAIT_TIME_SHORT});
     TopMenuPage.dropDownArrow.click();
@@ -18,7 +18,7 @@ describe('LOGOUT FUNCTIONALITY', function() {
     expect((LoginPage.headerLogin).getText()).eq(loginPage.header);
   });
 
-  it('should verify that ADMIN can logout to Login Page', function() {
+  it('TC-051 should verify that ADMIN can logout to Login Page', function() {
     LoginPage.login(user.admin.email, user.admin.password);
     TopMenuPage.userAvatarName.waitForDisplayed({WAIT_TIME_SHORT});
     TopMenuPage.dropDownArrow.click();
@@ -27,7 +27,7 @@ describe('LOGOUT FUNCTIONALITY', function() {
     expect((LoginPage.headerLogin).getText()).eq(loginPage.header);
   });
 
-  it('should verify that LEARNER can logout to Login Page', function() {
+  it('TC-053 should verify that LEARNER can logout to Login Page', function() {
     LoginPage.login(user.learner.email, user.learner.password);
     TopMenuPage.userAvatarName.waitForDisplayed({WAIT_TIME_SHORT});
     TopMenuPage.dropDownArrow.click();
@@ -36,7 +36,7 @@ describe('LOGOUT FUNCTIONALITY', function() {
     expect((LoginPage.headerLogin).getText()).eq(loginPage.header);
   });
 
-  it('should verify that STUDENT can logout to Login Page', function() {
+  it('TC-054 should verify that STUDENT can logout to Login Page', function() {
     LoginPage.login(user.student.email, user.student.password);
     TopMenuPage.userAvatarName.waitForDisplayed({WAIT_TIME_SHORT});
     TopMenuPage.dropDownArrow.click();
