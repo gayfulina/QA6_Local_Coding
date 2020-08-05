@@ -6,7 +6,7 @@ import RegisterStep2 from '../../../pageObjects/registerStep2.page';
 import LoginPage from '../../../pageObjects/login.page';
 import expected from '../../data/expected.json';
 
-describe('NEW USER PASSWORD UPDATE', function () {
+describe('NEW USER PASSWORD UPDATE', () => {
   before(function () {
     RegisterPage.open();
     RegisterPage.registerUser(newUser);
@@ -16,12 +16,12 @@ describe('NEW USER PASSWORD UPDATE', function () {
     SettingsPasswordPage.passwordTab.click();
   });
 
-  it('user should be able to update his password', function () {
+  it('UP1 user should be able to update his password', () => {
     SettingsPasswordPage.updatePassword(newUser.password, newUser.newPassword);
     ProfilePage.logout();
   });
 
-  it('should check if a user can login with updated password', function () {
+  it('UP2 should check if a user can login with updated password', () => {
     LoginPage.login(newUser.email, newUser.newPassword);
     expect(ProfilePage.badgeRole.getText()).eq(expected.userBadges.new);
     expect(ProfilePage.getLoginConfirmation()).eq(`${newUser.firstName} ${newUser.lastName}`);
