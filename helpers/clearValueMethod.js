@@ -1,6 +1,5 @@
 export default function clearInputValue(selector) {
-  while (selector.getValue() !== '') {
-    selector.doubleClick();
-    selector.keys('Delete');
-  }
+  let length = selector.getValue().length;
+  let backspaces = new Array(length).fill('Backspace');
+  selector.setValue(backspaces);
 }
