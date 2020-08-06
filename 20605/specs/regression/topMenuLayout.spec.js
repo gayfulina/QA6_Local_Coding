@@ -10,7 +10,7 @@ describe('TOPMENU LAYOUT', function () {
     topMenuPage.userAvatarName.isDisplayed();
   });
 
-  describe('MAIN ELEMENTS ARE DISPLAYED FOR ADMIN', function () {
+  describe('MAIN ELEMENTS ARE DISPLAYED FOR ALL ROLES', function () {
     it('logo is displayed', function () {
       expect(topMenuPage.logo.isDisplayed());
     });
@@ -23,6 +23,44 @@ describe('TOPMENU LAYOUT', function () {
       expect(topMenuPage.homePageLink.getText()).eq(topMenu.label);
     });
 
+    it('CoinImg is displayed', function () {
+      expect(topMenuPage.coinImg.isDisplayed());
+    });
+
+    it('AchievmentsLink is displayed', function () {
+      expect(topMenuPage.achievementsLink.isDisplayed());
+    });
+
+    it('UserAvatarImg is displayed', function () {
+      expect(topMenuPage.userAvatarImg.isDisplayed());
+    });
+
+    it('UserAvatarName is displayed', function () {
+      expect(topMenuPage.userAvatarName.isDisplayed());
+    });
+
+    it('DropDownArrow is displayed', function () {
+      expect(topMenuPage.dropDownArrow.isDisplayed());
+    });
+
+    it('DropDownMenuProfile is displayed', function () {
+      expect(topMenuPage.dropDownMenuProfile.isDisplayed());
+    });
+
+    it('DropDownMenuSettings is displayed', function () {
+      expect(topMenuPage.dropDownMenuSettings.isDisplayed());
+    });
+
+    it('DropDownMenuOrders is displayed', function () {
+      expect(topMenuPage.dropDownMenuOrders.isDisplayed());
+    });
+
+    it('DropDownMenuLogOut is displayed', function () {
+      expect(topMenuPage.dropDownMenuLogOut.isDisplayed());
+    });
+  });
+
+  describe('MAIN ELEMENTS ARE DISPLAYED for ADMIN', function () {
     it('Base Link is displayed', function () {
       expect(topMenuPage.baseLink.isDisplayed());
     });
@@ -102,41 +140,6 @@ describe('TOPMENU LAYOUT', function () {
     it('Orders Link has correct text', function () {
       expect(topMenuPage.ordersLink.getText()).eq(topMenu.ordersLink);
     });
-
-    it('CoinImg is displayed', function () {
-      expect(topMenuPage.coinImg.isDisplayed());
-    });
-
-    it('AchievmentsLink is displayed', function () {
-      expect(topMenuPage.achievementsLink.isDisplayed());
-    });
-
-    it('UserAvatarImg is displayed', function () {
-      expect(topMenuPage.userAvatarImg.isDisplayed());
-    });
-
-    it('UserAvatarName is displayed', function () {
-      expect(topMenuPage.userAvatarName.isDisplayed());
-    });
-
-    it('DropDownArrow is displayed', function () {
-      expect(topMenuPage.dropDownArrow.isDisplayed());
-    });
-
-    it('DropDownMenuProfile is displayed', function () {
-      expect(topMenuPage.dropDownMenuProfile.isDisplayed());
-    });
-
-    it('DropDownMenuSettings is displayed', function () {
-      expect(topMenuPage.dropDownMenuSettings.isDisplayed());
-    });
-
-    it('DropDownMenuOrders is displayed', function () {
-      expect(topMenuPage.dropDownMenuOrders.isDisplayed());
-    });
-
-    it('DropDownMenuLogOut is displayed', function () {
-      expect(topMenuPage.dropDownMenuLogOut.isDisplayed());
-    });
   });
 });
+
