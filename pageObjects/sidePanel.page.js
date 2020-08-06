@@ -57,8 +57,6 @@ class SidePanelPage extends BasePage {
     return $('//a[contains(text(),"Settings")]');
   }
 
-
-
   skip() {
     this.skipSidePanelBtn.click();
   }
