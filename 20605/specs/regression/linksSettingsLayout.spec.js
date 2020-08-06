@@ -69,5 +69,4 @@ describe('TC-200 LINKS ARE DISPLAYED AND HAVE CORRECT TEXT', function () {
   it('TC-213 SaveBtn has correct text', function () {
     expect(LinksPage.saveLinksBtn.getText()).eq(linksSettings.saveLinkBtn);
   });
-
 });
