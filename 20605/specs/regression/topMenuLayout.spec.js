@@ -1,12 +1,12 @@
 import LoginPage from '../../../pageObjects/login.page';
 import topMenuPage from '../../../pageObjects/topMenu.page'
-import { admin } from '../../../testData/user';
+import user from '../../../testData/user';
 import { topMenu } from '../../testResult/topMenu';
 
 describe('TOPMENU LAYOUT', function () {
   before(() => {
     LoginPage.open();
-    LoginPage.login(admin.email, admin.password);
+    LoginPage.login(user.admin.email, user.admin.password);
     topMenuPage.userAvatarName.isDisplayed();
   });
 

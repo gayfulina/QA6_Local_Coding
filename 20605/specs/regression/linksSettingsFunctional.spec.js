@@ -49,7 +49,3 @@ describe('LINKS FIELD ACCEPT INPUT DATA', function () {
     expect(LinksPage.saveLinksBtn.isClickable()).true;
   });
 });
-
-
-
-
