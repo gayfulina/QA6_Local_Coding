@@ -1,10 +1,9 @@
 {
   "registerPageData": {
     "header": "Create an account",
-    "agreementLabel":"I have readTerms and agreements",
+    "agreementLabel": "I have readTerms and agreements",
     "promptLabel": "Already have an account? Just click Log in."
   },
-
   "loginPageData": {
     "header": "Welcome back!",
     "title": "Local Coding",
@@ -21,15 +20,12 @@
     "invalidEmail": "abc@gmail.com",
     "invalidPassword": "1234"
   },
-
   "resetPasswordData": {
     "header": "Reset password"
   },
-
   "homePageData": {
     "header": "Adaptive learning platform"
   },
-
   "settingsPasswordData": {
     "TC-003-008-oldPasswordLabel": "Old password",
     "TC-003-009-newPasswordLabel": "New password",
@@ -39,15 +35,13 @@
     "TC-003-021-popUpMsg": "User Settings Update: Error",
     "TC-003-025-errorMsg": "New passwords do not match."
   },
-
   "userBadges": {
     "admin": "admin",
     "learner": "learner",
     "student": "student",
     "new": "new"
   },
-
-"linksPageData": {
+  "linksPageData": {
     "resumeLink": "https://docs.google.com/document/d/10YxY2G35iNST-Ht1qWY-DWYRUiZtWlR4mFoE-cNZrjM/edit#",
     "resumeText": "Google Doc resume link",
     "LinkedIn": "https://www.linkedin.com/in/bogutskii/",
@@ -62,12 +56,10 @@
     "successMSG": "User Links updated",
     "errorMSG": ""
   },
-
   "termsAndAgreements": {
     "drawerTitle": "Terms and agreements",
     "lastModified": "This Agreement was last modified on 05/22/2020"
   },
-
   "shippingAddressTab": {
     "fullNameLabel": "Full Name",
     "countryLabel": "Country",
@@ -110,12 +102,15 @@
       "Russia": "+7",
       "Republic of Serbia": "+381",
       "Slovakia": "+421",
-      "Slovenia" : "+386",
+      "Slovenia": "+386",
       "Ukraine": "+380",
       "United Kingdom": "+44",
       "United States": "+1",
       "Uzbekistan": "+998",
       "Vietnam": "+84"
     }
+  },
+  "registerStep2Data": {
+    "countryLabel": "Country"
   }
 }
