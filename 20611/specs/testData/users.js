@@ -14,6 +14,7 @@ const user = {
   lastName: 'Test',
   email: email,
   incorrectEmail: 'test@gmailcom',
+  incorrectPhone: '123456789',
   password: 'abc123',
   phone: '9048483838',
 };

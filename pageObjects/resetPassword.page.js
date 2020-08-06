@@ -48,8 +48,13 @@ class ResetPasswordPage extends BasePage {
     return LoginPage;
   }
 
+  requiredText(){
+    return $('.ant-form-item-explain');
+  }
+
   open(path) {
     super.open('/user/password/reset');
   }
+
 }
 export default new ResetPasswordPage();
