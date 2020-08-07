@@ -111,6 +111,21 @@
     }
   },
   "registerStep2Data": {
-    "countryLabel": "Country"
-  }
+    "countryLabel": "Country",
+    "phoneLabel": "Phone",
+    "countryDropDown": "United States",
+    "phonePlaceHolder": "phone number",
+    "phoneNumberPrefix": "+1",
+    "changeCountry": "Mongolia",
+    "changePrefix": "+976",
+    "phone10": "1234567890",
+    "phone11": "12345678900",
+    "phone9": "123456789",
+    "phone8": "12345678",
+    "phone7": "1234567",
+    "phone12": "123456789000",
+    "phoneabc": "abc",
+    "phone+@#": "+@#",
+    "skipText": "Skip"
+    }
 }
