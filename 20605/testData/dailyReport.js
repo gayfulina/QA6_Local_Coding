@@ -1,4 +1,7 @@
 export const dailyReport = {
-  howWasYourDayText: 'Daily report testing Daily report testing Daily report testing' + Math.trunc(Math.random() * 1000),
-};
+  howWasYourDayTextTC220: 'First daily report First daily report First daily report',
+  howWasYourDayTextTC221: 'Second daily report  Second daily report Second daily report',
+  howWasYourDayTextTC222: 'Third daily report Third daily report Third daily report',
+  moraleLevel: '10 – I am pleased with everything!',
+  };
 
