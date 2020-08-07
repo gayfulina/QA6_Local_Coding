@@ -3,5 +3,6 @@ export const dailyReport = {
   howWasYourDayTextTC221: 'Second daily report  Second daily report Second daily report',
   howWasYourDayTextTC222: 'Third daily report Third daily report Third daily report',
   moraleLevel: '10 – I am pleased with everything!',
+  tagText: 'I need help',
   };
 

@@ -3,7 +3,7 @@ import user from '../../../testData/user';
 import LoginPage from '../../../pageObjects/login.page';
 import { dailyReport } from '../../testData/dailyReport';
 
-describe('DAILY REPORTS FUNCTIONALITY', function() {
+describe('DAILY REPORTS FUNCTIONALITY FOR LEARNER', function() {
   before(() => {
     LoginPage.open();
     LoginPage.login(user.learner.email, user.learner.password);
@@ -17,7 +17,7 @@ describe('DAILY REPORTS FUNCTIONALITY', function() {
     DailyReportsPage.inputMoral.click();
     DailyReportsPage.selectContentMoraleAndHours[0].click();
     DailyReportsPage.inputHours.click();
-    browser.waitUntil(() => $$('.ant-select-selection-item')[0].getText() === dailyReport.moraleLevel);
+    browser.waitUntil(() => DailyReportsPage.selectedContentMoraleAndHours[0].getText() === dailyReport.moraleLevel);
     DailyReportsPage.selectContentMoraleAndHours[21].scrollIntoView();
     DailyReportsPage.selectContentMoraleAndHours[21].click();
     DailyReportsPage.howWasYourDayInput.click();
@@ -34,14 +34,14 @@ describe('DAILY REPORTS FUNCTIONALITY', function() {
     DailyReportsPage.inputMoral.click();
     DailyReportsPage.selectContentMoraleAndHours[0].click();
     DailyReportsPage.inputHours.click();
-    browser.waitUntil(() => $$('.ant-select-selection-item')[0].getText() === dailyReport.moraleLevel);
+    browser.waitUntil(() => DailyReportsPage.selectedContentMoraleAndHours[0].getText() === dailyReport.moraleLevel);
     DailyReportsPage.selectContentMoraleAndHours[21].scrollIntoView();
     DailyReportsPage.selectContentMoraleAndHours[21].click();
     DailyReportsPage.howWasYourDayInput.click();
     DailyReportsPage.howWasYourDayInput.setValue(dailyReport.howWasYourDayTextTC221);
     DailyReportsPage.submitBtn.click();
     browser.waitUntil(() => DailyReportsPage.newDailyReportCreatedText.getText() !== dailyReportText);
-    expect($$('.ant-tag')[0].getText()).eq('I need help');
+    expect(DailyReportsPage.dailyReportTag[0].getText()).eq(dailyReport.tagText);
   });
 
   it('TC-222 created daily report contains text created by learner', function() {
@@ -51,7 +51,7 @@ describe('DAILY REPORTS FUNCTIONALITY', function() {
     DailyReportsPage.inputMoral.click();
     DailyReportsPage.selectContentMoraleAndHours[0].click();
     DailyReportsPage.inputHours.click();
-    browser.waitUntil(() => $$('.ant-select-selection-item')[0].getText() === dailyReport.moraleLevel);
+    browser.waitUntil(() => DailyReportsPage.selectedContentMoraleAndHours[0].getText() === dailyReport.moraleLevel);
     DailyReportsPage.selectContentMoraleAndHours[21].scrollIntoView();
     DailyReportsPage.selectContentMoraleAndHours[21].click();
     DailyReportsPage.howWasYourDayInput.click();
