@@ -40,9 +40,11 @@ class TopMenuPage extends BasePage {
   get telephonyLink() {
     return $('[href="/telephony"]');
   }
+
   get shopLink() {
     return $('[href="/shop"]');
   }
+
   get adminOrderLink() {
     return $('[href="/admin-order"]');
   }
@@ -59,7 +61,7 @@ class TopMenuPage extends BasePage {
     return $('.ml-auto img');
   }
 
-  get achievementsLink() {
+ get achievementsLink() {
     return $('.ml-auto span');
   }
 
@@ -98,7 +100,6 @@ class TopMenuPage extends BasePage {
   get registerLink() {
     return $('[href="/user/register"]');
   }
-
 
   get headerChallenge() {
     return $('.h4.mr-4');
