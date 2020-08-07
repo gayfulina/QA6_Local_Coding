@@ -10,7 +10,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
     RegisterPage.open();
   });
 
-  it('should verify that user can not register with invalid First Name', function () {
+  it('TC-118 should verify that user can not register with invalid First Name', function () {
     for (let i = 0; i < negativeRegisterStep1.invalidName.length; i++) {
       browser.refresh();
       RegisterPage.firstNameInput.setValue(negativeRegisterStep1.invalidName[i]);
@@ -24,7 +24,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
     }
   });
 
-  it('should verify that user can not register with invalid Last Name', function () {
+  it('TC-119 should verify that user can not register with invalid Last Name', function () {
     for (let i = 0; i < negativeRegisterStep1.invalidName.length; i++) {
       browser.refresh();
       RegisterPage.firstNameInput.setValue(newUser.firstName);
@@ -38,7 +38,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
     }
   });
 
-  it('should verify that user can not register with invalid Email', function () {
+  it('TC-120 should verify that user can not register with invalid Email', function () {
     for (let i = 0; i < negativeRegisterStep1.invalidEmail1.length; i++) {
       browser.refresh();
       RegisterPage.firstNameInput.setValue(newUser.firstName);
@@ -49,7 +49,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
     }
   });
 
-  it('should verify that user can not register with already existing email', function () {
+  it('TC-121 should verify that user can not register with already existing email', function () {
     RegisterPage.firstNameInput.setValue(newUser.firstName);
     RegisterPage.lastNameInput.setValue(newUser.lastName);
     RegisterPage.email.setValue(user.new.email);
@@ -60,7 +60,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
     expect(RegisterPage.errorMessage.getText()).eq(errorMessagesRegistration.emailExistsError);
   });
 
-  it('should verify that user can not register with invalid password', function () {
+  it('TC-122 should verify that user can not register with invalid password', function () {
     RegisterPage.firstNameInput.setValue(newUser.firstName);
     RegisterPage.lastNameInput.setValue(newUser.lastName);
     RegisterPage.email.setValue(newUser.email);
@@ -71,28 +71,28 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
     expect(RegisterPage.errorMessage.getText()).eq(errorMessagesRegistration.wrongPasswordError);
   });
 
-  it('should verify that "Required" appears after First Name has been cleared', function () {
+  it('TC-123 should verify that "Required" appears after First Name has been cleared', function () {
     RegisterPage.firstNameInput.setValue(negativeRegisterStep1.oneLetter);
     browser.keys('Back space');
     RegisterPage.inputFieldErrorMessages[0].waitForDisplayed({ timeout: WAIT_TIME_MEDIUM });
     expect(RegisterPage.inputFieldErrorMessages[0].isDisplayed()).true;
   });
 
-  it('should verify that "Required" appears after Last Name has been cleared', function () {
+  it('TC-124 should verify that "Required" appears after Last Name has been cleared', function () {
     RegisterPage.lastNameInput.setValue(negativeRegisterStep1.oneLetter);
     browser.keys('Back space');
     RegisterPage.inputFieldErrorMessages[0].waitForDisplayed({ timeout: WAIT_TIME_MEDIUM });
     expect(RegisterPage.inputFieldErrorMessages[0].isDisplayed()).true;
   });
 
-  it('should verify that "Required" appears after Email has been cleared', function () {
+  it('TC-125 should verify that "Required" appears after Email has been cleared', function () {
     RegisterPage.email.setValue(negativeRegisterStep1.oneLetter);
     browser.keys('Back space');
     RegisterPage.inputFieldErrorMessages[0].waitForDisplayed({ timeout: WAIT_TIME_MEDIUM });
     expect(RegisterPage.inputFieldErrorMessages[0].isDisplayed()).true;
   });
 
-  it('should verify that "Required" appears after password has been cleared', function () {
+  it('TC-126 should verify that "Required" appears after password has been cleared', function () {
     RegisterPage.password.setValue(negativeRegisterStep1.oneLetter);
     browser.keys('Back space');
     RegisterPage.inputFieldErrorMessages[0].waitForDisplayed({ timeout: WAIT_TIME_MEDIUM });

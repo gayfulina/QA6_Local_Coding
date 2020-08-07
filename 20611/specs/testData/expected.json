@@ -72,5 +72,10 @@
     "contactUsPage": "Contact us",
     "termsOfServicePage": "Terms of Service",
     "privacyPolicyPage": "PASV Privacy Policy"
+  },
+
+  "resetPassword": {
+    "errorMessage": "'email' is not a valid email",
+    "required": "Required"
   }
 }
