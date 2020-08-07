@@ -8,22 +8,19 @@ describe('New user registration Negative ', () => {
     RegisterPage.open();
   });
 
-  it('TC-013 Check if error message appears when email has incorrect format ', function() {
+  it('TC-013 Check if email has incorrect format ', function () {
     RegisterPage.email.setValue();
     expect(RegisterPage.inputFieldErrorMessages).to.exist;
   });
 
-  it('TC-016 Check if error message appears when email has incorrect format ', function() {
+  it('TC-016 Check if error message appears when email has incorrect format ', function () {
     RegisterPage.email.setValue(user.incorrectEmail);
     expect(RegisterPage.errorMessage).to.exist;
   });
 
-  it('TC-023 Check IF phone number error message appears ', function() {
+  it('TC-023 Check IF phone number error message appears ', function () {
     RegisterStep2.open();
     RegisterStep2.phoneNumber.setValue(user.incorrectPhone);
     expect(RegisterStep2.errorMessages).to.exist;
   });
-
-
-
 });

@@ -75,6 +75,7 @@
   },
 
   "resetPassword": {
-    "errorMessage": "'email' is not a valid email"
+    "errorMessage": "'email' is not a valid email",
+    "required": "Required"
   }
 }
