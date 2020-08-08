@@ -3,8 +3,7 @@ import RegistrationPage from '../pageObjects/register.page';
 import LoginPage from '../pageObjects/login.page';
 
 class ResetPasswordPage extends BasePage {
-
-  get resetHeader () {
+  get resetHeader() {
     return $('h1');
   }
 
@@ -46,6 +45,10 @@ class ResetPasswordPage extends BasePage {
   goToLoginPage() {
     this.loginLink.click();
     return LoginPage;
+  }
+
+  get requiredText() {
+    return $('.ant-form-item-explain');
   }
 
   open(path) {

@@ -1,6 +1,6 @@
 import LoginPage from "../../../pageObjects/login.page";
 import {userNegativeData} from "../../data/userNegativeData";
-import {admin, student} from "../../../testData/user";
+import user from "../../../testData/user";
 
 describe ("LOGIN NEGATIVE", () => {
   before( () => {
@@ -8,12 +8,12 @@ describe ("LOGIN NEGATIVE", () => {
   });
 
   it('TC-084 should enter wrong email', () => {
-    LoginPage.login(userNegativeData.emailWrong, admin.password);
+    LoginPage.login(userNegativeData.emailWrong, user.admin.password);
     browser.waitUntil( () => LoginPage.errorMessageCloseBtn.isDisplayed());
   });
 
   it('TC-085 should enter wrong password', () => {
-    LoginPage.login(admin.email, userNegativeData.passwordWrong);
+    LoginPage.login(user.admin.email, userNegativeData.passwordWrong);
     browser.waitUntil( () => LoginPage.errorMessageCloseBtn.isDisplayed());
   });
 
@@ -23,24 +23,24 @@ describe ("LOGIN NEGATIVE", () => {
   });
 
   it('TC-087 should enter student email and admin password', () => {
-    LoginPage.login(student.email, admin.password);
+    LoginPage.login(user.student.email, user.admin.password);
     browser.waitUntil( () => LoginPage.errorMessageCloseBtn.isDisplayed());
   });
 
   it('TC-088 should enter admin email and student password', () => {
-    LoginPage.login(admin.email, student.password);
+    LoginPage.login(user.admin.email, user.student.password);
     browser.waitUntil( () => LoginPage.errorMessageCloseBtn.isDisplayed());
   });
 
   it('TC-089 should leave empty password field', () => {
     browser.refresh();
-    LoginPage.inputUsername.setValue(admin.email);
+    LoginPage.inputUsername.setValue(user.admin.email);
     expect(LoginPage.loginBtn.isEnabled()).equal(false);
   });
 
   it('TC-090 should leave empty email field', () => {
     browser.refresh();
-    LoginPage.inputPassword.setValue(admin.password);
+    LoginPage.inputPassword.setValue(user.admin.password);
     expect(LoginPage.loginBtn.isEnabled()).equal(false);
   });
 

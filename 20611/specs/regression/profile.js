@@ -25,9 +25,9 @@ describe('Verify that header is present', () => {
     expect(ProfilePage.completedCodeWarsText.getText()).eq(profile.paragraph3);
   });
 
-  it('TC-053 Verify that paragraph4 has text Daily reports', function () {
-    expect(ProfilePage.dailyReportsText.getText()).eq(profile.paragraph4);
-  });
+  // it('TC-053 Verify that paragraph4 has text Daily reports', function () {
+  //   expect(ProfilePage.dailyReportsText.getText()).eq(profile.paragraph4);
+  // });
 
   it('TC-054 Verify create day report btn text', function () {
     expect(ProfilePage.createDayReportBtn.getText()).eq(profile.createDayReportBtn);

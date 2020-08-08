@@ -15,6 +15,7 @@ describe('NEW USER CHANGE PASSWORD', function () {
     RegisterPage.registerUser(user);
     RegisterStep2.registerUserStep2(user);
     ProfilePage.dropDownUserMenu.click();
+    ProfilePage.settingsLink.waitForClickable();
     ProfilePage.settingsLink.click();
     SettingsPasswordPage.passwordTab.click();
   });
@@ -37,6 +38,7 @@ describe('LEARNER CHANGE PASSWORD', () => {
     ProfilePage.logout();
     LoginPage.login(user.email, user.newPassword);
     ProfilePage.dropDownUserMenu.click();
+    ProfilePage.settingsLink.waitForClickable();
     ProfilePage.settingsLink.click();
     SettingsPasswordPage.passwordTab.click();
   });
@@ -63,6 +65,7 @@ describe('STUDENT CHANGE PASSWORD', () => {
     ProfilePage.logout();
     LoginPage.login(user.email, user.password);
     ProfilePage.dropDownUserMenu.click();
+    ProfilePage.settingsLink.waitForClickable();
     ProfilePage.settingsLink.click();
     SettingsPasswordPage.passwordTab.click();
   });
@@ -90,6 +93,7 @@ describe('ADMIN CHANGE PASSWORD', () => {
     ProfilePage.logout();
     LoginPage.login(admin.email, admin.oldPassword);
     ProfilePage.dropDownUserMenu.click();
+    ProfilePage.settingsLink.waitForClickable();
     ProfilePage.settingsLink.click();
     SettingsPasswordPage.passwordTab.click();
   });
@@ -108,6 +112,7 @@ describe('ADMIN CHANGE PASSWORD', () => {
 
   it('Return old password for Admin', function () {
     ProfilePage.dropDownUserMenu.click();
+    ProfilePage.settingsLink.waitForClickable();
     ProfilePage.settingsLink.click();
     SettingsPasswordPage.passwordTab.click();
     SettingsPasswordPage.updatePassword(admin.newPassword, admin.oldPassword);

@@ -10,6 +10,7 @@ before(() => {
   LoginPage.open();
   LoginPage.login(newRole.email, newRole.oldPassword);
   ProfilePage.dropDownUserMenu.click();
+  ProfilePage.settingsLink.waitForClickable();
   ProfilePage.settingsLink.click();
   SettingsPasswordPage.passwordTab.click();
 });
@@ -169,6 +170,7 @@ after(() => {
   LoginPage.open();
   LoginPage.login(newRole.email, newRole.newPassword);
   ProfilePage.dropDownUserMenu.click();
+  ProfilePage.settingsLink.waitForClickable();
   ProfilePage.settingsLink.click();
   SettingsPasswordPage.passwordTab.click();
   SettingsPasswordPage.updatePassword(newRole.newPassword, newRole.oldPassword)

@@ -13,11 +13,11 @@ before(() => {
 });
 
 describe('Register step-2 elements', () => {
-  it('TC-008-001 Verify that homepage link is clickable', function () {
+  it(`TC-008-001 Verify that homepage link is clickable`, function () {
     expect(RegisterStep2Page.homePageLink.isClickable()).true;
   });
 
-  it('TC-008-002 Verify that header is displayed', function () {
+  it(`TC-008-002 Verify that header is displayed`, function () {
     expect(RegisterStep2Page.headerRegisterStep2.waitForDisplayed(WAIT_TIME_MEDIUM));
   });
 
@@ -27,17 +27,46 @@ describe('Register step-2 elements', () => {
     );
   });
 
-  it('TC-008-004 Verify that country label is displayed', function () {
+  it(`TC-008-004 Verify that country label is displayed`, function () {
     expect(RegisterStep2Page.countryLabel.isDisplayed()).true;
   });
 
-  it('TC-008-005 Verify that country label reads "Country"', function () {
+  it(`TC-008-005 Verify that country label reads "Country"`, function () {
     expect(RegisterStep2Page.countryLabel.getText()).eq(expected.registerStep2Data.countryLabel);
   });
+
+  it(`TC-008-006 Verify that phone label is displayed`, function () {
+    expect(RegisterStep2Page.phoneLabel.isDisplayed()).true;
+  });
+
+  it('TC-008-007 Verify that phone label reads "Phone"', function () {
+    expect(RegisterStep2Page.phoneLabel.getText()).eq(expected.registerStep2Data.phoneLabel);
+  });
+
+  it('TC-008-008 Verify that country dropdown is displayed', function () {
+    expect(RegisterStep2Page.openDropdown.isDisplayed()).true;
+  });
+
+  it('TC-008-009 Verify that country dropdown set by default: "United States"', function () {
+    expect(RegisterStep2Page.openDropdown.getText()).eq(expected.registerStep2Data.countryDropDown);
+  });
+
+  it('TC-008-010 Verify that phone placeholder is displayed', function () {
+    expect(RegisterStep2Page.phoneNumber.isDisplayed()).true;
+  });
+
+  it('TC-008-011 Verify that phone placeholder reads "phone number"', function () {
+    expect(RegisterStep2Page.phoneNumber.getAttribute('placeholder')).eq(expected.registerStep2Data.phonePlaceHolder);
+  });
+
+  it('TC-008-013 Verify that phone prefix by default is "+1"', function () {
+    expect(RegisterStep2Page.phoneNumberPrefix.getText()).eq(expected.registerStep2Data.phoneNumberPrefix);
+  });
+
+  it('TC-008-014 ', function () {});
 });
 
 after('Should delete a user', async () => {
-  const res = await userDelete(user.email.toLowerCase());
+  const res = await userDelete(user.email);
   expect(res.success).eq(true);
 });
-
