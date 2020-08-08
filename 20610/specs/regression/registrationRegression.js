@@ -1,3 +1,4 @@
+
 import RegisterPage from '../../../pageObjects/register.page';
 import user from '../../../testData/user';
 import expected from '../../data/expected.json';

@@ -1,3 +1,4 @@
+
 import RegisterPage from '../../../pageObjects/register.page';
 import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
 import expected from '../../../20610/data/expected.json';

@@ -16,8 +16,15 @@
   },
 
   "newUserStep2": {
-    "h5firstPart": "Dear",
-    "h5secondPart": "\nPlease complete these fields"
+    "h5firstPart": "Dear ",
+    "h5secondPart": "\nPlease complete these fields",
+    "countryLable": "Country",
+    "defaultCountry": "United States",
+    "phoneLable": "Phone",
+    "phonePlaceholder": "phone number",
+    "submitBtn": "Submit",
+    "phoneErrMessageNumOfDigits":  "Phone number mast be min: 10 and max: 11 numbers",
+    "phoneErrMessageNaN":  "This entry must only contain numbers"
   },
 
   "loginPageHeader": {
