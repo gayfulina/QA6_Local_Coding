@@ -66,6 +66,10 @@ class DailyReportsPage extends BasePage {
     return $$('.ant-tag');
   }
 
+  get notificationMessage() {
+    return $('.ant-notification-topRight');
+  }
+
   createRandomDayReport() {
     this.createDayReportBtn.click();
     this.checkbox[randomData.checkbox].click(); // click on random checkboxes
