@@ -124,8 +124,12 @@
     "phone8": "12345678",
     "phone7": "1234567",
     "phone12": "123456789000",
-    "phoneabc": "abc",
-    "phone+@#": "+@#",
-    "skipText": "Skip"
-    }
+    "phoneABC": "abc",
+    "phoneSC": "+@#",
+    "skipText": "Skip",
+    "errorPhone1011": "Number should be min 10 and max 11 digits with a code",
+    "errorPhone910": "Number should be min 9 and max 10 digits with a code",
+    "errorPhone89": "Number should be min 8 and max 9 digits with a code",
+    "errorABC": "This entry must only contain numbers"
+  }
 }
