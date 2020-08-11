@@ -2,9 +2,10 @@ import RegisterPage from '../../../pageObjects/register.page';
 import HomePage from '../../../pageObjects/home.page';
 import { registration, user } from '../testData/users';
 import LoginPage from '../../../pageObjects/login.page';
-import { login } from '../testData/expected.json';
+import { login, termsAndAgreement } from '../testData/expected.json';
 import RegisterStep2 from '../../../pageObjects/registerStep2.page';
 import { registrationPage2 } from '../testData/expected.json';
+import TermsAndAgreements from '../../../pageObjects/termsAndAgreements.page';
 
 describe('New user registration page', () => {
   before(() => {
@@ -48,13 +49,15 @@ describe('New user registration page', () => {
     expect(RegisterPage.registerBtn.isClickable()).to.equal(false);
   });
 
+  it('TC-014 The Terms and agreement link opens a pop-up window on the right side of the page with the text.', function () {
+    RegisterPage.agreementLabel.click();
+    expect(RegisterPage.agreementDrawer.isDisplayed()).true;
+    RegisterPage.drawerCloseBtn.click();
+  });
+
   it('TC-012 Check log in link ', function () {
     RegisterPage.loginLink.click();
     expect(LoginPage.headerLogin.getText()).eq(login.header);
-  });
-
-  it('TC-013 Check terms of agreement', function () {
-    expect(RegisterPage.agreementLabel).to.exist;
   });
 
   it('TC-018 Check if country lable text ', function () {
