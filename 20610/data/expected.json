@@ -67,7 +67,8 @@
     "submitBtn": "Submit",
     "emptyNameFieldWarning": "Required",
     "emailError": "'email' is not a valid email",
-    "emptyPhoneFieldWarning": "Required"
+    "emptyPhoneFieldWarning": "Required",
+    "submitConfirmation": "Your request was submitted!"
   },
 
   "ContactUsValues": {

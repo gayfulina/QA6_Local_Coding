@@ -1,7 +1,6 @@
 import BasePage from './../pageObjects/Base.page';
 
 class ContactUsPage extends BasePage {
-
   get headerContactUs() {
     return $('h1');
   }
@@ -70,10 +69,13 @@ class ContactUsPage extends BasePage {
     return $('p');
   }
 
+  get confirmationText() {
+    return $('.alert.alert-success.mt-4');
+  }
+
   open() {
     return super.open('/contact');
   }
 }
 
 export default new ContactUsPage();
-
