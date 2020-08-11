@@ -89,7 +89,7 @@ class ShippingAddressPage extends BasePage {
   }
 
   get shippingAddressLink() {
-    return $('//li[text()="Shipping address"]');
+    return $('[data-qa="shippingAddress"]')
   }
 
   get countryOptions() {
