@@ -1,6 +1,7 @@
 import ContactUsPage from '../../../pageObjects/contactUs.page';
 import user from '../../../testData/user';
 import { newUser } from '../../../20610/data/fakeData';
+import expected from '../../../20610/data/expected.json';
 
 describe('CONTACT US PAGE, SMOKE', () => {
   before('Before', () => {
@@ -26,6 +27,7 @@ describe('CONTACT US PAGE, SMOKE', () => {
     it('CU04 message field accepts data correct', function () {
       ContactUsPage.messageInputFld.setValue(newUser.message);
       ContactUsPage.submitBtn.click();
+      expect(ContactUsPage.confirmationText.getText()).eq(expected.contactUsElementsDisplayed.submitConfirmation);
     });
   });
 });
