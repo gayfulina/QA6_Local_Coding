@@ -33,8 +33,8 @@ describe('Values behavior negative', () => {
   });
 
   it('TC-008-026 Verify that if phone prefix is 2 digit and user enters less than 9 digits error appears', function () {
-    RegisterStep2Page.openDropdown.click();
-    RegisterStep2Page.openDropdown.selectByAttribute('aria-label', 'United Kingdom');
+    browser.refresh();
+    RegisterStep2Page.selectCountry2DigitPrefix();
     RegisterStep2Page.phoneNumber.setValue(expected.registerStep2Data.phone8);
     expect(RegisterStep2Page.errorMessages[0].waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM })).true;
   });
@@ -45,8 +45,7 @@ describe('Values behavior negative', () => {
 
   it('TC-008-028 Verify that if phone prefix is 2 digit and user enters more than 10 digits error appears', function () {
     browser.refresh();
-    RegisterStep2Page.openDropdown.click();
-    RegisterStep2Page.openDropdown.selectByAttribute('aria-label', 'United Kingdom');
+    RegisterStep2Page.selectCountry2DigitPrefix();
     RegisterStep2Page.phoneNumber.setValue(expected.registerStep2Data.phone11);
     expect(RegisterStep2Page.errorMessages[0].waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM })).true;
   });
@@ -57,8 +56,7 @@ describe('Values behavior negative', () => {
 
   it('TC-008-030 Verify that if phone prefix is 3 digit and user enters less than 8 digits error appears', function () {
     browser.refresh();
-    RegisterStep2Page.openDropdown.click();
-    RegisterStep2Page.openDropdown.selectByAttribute('aria-label', 'Ukraine');
+    RegisterStep2Page.selectCountry3DigitPrefix();
     RegisterStep2Page.phoneNumber.setValue(expected.registerStep2Data.phone7);
     expect(RegisterStep2Page.errorMessages[0].waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM })).true;
   });
@@ -69,8 +67,7 @@ describe('Values behavior negative', () => {
 
   it('TC-008-032 Verify that if phone prefix is 3 digit and user enters more than 9 digits error appears', function () {
     browser.refresh();
-    RegisterStep2Page.openDropdown.click();
-    RegisterStep2Page.openDropdown.selectByAttribute('aria-label', 'Ukraine');
+    RegisterStep2Page.selectCountry3DigitPrefix();
     RegisterStep2Page.phoneNumber.setValue(expected.registerStep2Data.phone10);
     expect(RegisterStep2Page.errorMessages[0].waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM })).true;
   });

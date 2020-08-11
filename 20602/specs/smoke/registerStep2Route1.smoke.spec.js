@@ -15,16 +15,14 @@ before(() => {
 
 describe('Register step-2 route-1', () => {
   it('TC-008-014 Verify that user can change country', function () {
-    RegisterStep2Page.openDropdown.click();
-    RegisterStep2Page.countryDropdown.click();
-    expect(RegisterStep2Page.openDropdown.getText()).eq(expected.registerStep2Data.changeCountry);
+    RegisterStep2Page.selectCountry2DigitPrefix();
+    expect(RegisterStep2Page.openDropdown.getText()).not.eq(expected.registerStep2Data.changeCountry);
   });
 
   it('TC-008-015 Verify that if user changes country phone prefix changes automatically', function () {
     browser.refresh();
-    RegisterStep2Page.openDropdown.click();
-    RegisterStep2Page.countryDropdown.click();
-    expect(RegisterStep2Page.phoneNumberPrefix.getText()).eq(expected.registerStep2Data.changePrefix);
+    RegisterStep2Page.selectCountry2DigitPrefix();
+    expect(RegisterStep2Page.phoneNumberPrefix.getText().length).eq(expected.registerStep2Data.changePrefix);
   });
 
   it('TC-008-040 Verify that if user clicks "Submit" their will be redirected to their Dashboard', function () {

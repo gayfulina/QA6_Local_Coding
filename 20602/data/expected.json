@@ -116,8 +116,8 @@
     "countryDropDown": "United States",
     "phonePlaceHolder": "phone number",
     "phoneNumberPrefix": "+1",
-    "changeCountry": "Mongolia",
-    "changePrefix": "+976",
+    "changeCountry": "United States",
+    "changePrefix": 3,
     "phone10": "1234567890",
     "phone11": "12345678900",
     "phone9": "123456789",
@@ -130,6 +130,7 @@
     "errorPhone1011": "Number should be min 10 and max 11 digits with a code",
     "errorPhone910": "Number should be min 9 and max 10 digits with a code",
     "errorPhone89": "Number should be min 8 and max 9 digits with a code",
-    "errorABC": "This entry must only contain numbers"
+    "errorABC": "This entry must only contain numbers",
+    "popupDrawerTitle": "Contact information"
   }
 }
