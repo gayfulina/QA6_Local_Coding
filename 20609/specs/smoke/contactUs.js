@@ -7,31 +7,31 @@ describe('CONTACT US PAGE - SMOKE', () => {
     ContactUsPage.open();
   });
 
-  it('should Name field accept full name', () => {
+  it('TC-110 should Name field accept full name', () => {
     ContactUsPage.nameInputFld.setValue(user.new.firstName + ' ' + user.new.lastName);
     expect(ContactUsPage.nameInputFld.getValue()).eq(user.new.firstName + ' ' + user.new.lastName);
   });
 
-  it('should Email field accept email', () => {
+  it('TC-111 should Email field accept email', () => {
     ContactUsPage.emailInputFld.setValue(user.new.email);
     expect(ContactUsPage.emailInputFld.getValue()).eq(user.new.email);
   });
 
-  it('should Cell Phone Number field accept valid phone number', () => {
+  it('TC-112 should Cell Phone Number field accept valid phone number', () => {
     ContactUsPage.phoneInputFld.setValue(user.new.phone);
     expect(ContactUsPage.phoneInputFld.getValue()).eq(user.new.phone);
   });
 
-  it('should Message field accept text message', () => {
+  it('TC-113 should Message field accept text message', () => {
     ContactUsPage.messageInputFld.setValue(textMessageInput);
     expect(ContactUsPage.messageInputFld.getValue()).eq(textMessageInput);
   });
 
-  it('should the Reset button be clickable', () => {
+  it('TC-114 should the Reset button be clickable', () => {
     ContactUsPage.resetBtn.isClickable();
   });
 
-  it('should confirmation message be displayed when clicking Submit Button after filling out the form ', () => {
+  it('TC-115 should confirmation message be displayed when clicking Submit Button after filling out the form ', () => {
     ContactUsPage.submitBtn.click();
     browser.waitUntil(() => ContactUsPage.confirmationText.isDisplayed());
   });
