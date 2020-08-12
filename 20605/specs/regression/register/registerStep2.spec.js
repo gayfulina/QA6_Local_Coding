@@ -1,7 +1,7 @@
-import RegisterPage from '../../../pageObjects/register.page';
-import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
-import { registerPageTestResult } from '../../testResult/register';
-import { newUser } from '../../testData/register';
+import RegisterPage from '../../../../pageObjects/register.page';
+import RegisterStep2Page from '../../../../pageObjects/registerStep2.page';
+import { registerPageTestResult } from '../../../testResult/register';
+import { newUser } from '../../../testData/register';
 
 
 describe('REGISTER PAGE STEP 2', function () {

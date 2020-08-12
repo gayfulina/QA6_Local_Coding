@@ -1,8 +1,8 @@
-import LoginPage from '../../../pageObjects/login.page';
-import user from '../../../testData/user';
-import ProfilePage from '../../../pageObjects/profile.page';
-import SettingsProfilePage from '../../../pageObjects/settingsProfile.page';
-import {profileSettings} from '../../testResult/profileSettings';
+import LoginPage from '../../../../pageObjects/login.page';
+import user from '../../../../testData/user';
+import ProfilePage from '../../../../pageObjects/profile.page';
+import SettingsProfilePage from '../../../../pageObjects/settingsProfile.page';
+import {profileSettings} from '../../../testResult/profileSettings';
 
 describe('PROFILE TAB (SETTINGS) LAYOUT', function () {
 

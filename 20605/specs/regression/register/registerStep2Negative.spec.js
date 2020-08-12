@@ -1,6 +1,6 @@
-import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
-import {negativeRegisterStep2} from '../../testData/register';
-import {errorMessagesRegisterStep2} from '../../testResult/errorMessages';
+import RegisterStep2Page from '../../../../pageObjects/registerStep2.page';
+import {negativeRegisterStep2} from '../../../testData/register';
+import {errorMessagesRegisterStep2} from '../../../testResult/errorMessages';
 // import waitTime from '../../../testData/waitTimes';
 
 describe('REGISTRATION PAGE 2 (NEGATIVE)', function () {

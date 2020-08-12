@@ -1,6 +1,6 @@
-import RegisterPage from '../../../pageObjects/register.page';
-import { inputRegisterStep1 } from '../../testData/register';
-import { expectedRegisterStep1 } from '../../testResult/register';
+import RegisterPage from '../../../../pageObjects/register.page';
+import { inputRegisterStep1 } from '../../../testData/register';
+import { expectedRegisterStep1 } from '../../../testResult/register';
 
 describe('REGISTER PAGE STEP-1 FUNCTIONAL PART', function() {
   beforeEach(() => {

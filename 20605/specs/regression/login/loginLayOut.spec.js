@@ -1,5 +1,5 @@
-import LoginPage from '../../../pageObjects/login.page';
-import { loginPage } from '../../testResult/login';
+import LoginPage from '../../../../pageObjects/login.page';
+import { loginPage } from '../../../testResult/login';
 
 describe('LOGIN PAGE', function () {
   before(() => {

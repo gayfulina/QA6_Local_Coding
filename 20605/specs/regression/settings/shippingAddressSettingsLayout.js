@@ -1,8 +1,8 @@
-import LoginPage from '../../../pageObjects/login.page';
-import user from '../../../testData/user';
-import TopMenuPage from '../../../pageObjects/topMenu.page';
-import ShippingAddressPage from '../../../pageObjects/shippingAddress.page';
-import { shippingAddressSettings } from '../../testResult/shippingAddressSettings';
+import LoginPage from '../../../../pageObjects/login.page';
+import user from '../../../../testData/user';
+import TopMenuPage from '../../../../pageObjects/topMenu.page';
+import ShippingAddressPage from '../../../../pageObjects/shippingAddress.page';
+import { shippingAddressSettings } from '../../../testResult/shippingAddressSettings';
 
 describe('PROFILE TAB (SETTINGS) LAYOUT', function () {
   before(() => {

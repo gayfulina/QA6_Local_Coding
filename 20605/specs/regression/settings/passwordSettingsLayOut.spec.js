@@ -1,9 +1,9 @@
-import RegisterPage from '../../../pageObjects/register.page';
-import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
-import ProfilePage from '../../../pageObjects/profile.page';
-import SettingsPasswordPage from '../../../pageObjects/settingsPassword.page';
-import { newUser } from '../../testData/register';
-import { passwordSettingsTestResult } from '../../testResult/passwordSettings';
+import RegisterPage from '../../../../pageObjects/register.page';
+import RegisterStep2Page from '../../../../pageObjects/registerStep2.page';
+import ProfilePage from '../../../../pageObjects/profile.page';
+import SettingsPasswordPage from '../../../../pageObjects/settingsPassword.page';
+import { newUser } from '../../../testData/register';
+import { passwordSettingsTestResult } from '../../../testResult/passwordSettings';
 
 describe('PASSWORD (SETTINGS) PAGE', () => {
   before('before all describes => register', () => {
