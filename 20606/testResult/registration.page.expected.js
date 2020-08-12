@@ -2,4 +2,8 @@ const registrationPage = {
   txtHeader: "Create an account"
 }
 
-export {registrationPage};
+const errorRegMessage = {
+  emailExist: 'User with this e-mail exists'
+}
+
+export {registrationPage, errorRegMessage};
