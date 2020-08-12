@@ -13,8 +13,9 @@ const user = {
   },
 
   tempUser: {
-    email: 'new55@qa6.us',
+    email: 'new55@qa63.us',
     password: 'newnew',
+    newPassword: 'newPasw',
     firstName: 'NewFirst',
     lastName: 'NewLast',
     phone: '17775551121',
