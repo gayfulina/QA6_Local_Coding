@@ -37,7 +37,7 @@ class ContactUsPage extends BasePage {
     return $('.ant-btn.login-form-button.ant-btn-primary');
   }
 
-  get resetBtn(){
+  get resetBtn() {
     return $('.ant-btn.ml-2');
   }
 
