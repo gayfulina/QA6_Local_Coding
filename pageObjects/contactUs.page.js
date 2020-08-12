@@ -1,7 +1,6 @@
 import BasePage from './../pageObjects/Base.page';
 
 class ContactUsPage extends BasePage {
-
   get headerContactUs() {
     return $('h1');
   }
@@ -38,6 +37,10 @@ class ContactUsPage extends BasePage {
     return $('.ant-btn.login-form-button.ant-btn-primary');
   }
 
+  get resetBtn() {
+    return $('.ant-btn.ml-2');
+  }
+
   get contactUsLink() {
     return $('[href="/contact"]');
   }
@@ -70,10 +73,13 @@ class ContactUsPage extends BasePage {
     return $('p');
   }
 
+  get confirmationText() {
+    return $('.alert.alert-success.mt-4');
+  }
+
   open() {
     return super.open('/contact');
   }
 }
 
 export default new ContactUsPage();
-

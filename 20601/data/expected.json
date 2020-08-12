@@ -35,5 +35,12 @@
     "country": "Country",
     "englishLevel": "English level",
     "t-ShirtSize": "T-Shirt size"
+  },
+  "userBadges":
+  {
+    "admin": "admin",
+    "learner": "learner",
+    "student": "student",
+    "new": "new"
   }
 }

@@ -1,6 +1,6 @@
-import LoginPage from '../../../pageObjects/login.page';
-import user from '../../../testData/user';
-import {anyNumbers, anySymbols, upperLowerLetters} from "../../testData/login";
+import LoginPage from '../../../../pageObjects/login.page';
+import user from '../../../../testData/user';
+import {anyNumbers, anySymbols, upperLowerLetters} from "../../../testData/login";
 
 describe('LOGIN PAGE (FUNCTIONAL)', function () {
     before(() => {

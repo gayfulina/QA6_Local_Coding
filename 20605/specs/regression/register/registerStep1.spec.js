@@ -1,5 +1,5 @@
-import RegisterPage from '../../../pageObjects/register.page';
-import { registerPageTestResult } from '../../testResult/register';
+import RegisterPage from '../../../../pageObjects/register.page';
+import { registerPageTestResult } from '../../../testResult/register';
 
 describe('REGISTER PAGE STEP 1', function () {
   before(() => {
