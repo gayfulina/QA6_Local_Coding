@@ -75,6 +75,10 @@ class RegisterPage extends BasePage {
     return $$('.ant-form-item-explain');
   }
 
+  get errorMessage() {
+    return $('.ant-notification-notice-message');
+  }
+
   termsAndAgreements() {
     this.agreementCheckBox.click();
     this.termsAndAgreementsLink.click();

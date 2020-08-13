@@ -2,7 +2,7 @@ import RegisterPage from '../../../pageObjects/register.page';
 import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
 import { newUser } from '../../data/fakeData';
 import ProfilePage from '../../../pageObjects/profile.page';
-import SettingsEmailPage from '../../../pageObjects/settings.email.page';
+import SettingsEmailPage from '../../../pageObjects/settingsEmail.page';
 import LoginPage from '../../../pageObjects/login.page';
 
 describe('RESET OLD EMAIL AND LOGIN WITH NEW EMAIL FOR NEW USER SMOKE)', () => {

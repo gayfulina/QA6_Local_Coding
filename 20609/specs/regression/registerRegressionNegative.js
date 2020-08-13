@@ -1,7 +1,7 @@
 import RegisterPage from '../../../pageObjects/register.page';
 import { userNew } from '../../data/registerData';
 import { userNegativeData, invalidFirstNameData } from '../../data/userNegativeData';
-import ResetPasswordPage from '../../../pageObjects/reset.password';
+import ResetPasswordPage from '../../../pageObjects/resetPassword.page';
 import { errorMessages } from '../../data/errorMessages';
 import user from '../../.././testData/user';
 

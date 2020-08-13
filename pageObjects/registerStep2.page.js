@@ -1,7 +1,6 @@
 import BasePage from './../pageObjects/Base.page';
 
 class RegisterStep2Page extends BasePage {
-
   get headerRegisterStep2() {
     return $('h5');
   }
@@ -14,7 +13,11 @@ class RegisterStep2Page extends BasePage {
     return $$('.ant-select-item-option-content')[2];
   }
 
-  get countryCurrent(){
+  get countryOptions() {
+    return $$('.ant-select-item-option-content');
+  }
+
+  get countryCurrent() {
     return $('.ant-select-selection-item');
   }
 
@@ -22,7 +25,7 @@ class RegisterStep2Page extends BasePage {
     return $('#user_login_phone');
   }
 
-  get phoneNumberPrefix(){
+  get phoneNumberPrefix() {
     return $('.ant-input-prefix');
   }
 
@@ -46,7 +49,7 @@ class RegisterStep2Page extends BasePage {
   }
 
   get closeBtn() {
-    return $('button[aria-label="Close"]');
+    return $('.ant-drawer-close');
   }
 
   get countryLabel() {
@@ -56,7 +59,33 @@ class RegisterStep2Page extends BasePage {
   get phoneLabel() {
     return $('label[for="user_login_phone"]');
   }
-  
+
+  get errorMessages() {
+    return $$('.ant-form-item-explain');
+  }
+
+  get popupDrawer() {
+    return $('.ant-drawer-open');
+  }
+
+  selectCountry2DigitPrefix() {
+    while (this.phoneNumberPrefix.getText().length !== 3) {
+      const l = 11;
+      const n = Math.floor(Math.random() * l);
+      this.openDropdown.click();
+      this.countryOptions[n].click();
+    }
+  }
+
+  selectCountry3DigitPrefix() {
+    while (this.phoneNumberPrefix.getText().length !== 4) {
+      const l = 11;
+      const n = Math.floor(Math.random() * l);
+      this.openDropdown.click();
+      this.countryOptions[n].click();
+    }
+  }
+
   open(path) {
     return super.open('user/register-step2');
   }

@@ -1,4 +1,4 @@
-module.exports = {
+const user = {
   new: {
     email: 'new@qa6.us',
     password: 'newnew',
@@ -29,11 +29,11 @@ module.exports = {
     password: 'learner',
     firstName: 'LearnerFirst',
     lastName: 'LearnerLast',
-    phone: '17775551123',
+    phone: '111234567890',
     about: 'QA Engineer',
     goals: 'no goals',
     englishLevel: 'Advanced',
-    countryName: 'USA',
+    countryName: 'United States',
   },
 
   student: {
@@ -48,3 +48,5 @@ module.exports = {
     countryName: 'USA',
   },
 };
+
+module.exports = user;

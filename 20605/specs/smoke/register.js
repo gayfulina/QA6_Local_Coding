@@ -4,7 +4,7 @@ import {newUser} from '../../testData/register';
 import ProfilePage from '../../../pageObjects/profile.page';
 
 describe('REGISTER', function() {
-  it('should verify that newUser can register', function() {
+  it('TC-091 should verify that newUser can register', function() {
     RegisterPage.open();
     RegisterPage.registerUser(newUser);
     RegisterStep2Page.registerUserStep2(newUser);

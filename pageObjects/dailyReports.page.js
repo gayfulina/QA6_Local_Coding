@@ -30,6 +30,10 @@ class DailyReportsPage extends BasePage {
     return $$('.ant-select-item.ant-select-item-option'); //one selector for both fields
   }
 
+  get selectedContentMoraleAndHours() {
+    return $$('.ant-select-selection-item');
+  }
+
   get inputHours() {
     return $('#hours');
   }
@@ -48,6 +52,22 @@ class DailyReportsPage extends BasePage {
 
   get lastDailyReportText() {
     return $('.ant-row.mb-4');
+  }
+
+  get reportQty() {
+    return $('.small.ml-2');
+  }
+
+  get newDailyReportCreatedText () {
+    return $('.ant-row.mb-4')
+  }
+
+  get dailyReportTag() {
+    return $$('.ant-tag');
+  }
+
+  get notificationMessage() {
+    return $('.ant-notification-topRight');
   }
 
   createRandomDayReport() {

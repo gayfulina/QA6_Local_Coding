@@ -1,5 +1,5 @@
 {
- "main" : {
+ "main": {
    "header": "Adaptive learning platform"
  },
   "registration": {
@@ -8,7 +8,8 @@
     "firstName": "First Name",
     "lastName": "Last Name",
     "email": "Email",
-    "password": "Password"
+    "password": "Password",
+    "termsOfAgreement": "Terms and agreements"
   },
   "login": {
     "header": "Welcome back!",
@@ -25,9 +26,11 @@
   "correctEmail": {
     "email": "test@qa6.us"
   },
+
   "incorrectEmail": {
     "email": "qwerty@qwerty.net"
   },
+
   "error": {
     "errorMessage": "User not found"
   },
@@ -42,11 +45,12 @@
 
   "registrationPage2": {
     "title": "Dear \nPlease complete these fields",
-    "countryLabel": "Country:",
+    "countryLabel": "Country",
     "countryInputField": "United States",
-    "phoneLabel": "Phone:",
+    "phoneLabel": "Phone",
     "submitBtn": "Submit",
-    "skipLink": "Skip"
+    "skipLink": "Skip",
+    "phonePlaceHolder": "phone number"
 
   },
 
@@ -60,5 +64,22 @@
     "contactUsLink": "contact us.",
     "termsOfServiceLink": "Terms of Service",
     "privacyPolicyLink": "Privacy Policy"
+  },
+
+  "footer": {
+    "homePageData": "Local Coding community",
+    "footerText": "If you have any questions or concerns, please contact us.\nTerms of Service Privacy Policy",
+    "contactUsPage": "Contact us",
+    "termsOfServicePage": "Terms of Service",
+    "privacyPolicyPage": "PASV Privacy Policy"
+  },
+
+  "resetPassword": {
+    "errorMessage": "'email' is not a valid email",
+    "required": "Required"
+  },
+
+  "termsAndAgreement": {
+    "title" : "Terms and agreements"
   }
 }

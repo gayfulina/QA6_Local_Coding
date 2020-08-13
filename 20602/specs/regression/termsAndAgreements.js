@@ -1,5 +1,5 @@
 import RegisterPage from '../../../pageObjects/register.page';
-import TermsAndAgreementsPage from '../../../pageObjects/TermsAndAgreements.page';
+import TermsAndAgreementsPage from '../../../pageObjects/termsAndAgreements.page';
 import expected from '../../data/expected.json';
 
 before(() => {
@@ -19,6 +19,13 @@ describe('VERIFY TERMS AND CONDITIONS', () => {
     RegisterPage.termsAndAgreementsLink.click();
     expect(TermsAndAgreementsPage.drawerTitle.getText()).eq(expected.termsAndAgreements.drawerTitle);
   });
+
+  it('Verify that last modify date is correct', function () {
+    TermsAndAgreementsPage.lastModified.scrollIntoView();
+    expect(TermsAndAgreementsPage.lastModified.getText()).eq(expected.termsAndAgreements.lastModified);
+  });
+
+  it('Verify that pop-up window has close icon', function () {
+    TermsAndAgreementsPage.termsAndAgreementsLinkClose.click();
+  });
 });
-
-

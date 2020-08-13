@@ -17,10 +17,12 @@ describe(' USER REGISTER STEP 2 - NEGATIVE', () => {
     browser.waitUntil(() => RegisterPage.inputFieldErrorMessages[0].isDisplayed());
   });
 
+  /* The test will be comment before solve issue (TLC-394)
   it('TC-056 should check that is displayed the correct error message when invalid data is entered into the Phone field', () => {
     RegisterStep2Page.phoneNumber.setValue(userStep2NegativeData.invalidPhoneNumber);
     expect(RegisterPage.inputFieldErrorMessages[0].getText()).eq(errorMessagesSRegisterStep2Page.invalidPhoneNumErrorMessage);
   });
+*/
 
   it('TC-057 should check that the button stays disabled when invalid data is entered into the Phone field', () => {
     RegisterStep2Page.phoneNumber.setValue(userStep2NegativeData.invalidPhoneNumber);
