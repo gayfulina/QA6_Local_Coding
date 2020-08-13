@@ -32,13 +32,13 @@ for (let property in user) {
       expect(SettingsProfilePage.myGoalsRIF.getValue()).eq(user[property].goals);
     });
     it(`TC-002-0${flag + (6 + count)} Country DDBtn is present and present correct data`, function () {
-      expect(SettingsProfilePage.countryFieldDDB.getText()).eq(user[property].countryName); //??????????????
+      expect(SettingsProfilePage.countryFieldDDL.getText()).eq(user[property].countryName); //??????????????
     });
     it(`TC-002-0${flag + (7 + count)} English Level DDBtn is present and present correct data`, function () {
-      expect(SettingsProfilePage.englishLevelDDB.getText()).eq(user[property].englishLevel);
+      expect(SettingsProfilePage.englishLevelDDL.getText()).eq(user[property].englishLevel);
     });
     it(`TC-002-0${flag + (8 + count)} T-Shirt DDBtn is present and present correct data`, function () {
-      expect(SettingsProfilePage.tShirtSizeDDB.getValue()).eq('');  // ?????????????????
+      expect(SettingsProfilePage.tShirtSizeDDL.getValue()).eq('');  // ?????????????????
     });
     it(`TC-002-0${flag + (9 + count)} Save Btn is present and present correct data`, function () {
       expect(SettingsProfilePage.saveBTN.isDisplayed().true);

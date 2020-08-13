@@ -48,24 +48,24 @@ class settingsProfilePage extends BasePage {
     return $('[title="Country"]');
   }
 
-  get countryFieldDDB() {
-    return $$('.ant-select-selection-item')[0];
+  get countryFieldDDL() {
+    return $('[data-qa="countries"]');
   }
 
   get englishLevelDDBTitle() {
     return $('[title="English level"]');
   }
 
-  get englishLevelDDB() {
-    return $$('.ant-select-selection-item')[1];
+  get englishLevelDDL() {
+    return $('[data-qa="englishLevel"]');
   }
 
   get tShirtSizeDDBTitle() {
     return $('[title="T-Shirt size"]');
   }
 
-  get tShirtSizeDDB() {
-    return $$('.ant-select-selection-item')[2];
+  get tShirtSizeDDL() {
+    return $('[data-qa="tShirtSize"]');
   }
 
   get saveBTN() {
