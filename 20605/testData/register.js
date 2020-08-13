@@ -1,9 +1,11 @@
+import faker from 'faker';
+
 const newUser = {
-  firstName: 'FirstName',
-  lastName: 'LastName',
-  phone: '17775551122',
-  email: `${Math.random().toFixed(10)}@gmail.com`,
-  password: 'abc123',
+  firstName: faker.name.firstName(),
+  lastName: faker.name.lastName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  phone: faker.phone.phoneNumber('##########') //10
 };
 
 const negativeRegisterStep1 = {

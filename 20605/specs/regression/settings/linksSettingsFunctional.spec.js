@@ -1,9 +1,9 @@
-import LoginPage from '../../../pageObjects/login.page';
-import { userProfile } from '../../testData/userForUpdate';
-import ProfilePage from '../../../pageObjects/profile.page';
-import TopMenuPage from '../../../pageObjects/topMenu.page';
-import LinksPage from '../../../pageObjects/links.page';
-import { linksSettings } from '../../testResult/linksSettings';
+import LoginPage from '../../../../pageObjects/login.page';
+import { userProfile } from '../../../testData/userForUpdate';
+import ProfilePage from '../../../../pageObjects/profile.page';
+import TopMenuPage from '../../../../pageObjects/topMenu.page';
+import LinksPage from '../../../../pageObjects/links.page';
+import { linksSettings } from '../../../testResult/linksSettings';
 
 before(() => {
   LoginPage.open();

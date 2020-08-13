@@ -1,4 +1,7 @@
 const beforeHook = require('./hooks/beforeHook');
+const afterHook = require('./hooks/afterHook');
+
+
 exports.config = {
   runner: 'local',
 
@@ -175,6 +178,7 @@ exports.config = {
    */
   // after: function (result, capabilities, specs) {
   // },
+  after: afterHook,
   /**
    * Gets executed right after terminating the webdriver session.
    * @param {Object} config wdio configuration object

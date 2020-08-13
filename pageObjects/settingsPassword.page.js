@@ -59,7 +59,7 @@ class SettingsPasswordPage extends BasePage {
   }
 
   open(userId) {
-    super.open('settings/`${userId}`/password');
+    super.open(`settings/${userId}/password`);
   }
 
   updatePassword(password, newPassword) {

@@ -14,18 +14,15 @@ describe('NEW USER CHANGE PASSWORD', function () {
     RegisterPage.open();
     RegisterPage.registerUser(user);
     RegisterStep2.registerUserStep2(user);
-    ProfilePage.dropDownUserMenu.click();
-    ProfilePage.settingsLink.waitForClickable();
-    ProfilePage.settingsLink.click();
-    SettingsPasswordPage.passwordTab.click();
+    SettingsPasswordPage.open(process.env.RANDOMUSER_ID);
   });
 
-  it('TC-003-028 User stays logged in after password has been changed', function () {
+  it('TC-003-028a User stays logged in after password has been changed', function () {
     SettingsPasswordPage.updatePassword(user.password, user.newPassword);
     expect(ProfilePage.dropDownUserMenu.isDisplayed()).true;
   });
 
-  it('TC-003-29 User can log in using the new password', function () {
+  it('TC-003-029a User can log in using the new password', function () {
     ProfilePage.logout();
     LoginPage.login(user.email, user.newPassword);
     expect(ProfilePage.badgeRole.getText()).eq(expected.userBadges.new);
@@ -34,25 +31,17 @@ describe('NEW USER CHANGE PASSWORD', function () {
 });
 
 describe('LEARNER CHANGE PASSWORD', () => {
-  before(() => {
-    ProfilePage.logout();
-    LoginPage.login(user.email, user.newPassword);
-    ProfilePage.dropDownUserMenu.click();
-    ProfilePage.settingsLink.waitForClickable();
-    ProfilePage.settingsLink.click();
-    SettingsPasswordPage.passwordTab.click();
-  });
-  it('Should update role from new to Learner', async () => {
-    const res = await userUpdateRole(user.email, user.newPassword, roles.learner);
-    expect(res.success).eq(true);
+  before(async () => {
+    await userUpdateRole(user.email, user.newPassword, roles.learner);
+    SettingsPasswordPage.open(process.env.RANDOMUSER_ID);
   });
 
-  it('TC-003-028 User stays logged in after password has been changed', function () {
+  it('TC-003-028b User stays logged in after password has been changed', function () {
     SettingsPasswordPage.updatePassword(user.newPassword, user.password);
     expect(ProfilePage.dropDownUserMenu.isDisplayed()).true;
   });
 
-  it('TC-003-29 User can log in using the new password', function () {
+  it('TC-003-029b User can log in using the new password', function () {
     ProfilePage.logout();
     LoginPage.login(user.email, user.password);
     expect(ProfilePage.badgeRole.getText()).eq(expected.userBadges.learner);
@@ -61,26 +50,17 @@ describe('LEARNER CHANGE PASSWORD', () => {
 });
 
 describe('STUDENT CHANGE PASSWORD', () => {
-  before(() => {
-    ProfilePage.logout();
-    LoginPage.login(user.email, user.password);
-    ProfilePage.dropDownUserMenu.click();
-    ProfilePage.settingsLink.waitForClickable();
-    ProfilePage.settingsLink.click();
-    SettingsPasswordPage.passwordTab.click();
+  before(async () => {
+    await userUpdateRole(user.email, user.password, roles.student);
+    SettingsPasswordPage.open(process.env.RANDOMUSER_ID);
   });
 
-  it('Should update role from Learner to Student', async () => {
-    const res = await userUpdateRole(user.email, user.password, roles.student);
-    expect(res.success).eq(true);
-  });
-
-  it('TC-003-028 User stays logged in after password has been changed', function () {
+  it('TC-003-028c User stays logged in after password has been changed', function () {
     SettingsPasswordPage.updatePassword(user.password, user.newPassword);
     expect(ProfilePage.dropDownUserMenu.isDisplayed()).true;
   });
 
-  it('TC-003-29 User can log in using the new password', function () {
+  it('TC-003-029c User can log in using the new password', function () {
     ProfilePage.logout();
     LoginPage.login(user.email, user.newPassword);
     expect(ProfilePage.badgeRole.getText()).eq(expected.userBadges.student);
@@ -98,12 +78,12 @@ describe('ADMIN CHANGE PASSWORD', () => {
     SettingsPasswordPage.passwordTab.click();
   });
 
-  it('TC-003-028 User stays logged in after password has been changed', function () {
+  it('TC-003-028d User stays logged in after password has been changed', function () {
     SettingsPasswordPage.updatePassword(admin.oldPassword, admin.newPassword);
     expect(ProfilePage.dropDownUserMenu.isDisplayed()).true;
   });
 
-  it('TC-003-29 User can log in using the new password', function () {
+  it('TC-003-029d User can log in using the new password', function () {
     ProfilePage.logout();
     LoginPage.login(admin.email, admin.newPassword);
     expect(ProfilePage.badgeRole.getText()).eq(expected.userBadges.admin);

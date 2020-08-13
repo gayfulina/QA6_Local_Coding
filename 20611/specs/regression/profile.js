@@ -68,14 +68,14 @@ describe('Verify that header is present', () => {
   });
 
   it('TC-063 Check Profile -> Country value ', function () {
-    expect(SettingsProfile.countryFieldDDB.getAttribute('title')).to.equal(user.learner.countryName);
+    expect(SettingsProfile.countryFieldDDL.getAttribute('title')).to.equal(user.learner.countryName);
   });
 
   it('TC-064 Check Profile -> English Level value ', function () {
-    expect(SettingsProfile.englishLevelDDB.getAttribute('title')).to.equal(user.learner.englishLevel);
+    expect(SettingsProfile.englishLevelDDL.getAttribute('title')).to.equal(user.learner.englishLevel);
   });
 
   it('TC-065 Check Profile -> T-Shirt Size field exists ', function () {
-    expect(SettingsProfile.tShirtSizeDDB).to.exist;
+    expect(SettingsProfile.tShirtSizeDDL).to.exist;
   });
 });
