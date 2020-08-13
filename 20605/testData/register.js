@@ -5,7 +5,7 @@ const newUser = {
   lastName: faker.name.lastName(),
   email: faker.internet.email(),
   password: faker.internet.password(),
-  phone: faker.phone.phoneNumber('##########') //10
+  phone: faker.phone.phoneNumber('###########') //11
 };
 
 const negativeRegisterStep1 = {
