@@ -1,7 +1,7 @@
 import BasePage from './Base.page';
 // import TopMenuPage from './topMenu.page';
 
-class SettingsLinksPage extends BasePage {
+class LinksPage extends BasePage {
 
   get linksTab() {
     return $$('.ant-menu-item')[3];
@@ -55,4 +55,4 @@ class SettingsLinksPage extends BasePage {
     this.saveLinksBtn.click();
   }
 }
-export default new SettingsLinksPage();
+export default new LinksPage();
