@@ -1,5 +1,5 @@
 import BasePage from './Base.page';
-import { RegisterData } from '../20608/data/DataPage';
+import user from '../testData/user';
 
 class SidePanelPage extends BasePage {
   get countryDropdown() {
@@ -45,18 +45,6 @@ class SidePanelPage extends BasePage {
     return $('[id="editProfile_phone"]');
   }
 
-  get saveBtn() {
-    return $('[class="ant-btn ant-btn-primary"]');
-  }
-
-  get openDropdown() {
-    return $('[class="ant-dropdown-link ant-dropdown-trigger"]');
-  }
-
-  get settings() {
-    return $('//a[contains(text(),"Settings")]');
-  }
-
   skip() {
     this.skipSidePanelBtn.click();
   }
@@ -65,19 +53,9 @@ class SidePanelPage extends BasePage {
     this.closeBtn.click();
   }
 
-  submitForm(data) {
-    this.phoneNumber.setValue(RegisterData.phone);
+  submitForm() {
+    this.phoneNumber.setValue(user.new.phone);
     this.submitBtn.click();
-  }
-
-  deletePhone() {
-    this.settingsEditPhone.clearValue();
-    this.saveBtn.click();
-  }
-
-  moveToSettings() {
-    this.openDropdown.click();
-    this.settings.click();
   }
 
   open() {

@@ -31,5 +31,10 @@ class settingsProfilePage extends BasePage {
   get saveBTN() {
     return $('.ant-btn.ant-btn-primary');
   }
+
+  setPhone() {
+    this.phoneIF.setValue(user.new.phone);
+    this.saveBTN.click();
+  }
 }
 export default new settingsProfilePage();
