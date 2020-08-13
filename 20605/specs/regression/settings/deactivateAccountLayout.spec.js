@@ -3,7 +3,7 @@ import user from '../../../../testData/user';
 import ProfilePage from '../../../../pageObjects/profile.page';
 import TopMenuPage from '../../../../pageObjects/topMenu.page';
 import DeactivateAccountPage from '../../../../pageObjects/settingsDeactivateAccount.page';
-import { deactivateSettings } from '../../../testResult/deactivateAccount';
+import { deactivateSettings } from '../../../testResult/deactivateAccountSettings';
 
 before(() => {
   LoginPage.open();

@@ -3,7 +3,7 @@ import BasePage from './Base.page';
 class DeactivateAccountPage extends BasePage {
 
   get deactivateAccountTab() {
-    return $('//a[contains(@href,"/settings/5f31f5498fea8300ef6b424c/userDeactivation")]');
+    return $('//html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/ul[1]/li[6]');
   }
 
   get accountDeactivationHeader() {
@@ -11,11 +11,12 @@ class DeactivateAccountPage extends BasePage {
   }
 
   get textDescription() {
-    return $$('.pt-4');
+    return $('//html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/p[1]');
   }
 
   get deactivateBtn() {
     return $('//span[contains(text(),"Deactivate")]');
   }
 }
-export default new DeactivateAccountPage()
+
+export default new DeactivateAccountPage();
