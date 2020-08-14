@@ -56,6 +56,7 @@ describe ('UPDATE PASSWORD FROM SETTINGS NEGATIVE TESTING ',function () {
         SettingsPasswordPage.updatePasswordNegative(passwordSettingsNegative.oldCorrectPassword,passwordSettingsNegative.newSmallPassword,passwordSettingsNegative.newSmallPassword);
         SettingsPasswordPage.updatePasswordButton.click();
         expect(SettingsPasswordPage.popUpWrongOldPwrd.getText()).eq(errorMessagesRegistration.wrongPasswordError);
+
     });
 
 })
