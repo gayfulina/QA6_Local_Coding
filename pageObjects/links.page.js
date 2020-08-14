@@ -54,5 +54,26 @@ class LinksPage extends BasePage {
   saveLinks() {
     this.saveLinksBtn.click();
   }
+
+  get errorMesResumeLink() {
+    return $$('.ant-form-item-explain')[0];
+  }
+
+  get errorMesLinkedInLink() {
+    return $$('.ant-form-item-explain')[1];
+  }
+
+  get errorMesFacebookLink() {
+    return $$('.ant-form-item-explain')[2];
+  }
+
+  get errorMesGitHubLink() {
+    return $$('.ant-form-item-explain')[3];
+  }
+
+  get errorMesCodeWarsLink() {
+    return $$('.ant-form-item-explain')[4];
+  }
 }
+
 export default new LinksPage();

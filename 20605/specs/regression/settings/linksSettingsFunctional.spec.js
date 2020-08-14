@@ -21,9 +21,9 @@ describe('LINKS FIELD ACCEPT INPUT DATA', function () {
   });
 
   it('TC-215 Linkedin Link field can accept reference', function () {
-    LinksPage.linkedInField.setValue(linksSettings.linkedinData);
+    LinksPage.linkedInField.setValue(linksSettings.linkedInData);
     LinksPage.saveLinks();
-    expect(LinksPage.linkedInField.getValue()).eq(linksSettings.linkedinData);
+    expect(LinksPage.linkedInField.getValue()).eq(linksSettings.linkedInData);
   });
 
   it('TC-216 Facebook Link field can accept reference', function () {

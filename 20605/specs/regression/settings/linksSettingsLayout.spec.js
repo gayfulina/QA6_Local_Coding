@@ -35,7 +35,7 @@ describe('TC-200 LINKS ARE DISPLAYED AND HAVE CORRECT TEXT', function () {
   });
 
   it('TC-205 LinkedinLabel has correct text', function () {
-    expect(LinksPage.linkedInLabel.getText()).eq(linksSettings.linkedinLabel);
+    expect(LinksPage.linkedInLabel.getText()).eq(linksSettings.linkedInLabel);
   });
 
   it('TC-206 FacebookLabel should be displayed', function () {
