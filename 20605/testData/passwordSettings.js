@@ -7,4 +7,13 @@ const passwordSettingsInputs = {
   passwordEmpty: '',
 };
 
-export { passwordSettingsInputs };
+const passwordSettingsNegative = {
+  oldWrongPassword: 'xwz124',
+  oldCorrectPassword: '963smile',
+  newPassword: 'smile963',
+  confirmNewWrongPassword: 'smile96',
+  newSmallPassword: '1234',
+
+}
+
+export { passwordSettingsInputs, passwordSettingsNegative };
