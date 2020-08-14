@@ -1,54 +1,25 @@
-import LoginPage from '../../../pageObjects/login.page';
-import ProfilePage from '../../../pageObjects/profile.page';
-import user from '../../../testData/user';
-import WAIT_TIME_MEDIUM from '../../../testData/waitTimes';
-import axios from 'axios';
+const axios = require('axios');
+import RegisterPage from '../../../pageObjects/register.page';
+import { userGetByEmail, loginNewUser } from '../../../helpers/apiFunctions';
 const host = 'https://server-stage.pasv.us';
-const token =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHFhNi51cyIsInVzZXJJZCI6IjVmMWU4MmRjMzAzY2E1MDBlZDY1NzQ4NCIsImNvZGV3YXJzSWQiOm51bGwsImlhdCI6MTU5NjI1NDkwNSwiZXhwIjoxNTk2NTE0MTA1fQ.sBNCwPY4W2tTrXdQckT8ZaYIa9geCpwHZMa7rKPg82w';
-const userId = '5f1e82dc303ca500ed657484';
+import user from '../../data/fakerData';
+
+before(() => {
+  RegisterPage.open();
+  RegisterPage.registerUser(user.tempUser);
+});
 
 describe('LOGIN', () => {
-  beforeEach(() => {
-    LoginPage.open();
-  });
-
-  it('TC-001 Successful login as an admin', () => {
-    LoginPage.validLogin(user.admin.email, user.admin.password);
-    ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
-    expect(ProfilePage.getLoginConfirmation()).eq(user.admin.firstName + ' ' + user.admin.lastName);
-  });
-
-  it('TC-002 Successful login as a new user', () => {
-    LoginPage.validLogin(user.new.email, user.new.password);
-    ProfilePage.badgeRole.waitForDisplayed(WAIT_TIME_MEDIUM);
-    expect(ProfilePage.getLoginConfirmation()).eq(user.new.firstName + ' ' + user.new.lastName);
+  it('Login new user', async () => {
+    const newUser = await loginNewUser(user.tempUser.email, user.tempUser.password);
+    console.log(process.env.USERNEW_TOKEN);
+    console.log(process.env.USERNEW_ID);
+    expect(newUser.success).true;
   });
 
   it('API check the new user', async () => {
-    const arr = await axios({
-      method: 'get',
-      url: `${host}/user/email/${newUser.email}`,
-      headers: {
-        Authorization: token,
-      },
-    })
-      .then(res => res.data)
-      .catch(err => err.response.data);
-    console.log(arr);
-    expect(arr.payload.name).eq(`${newUser.firstName} ${newUser.lastName}`);
-  });
-  after(async () => {
-    const delUser = await axios({
-      method: 'delete',
-      url: `${host}/user/email/${newUser.email}`,
-      headers: {
-        Authorization: token,
-      },
-    })
-      .then(res => res.data)
-      .catch(err => err.response.data);
-    console.log(delUser);
-    expect(delUser.success).true;
+    const user = await userGetByEmail(user.tempUser);
+    console.log(user);
+    expect(user.payload.name).eq(`${user.tempUser.firstName} ${user.tempUser.lastName}`);
   });
 });

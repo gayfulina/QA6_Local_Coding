@@ -1,9 +1,11 @@
+import faker from 'faker';
+
 const newUser = {
-  firstName: 'FirstName',
-  lastName: 'LastName',
-  phone: '17775551122',
-  email: `${Math.random().toFixed(10)}@gmail.com`,
-  password: 'abc123',
+  firstName: faker.name.firstName(),
+  lastName: faker.name.lastName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  phone: faker.phone.phoneNumber('###########') //11
 };
 
 const negativeRegisterStep1 = {
@@ -31,4 +33,10 @@ const negativeRegisterStep2 = {
     invalidPhoneNumberEmpty: ''
 };
 
-export {newUser, inputRegisterStep1, negativeRegisterStep1, negativeRegisterStep2}
+const functionalRegisterStep2 = {
+  validPhoneNumberMin:  `${'7'.repeat(10)}`,
+  validPhoneNumberMax:  `${'7'.repeat(11)}`,
+  countryFieldRussia: 'Russia',
+  countryCodeRussia: '+7'
+}
+export {newUser, inputRegisterStep1, negativeRegisterStep1, negativeRegisterStep2, functionalRegisterStep2}

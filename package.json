@@ -46,6 +46,7 @@
     "wdio-chromedriver-service": "^6.0.3"
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "newman": "^5.1.2"
   }
 }

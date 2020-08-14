@@ -9,8 +9,9 @@ const user = {
   shippingStreetAddress: faker.address.streetAddress(),
   shippingCity: faker.address.city(),
   shippingPostalCode: faker.address.zipCode(),
-  phone: 2157777577,
-  // shippingContactPhone: faker.random().number({min:100000000, max:9999999999}),
+  phone: '2157777577',
+  phone2: '123123123',
+  //shippingContactPhone: faker.random().number({min:100000000, max:9999999999}),
 };
 
 const shippingAddressData = {};

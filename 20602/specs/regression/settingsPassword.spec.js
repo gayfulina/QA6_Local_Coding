@@ -4,11 +4,13 @@ import SettingsPasswordPage from '../../../pageObjects/settingsPassword.page';
 import expected from '../../data/expected.json';
 import { newRole, admin } from '../../data/settingsPasswordData';
 import user from '../../data/users';
+import { WAIT_TIME_MEDIUM } from '../../../testData/waitTimes';
 
 before(() => {
   LoginPage.open();
   LoginPage.login(newRole.email, newRole.oldPassword);
   ProfilePage.dropDownUserMenu.click();
+  ProfilePage.settingsLink.waitForClickable();
   ProfilePage.settingsLink.click();
   SettingsPasswordPage.passwordTab.click();
 });
@@ -118,14 +120,14 @@ describe('NEGATIVE FUNCTIONALITY', () => {
   it('TC-003-020 Wrong old password: pop-up error message will appear ', function () {
     browser.refresh();
     SettingsPasswordPage.updatePassword(newRole.oldPasswordIncorrect, newRole.newPassword);
-    SettingsPasswordPage.popUpWrongOldPwrd.waitForDisplayed();
+    SettingsPasswordPage.popUpWrongOldPwrd.waitForDisplayed(WAIT_TIME_MEDIUM);
     expect(SettingsPasswordPage.popUpWrongOldPwrd.isDisplayed()).true;
   });
 
   it('TC-003-021 Wrong old password: pop-up error message = User Settings Update: Error', function () {
     browser.refresh();
     SettingsPasswordPage.updatePassword(newRole.oldPasswordIncorrect, newRole.newPassword);
-    SettingsPasswordPage.popUpWrongOldPwrd.waitForDisplayed();
+    SettingsPasswordPage.popUpWrongOldPwrd.waitForDisplayed(WAIT_TIME_MEDIUM);
     expect(SettingsPasswordPage.popUpWrongOldPwrd.getText()).eq(expected.settingsPasswordData['TC-003-021-popUpMsg']);
   });
 
@@ -168,6 +170,7 @@ after(() => {
   LoginPage.open();
   LoginPage.login(newRole.email, newRole.newPassword);
   ProfilePage.dropDownUserMenu.click();
+  ProfilePage.settingsLink.waitForClickable();
   ProfilePage.settingsLink.click();
   SettingsPasswordPage.passwordTab.click();
   SettingsPasswordPage.updatePassword(newRole.newPassword, newRole.oldPassword)

@@ -19,8 +19,9 @@ const newRole = {
 };
 
 const admin = {
-  email: 'admin@us.com',
-  password: 'admin',
+  email: 'adminpassword@us.com',
+  oldPassword: 'admin',
+  newPassword: 'newPassword',
   firstName: 'AdminFirstName',
   lastName: 'AdminLastName',
   phone: '17775551122',
@@ -31,4 +32,11 @@ const admin = {
   id: '',
 };
 
-export { newRole, admin };
+const roles = {
+  new: 'new',
+  learner: 'learner',
+  student: 'student',
+  admin: 'admin',
+};
+
+export { newRole, admin, roles };

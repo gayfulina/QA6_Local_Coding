@@ -13,14 +13,34 @@
     "Required": "Required",
     "resetPasswordHeader": "Reset password",
     "MainPageHeader" : "Adaptive learning platform",
-    "CoursesPage": "Courses",
+    "Base": "Base dashboard",
+    "Courses": "Courses",
     "Cards": "Flash Cards",
     "Diary": "Daily reports",
     "Groups": "Groups",
     "Users": "Users",
     "Challenges": "Challenge",
     "Telephony": "Telephony",
+    "Shop": "Products",
     "Orders": "Orders",
     "Achievements": "Achievements"
+  },
+  "profile":
+  {
+    "firstNameIF": "First Name",
+    "lastNameIF": "Last Name",
+    "phone": "Phone",
+    "about": "About",
+    "myGoals": "My goals",
+    "country": "Country",
+    "englishLevel": "English level",
+    "t-ShirtSize": "T-Shirt size"
+  },
+  "userBadges":
+  {
+    "admin": "admin",
+    "learner": "learner",
+    "student": "student",
+    "new": "new"
   }
 }

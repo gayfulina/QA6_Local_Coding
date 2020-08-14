@@ -1,3 +1,7 @@
+const beforeHook = require('./hooks/beforeHook');
+const afterHook = require('./hooks/afterHook');
+
+
 exports.config = {
   runner: 'local',
 
@@ -27,8 +31,8 @@ exports.config = {
       maxInstances: 1,
       browserName: 'chrome',
       'goog:chromeOptions': {
-        excludeSwitches: ["enable-automation"]
-      }
+        excludeSwitches: ['enable-automation'],
+      },
     },
   ],
 
@@ -108,6 +112,7 @@ exports.config = {
    */
   // before: function (capabilities, specs) {
   // },
+  before: beforeHook,
   /**
    * Runs before a WebdriverIO command gets executed.
    * @param {String} commandName hook command name
@@ -173,6 +178,7 @@ exports.config = {
    */
   // after: function (result, capabilities, specs) {
   // },
+  after: afterHook,
   /**
    * Gets executed right after terminating the webdriver session.
    * @param {Object} config wdio configuration object

@@ -6,7 +6,7 @@ import LoginPage from '../../../pageObjects/login.page';
 import TopMenuPage from '../../../pageObjects/topMenu.page';
 import { newUser } from '../../testData/register';
 import { passwordSettingsInputs } from '../../testData/passwordSettings';
-import { WAIT_TIME_MEDIUM } from '../../../testData/waitTimes';
+import waitTime from '../../../testData/waitTimes';
 
 describe('UPDATE PASSWORD IN SETTINGS', () => {
   it('TC-199 User (new) can update password in settings', function () {
@@ -19,7 +19,7 @@ describe('UPDATE PASSWORD IN SETTINGS', () => {
     SettingsPasswordPage.updatePassword(newUser.password, passwordSettingsInputs.passwordNew);
     LoginPage.open();
     LoginPage.login(newUser.email, passwordSettingsInputs.passwordNew);
-    TopMenuPage.userAvatarName.waitForDisplayed({ WAIT_TIME_MEDIUM });
+    TopMenuPage.userAvatarName.waitForDisplayed(waitTime.WAIT_TIME_MEDIUM);
     expect(ProfilePage.getLoginConfirmation()).eq(newUser.firstName + ' ' + newUser.lastName);
   });
 });
