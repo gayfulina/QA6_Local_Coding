@@ -90,7 +90,7 @@ describe('PROFILE TAB (SETTINGS) LAYOUT', function () {
     });
 
     it('TC-275 "Country" input field should be display', function () {
-        expect(SettingsProfilePage.countryFieldDDB.isDisplayed()).true;
+        expect(SettingsProfilePage.countryFieldDDL.isDisplayed()).true;
     });
 
     it('TC-276 "English level" title should be display', function () {
@@ -102,7 +102,7 @@ describe('PROFILE TAB (SETTINGS) LAYOUT', function () {
     });
 
     it('TC-278 "English level" input field should be display', function () {
-        expect(SettingsProfilePage.englishLevelDDB.isDisplayed()).true;
+        expect(SettingsProfilePage.englishLevelDDL.isDisplayed()).true;
     });
 
     it('TC-279 "T-Shirt size" title should be display', function () {
@@ -114,7 +114,7 @@ describe('PROFILE TAB (SETTINGS) LAYOUT', function () {
     });
 
     it('TC-281 "T-Shirt size" input field should be display', function () {
-        expect(SettingsProfilePage.tShirtSizeDDB.isDisplayed()).true;
+        expect(SettingsProfilePage.tShirtSizeDDL.isDisplayed()).true;
     });
 
     it('TC-282 "Save" button is display', function () {

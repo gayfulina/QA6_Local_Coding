@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-const userFaker = {
+const user = {
   fakerUser: {
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
@@ -9,13 +9,12 @@ const userFaker = {
     phone: '17775551122',
     shippingStreetAddress: faker.address.streetAddress(),
     shippingCity: faker.address.city(),
-    shippingPostalCode: faker.address.zipCode()
+    shippingPostalCode: faker.address.zipCode(),
   },
-//
+
   tempUser: {
-    email: 'new55@qa63.us',
+    email: 'new55@qa6.us',
     password: 'newnew',
-    newPassword: 'newPasw',
     firstName: 'NewFirst',
     lastName: 'NewLast',
     phone: '17775551121',
@@ -23,7 +22,7 @@ const userFaker = {
     goals: 'no goals',
     englishLevel: 'Advanced',
     countryName: 'USA',
-  }
-}
+  },
+};
 
-module.exports = userFaker;
+module.exports = user;
