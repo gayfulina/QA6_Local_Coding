@@ -2,8 +2,6 @@ import LoginPage from '../../../pageObjects/login.page';
 import ProfilePage from '../../../pageObjects/profile.page';
 import SettingsPasswordPage from '../../../pageObjects/settingsPassword.page';
 import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
-
-import { WAIT_TIME_SHORT } from '../../../testData/waitTimes';
 import { updatePassword } from "../../testData/login";
 import { passwordSettingsNegative} from "../../testData/passwordSettings";
 import { errorMessagesRegistration } from '../../testResult/errorMessages';
@@ -22,7 +20,6 @@ describe ('UPDATE PASSWORD FROM SETTINGS NEGATIVE TESTING ',function () {
     it('TC-044 a pop-up with an error message should appears after entering wrong old password  ', function () {
         SettingsPasswordPage.updatePasswordNegative(passwordSettingsNegative.oldWrongPassword,passwordSettingsNegative.newPassword,passwordSettingsNegative.newPassword);
         SettingsPasswordPage.updatePasswordButton.click();
-        SettingsPasswordPage.popUpWrongOldPwrd.waitForDisplayed({ timeout: WAIT_TIME_SHORT });
         expect(SettingsPasswordPage.popUpWrongOldPwrd.getText()).eq(errorMsgPasswordSettings.wrongOldPassword);
     });
 
@@ -50,7 +47,6 @@ describe ('UPDATE PASSWORD FROM SETTINGS NEGATIVE TESTING ',function () {
     it('TC-048 an error message should appears  when new password mismatch with confirm new password ', function () {
         browser.refresh();
         SettingsPasswordPage.updatePasswordNegative(passwordSettingsNegative.oldWrongPassword,passwordSettingsNegative.newPassword,passwordSettingsNegative.confirmNewWrongPassword)
-        SettingsPasswordPage.errorMsgPasswordNotMatch.waitForDisplayed({timeout: WAIT_TIME_SHORT});
         expect(SettingsPasswordPage.errorMsgPasswordNotMatch.getText()).eq(errorMsgPasswordSettings.newMismatchPassword);
         expect(SettingsPasswordPage.updatePasswordButton.isEnabled().false);
     });
@@ -59,7 +55,7 @@ describe ('UPDATE PASSWORD FROM SETTINGS NEGATIVE TESTING ',function () {
         browser.refresh();
         SettingsPasswordPage.updatePasswordNegative(passwordSettingsNegative.oldCorrectPassword,passwordSettingsNegative.newSmallPassword,passwordSettingsNegative.newSmallPassword);
         SettingsPasswordPage.updatePasswordButton.click();
-        SettingsPasswordPage.popUpWrongOldPwrd.waitForDisplayed({ timeout: WAIT_TIME_SHORT });
         expect(SettingsPasswordPage.popUpWrongOldPwrd.getText()).eq(errorMessagesRegistration.wrongPasswordError);
+
     });
 })
