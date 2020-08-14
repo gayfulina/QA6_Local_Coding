@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-const user = {
+const userFaker = {
   fakerUser: {
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
@@ -11,7 +11,7 @@ const user = {
     shippingCity: faker.address.city(),
     shippingPostalCode: faker.address.zipCode()
   },
-
+//
   tempUser: {
     email: 'new55@qa63.us',
     password: 'newnew',
@@ -26,4 +26,4 @@ const user = {
   }
 }
 
-module.exports = user;
+module.exports = userFaker;
