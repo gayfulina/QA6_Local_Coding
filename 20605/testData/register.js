@@ -33,4 +33,10 @@ const negativeRegisterStep2 = {
     invalidPhoneNumberEmpty: ''
 };
 
-export {newUser, inputRegisterStep1, negativeRegisterStep1, negativeRegisterStep2}
+const functionalRegisterStep2 = {
+  validPhoneNumberMin:  `${'7'.repeat(10)}`,
+  validPhoneNumberMax:  `${'7'.repeat(11)}`,
+  countryFieldRussia: 'Russia',
+  countryCodeRussia: '+7'
+}
+export {newUser, inputRegisterStep1, negativeRegisterStep1, negativeRegisterStep2, functionalRegisterStep2}
