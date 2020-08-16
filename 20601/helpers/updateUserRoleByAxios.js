@@ -7,7 +7,8 @@ let tokenUser = '';
 let idUser = '';
 let roleUser = '';
 import user from '../../testData/user';
-import user from '../../20601/data/fakerData';
+//import user from '../../20601/data/fakerData';
+import apiLogin from './apiRequests';
 
 describe('', () => {
   it('should login as Admin', async function () {
@@ -33,16 +34,23 @@ describe('', () => {
     });
   });
 
-  it('should new user login', async function () {
-    const response = await axios.post(`${host}/user/login`, {
-      email: 'newtest@qa4.us',
-      password: '123456',
-    });
-    tokenUser = response.data.token;
-    idUser = response.data.userId;
-    roleUser = response.data.user.roles;
-  });
+  ['student', 'learner'].forEach(el => {
 
+
+    it('should new user login', async function() {
+      const response = await apiLogin(el);
+
+      console.log(response)
+
+      tokenUser = response.data.token;
+      idUser = response.data.userId;
+      roleUser = response.data.user.roles;
+
+      expect(tokenUser).to.be.a('string')
+      expect(tokenUser).to.have.lengthOf.above(30);
+    });
+
+  })
   it('should Update User role for new User to Learner', async function () {
     const response = await axios.patch(
       `${host}/user/${idUser}`,
