@@ -1,4 +1,4 @@
-import ShippingAddressPage from '../../pageObjects/shippingAddress.page';
+import ShippingAddressPage from '../../../pageObjects/shippingAddress.page';
 
 before(() => {
   ShippingAddressPage.goToShippingAddressPageAsAdmin()

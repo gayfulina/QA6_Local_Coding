@@ -1,14 +1,14 @@
-import RegisterPage from '../../pageObjects/register.page';
-import { newUser } from '../helpers/faker';
-import RegisterStep2 from '../../pageObjects/registerStep2.page';
-import ProfilePage from '../../pageObjects/profile.page';
-import SettingsPasswordPage from '../../pageObjects/settingsPassword.page';
-import LoginPage from '../../pageObjects/login.page';
-import { userDelete } from '../../helpers/deleteNewUserByAxios';
-import expected from '../data/expected.json';
-import { userUpdateRole } from '../helpers/userUpdateRole';
-import { userBadges } from '../data/expected.json';
-import user from '../../testData/user'
+import RegisterPage from '../../../pageObjects/register.page';
+import { newUser } from '../../helpers/faker';
+import RegisterStep2 from '../../../pageObjects/registerStep2.page';
+import ProfilePage from '../../../pageObjects/profile.page';
+import SettingsPasswordPage from '../../../pageObjects/settingsPassword.page';
+import LoginPage from '../../../pageObjects/login.page';
+import { userDelete } from '../../../helpers/deleteNewUserByAxios';
+import expected from '../../data/expected.json';
+import { userUpdateRole } from '../../helpers/userUpdateRole';
+import { userBadges } from '../../data/expected.json';
+import user from '../../../testData/user'
 
 describe('NEW USER CHANGE PASSWORD', () => {
   before(function () {

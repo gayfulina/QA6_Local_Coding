@@ -1,7 +1,7 @@
-import HomePage from '../../pageObjects/home.page';
-import LoginPage from '../../pageObjects/login.page';
-import RegisterPage from '../../pageObjects/register.page';
-import expected from '../data/expected.json';
+import HomePage from '../../../pageObjects/home.page';
+import LoginPage from '../../../pageObjects/login.page';
+import RegisterPage from '../../../pageObjects/register.page';
+import expected from '../../data/expected.json';
 
 describe('CHECK the HOME PAGE LINKS', () => {
 
