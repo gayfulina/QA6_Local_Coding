@@ -1,7 +1,7 @@
-import LoginPage from '../../pageObjects/login.page';
-import ProfilePage from '../../pageObjects/profile.page';
-import user from '../../testData/user';
-import expected from '../data/expected.json';
+import LoginPage from '../../../pageObjects/login.page';
+import ProfilePage from '../../../pageObjects/profile.page';
+import user from '../../../testData/user';
+import expected from '../../data/expected.json';
 
 before(() => {
   LoginPage.open();

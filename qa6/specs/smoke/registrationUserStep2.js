@@ -1,9 +1,9 @@
-import RegisterPage from '../../pageObjects/register.page';
-import RegisterStep2Page from '../../pageObjects/registerStep2.page';
-import expected from '../data/expected.json';
-import { newUser } from '../helpers/faker';
-import ProfilePage from '../../pageObjects/profile.page';
-import { userDelete } from '../../helpers/deleteNewUserByAxios';
+import RegisterPage from '../../../pageObjects/register.page';
+import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
+import expected from '../../data/expected.json';
+import { newUser } from '../../helpers/faker';
+import ProfilePage from '../../../pageObjects/profile.page';
+import { userDelete } from '../../../helpers/deleteNewUserByAxios';
 
 before( 'Should register new user',() => {
   RegisterPage.open();
