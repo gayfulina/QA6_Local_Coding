@@ -10,6 +10,17 @@ const user = {
     englishLevel: 'Advanced',
     countryName: 'USA',
   },
+  new2: {
+    email: 'new2@qa6.us',
+    password: 'newnew',
+    firstName: 'NewFirst',
+    lastName: 'NewLast',
+    phone: '17775551121',
+    about: 'QA Engineer',
+    goals: 'no goals',
+    englishLevel: 'Advanced',
+    countryName: 'USA',
+  },
 
   admin: {
     email: 'admin@qa6.us',
@@ -22,6 +33,18 @@ const user = {
     englishLevel: 'Advanced',
     countryName: 'USA',
     id: '5f1e82dc303ca500ed657484',
+  },
+    adminUpdatePassword: {
+    email: 'adminpassword@us.com',
+    oldPassword: 'admin',
+    newPassword: 'newPassword',
+    firstName: 'AdminFirstName',
+    lastName: 'AdminLastName',
+    phone: '17775551122',
+    about: '123123',
+    goals: '123123',
+    englishLevel: 'Pre-Intermediate',
+    countryName: 'USA',
   },
 
   learner: {
