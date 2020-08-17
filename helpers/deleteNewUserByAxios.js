@@ -1,6 +1,6 @@
 import axios from 'axios';
 import users from '../testData/user';
-let host = 'https://server-stage.pasv.us';
+const host = 'https://server-stage.pasv.us';
 
 export const userDelete = async userEmail => {
   const response = await axios.post(`${host}/user/login`, {
@@ -16,8 +16,8 @@ export const userDelete = async userEmail => {
       Authorization: token,
     },
   })
-    .then(res => res.data)
-    .catch(err => err.response.data);
+    .then(res => res.data) //true
+    .catch(err => err.response.data); //false
 };
 
 /* to call the function in your tests After hook should be added similar to below
