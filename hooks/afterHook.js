@@ -1,11 +1,10 @@
 const axios = require('axios');
-const user = require('../testData/user');
 const host = 'https://server-stage.pasv.us';
 
 async function afterHook() {
   const userNewDelete = await axios({
     method: 'delete',
-    url: `${host}/user/email/${user.new.email}`,
+    url: `${host}/user/email/${userEmail}`,
     headers: {
       Authorization: process.env.ADMIN_TOKEN
     },
