@@ -7,6 +7,7 @@ import TopMenuPage from '../../../pageObjects/topMenu.page';
 import { newUser } from '../../testData/register';
 import { passwordSettingsInputs } from '../../testData/passwordSettings';
 import waitTime from '../../../testData/waitTimes';
+import { userDeleteByEmail } from '../../helpers/axios/userDeleteByEmail';
 
 describe('UPDATE PASSWORD IN SETTINGS', () => {
   it('TC-199 User (new) can update password in settings', function () {
@@ -23,3 +24,10 @@ describe('UPDATE PASSWORD IN SETTINGS', () => {
     expect(ProfilePage.getLoginConfirmation()).eq(newUser.firstName + ' ' + newUser.lastName);
   });
 });
+
+after ('Should delete a user', async () => {
+  const res = await userDeleteByEmail(newUser.email);
+  console.log('delete ' + res.success);
+  expect(res.success).eq(true);
+});
+

@@ -5,6 +5,7 @@ import SettingsPasswordPage from '../../../../pageObjects/settingsPassword.page'
 import { newUser } from '../../../testData/register';
 import { passwordSettingsTestResult } from '../../../testResult/passwordSettings';
 import { passwordSettingsInputs } from '../../../testData/passwordSettings';
+import { userDeleteByEmail } from '../../../helpers/axios/userDeleteByEmail';
 
 describe('PASSWORD (SETTINGS) PAGE', () => {
   before('before all describes => register', () => {
@@ -162,3 +163,10 @@ describe('PASSWORD (SETTINGS) PAGE', () => {
     });
   });
 });
+
+after ('Should delete a user', async () => {
+  const res = await userDeleteByEmail(newUser.email);
+  console.log('delete ' + res.success);
+  expect(res.success).eq(true);
+});
+
