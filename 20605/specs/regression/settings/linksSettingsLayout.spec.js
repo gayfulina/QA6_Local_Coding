@@ -2,7 +2,7 @@ import LoginPage from '../../../../pageObjects/login.page';
 import user from '../../../../testData/user';
 import ProfilePage from '../../../../pageObjects/profile.page';
 import TopMenuPage from '../../../../pageObjects/topMenu.page';
-import LinksPage from '../../../../pageObjects/links.page';
+import LinksPage from '../../../../pageObjects/settingsLinks.page';
 import { linksSettings } from '../../../testResult/linksSettings';
 
 before(() => {
@@ -35,7 +35,7 @@ describe('TC-200 LINKS ARE DISPLAYED AND HAVE CORRECT TEXT', function () {
   });
 
   it('TC-205 LinkedinLabel has correct text', function () {
-    expect(LinksPage.linkedInLabel.getText()).eq(linksSettings.linkedinLabel);
+    expect(LinksPage.linkedInLabel.getText()).eq(linksSettings.linkedInLabel);
   });
 
   it('TC-206 FacebookLabel should be displayed', function () {

@@ -10,4 +10,9 @@ const errorMessagesRegisterStep2 = {
     invalidPhoneNumberErrorMessage2: "This entry must only contain numbers"
 };
 
-export {errorMessagesRegistration, errorMessagesRegisterStep2};
+const errorMsgPasswordSettings = {
+    newMismatchPassword: 'New passwords do not match.',
+    wrongOldPassword: 'User settings update password. Error'
+}
+
+export {errorMessagesRegistration, errorMessagesRegisterStep2, errorMsgPasswordSettings};

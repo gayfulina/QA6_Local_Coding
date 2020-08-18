@@ -20,5 +20,10 @@ const anySymbols = {
     password: '#!$%&’*+-/=?^_`{}|~'
 }
 
-export {invalidUserCredentials, emptyField, upperLowerLetters, anyNumbers, anySymbols};
+const updatePassword = {
+    email: 'test20605update@qa6.us',
+    password: '963smile'
+}
+
+export {invalidUserCredentials, emptyField, upperLowerLetters, anyNumbers, anySymbols, updatePassword};
 

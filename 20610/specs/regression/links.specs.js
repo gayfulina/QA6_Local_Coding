@@ -2,7 +2,7 @@ import LoginPage from '../../../pageObjects/login.page';
 import user from '../../../testData/user';
 import ProfilePage from '../../../pageObjects/profile.page';
 import TopMenuPage from '../../../pageObjects/topMenu.page';
-import LinksPage from '../../../pageObjects/links.page';
+import LinksPage from '../../../pageObjects/settingsLinks.page';
 import expected from '../../data/expected.json';
 
 before(() => {

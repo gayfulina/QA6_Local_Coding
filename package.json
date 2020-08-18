@@ -14,6 +14,7 @@
     "20609": "npx wdio wdio.conf.js --suite 20609",
     "20610": "npx wdio wdio.conf.js --suite 20610",
     "20611": "npx wdio wdio.conf.js --suite 20611",
+    "qa6": "npx wdio wdio.conf.js --suite qa6",
     "test": "npx wdio wdio.conf.js",
     "report": "allure generate allure-results --clean && allure open"
   },

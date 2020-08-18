@@ -18,6 +18,7 @@ exports.config = {
     20609: ['./20609/specs/**/*.js'],
     20610: ['./20610/specs/**/*.js'],
     20611: ['./20611/specs/**/*.js'],
+    qa6: ['./qa6/specs/**/*.js'],
   },
 
   exclude: [

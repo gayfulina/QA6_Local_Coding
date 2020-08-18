@@ -2,7 +2,6 @@ import ContactUsPage from '../../../pageObjects/contactUs.page';
 import expectedContactUs from '../../../20610/data/expected.json';
 import clearInputValue from '../../../helpers/clearValueMethod';
 import expected from '../../data/expected.json';
-import { newUser } from '../../../20610/data/fakeData';
 
 describe('CONTACT US PAGE BY DEFAULT', () => {
   before('Before', () => {
@@ -85,13 +84,6 @@ describe('CONTACT US PAGE BY DEFAULT', () => {
         clearInputValue(ContactUsPage.emailInputFld);
         browser.waitUntil(() => ContactUsPage.emailRequiredTxt.isDisplayed());
         expect(ContactUsPage.emailRequiredTxt.getText()).eq(expected.contactUsElementsDisplayed.emptyNameFieldWarning);
-      });
-
-      it('CU16 if phone field is cleared, Error REQUIRED should pop up', () => {
-        ContactUsPage.phoneInputFld.setValue(newUser.phone);
-        clearInputValue(ContactUsPage.phoneInputFld);
-        browser.waitUntil(() => ContactUsPage.phoneRequiredTxt.isDisplayed());
-        expect(ContactUsPage.phoneRequiredTxt.getText()).eq(expected.contactUsElementsDisplayed.emptyNameFieldWarning);
       });
     });
   });

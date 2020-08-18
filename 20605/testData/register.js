@@ -3,9 +3,9 @@ import faker from 'faker';
 const newUser = {
   firstName: faker.name.firstName(),
   lastName: faker.name.lastName(),
-  email: faker.internet.email(),
+  email: faker.internet.email().toLowerCase(),
   password: faker.internet.password(),
-  phone: faker.phone.phoneNumber('##########') //10
+  phone: faker.phone.phoneNumber('###########') //11
 };
 
 const negativeRegisterStep1 = {
@@ -33,4 +33,10 @@ const negativeRegisterStep2 = {
     invalidPhoneNumberEmpty: ''
 };
 
-export {newUser, inputRegisterStep1, negativeRegisterStep1, negativeRegisterStep2}
+const functionalRegisterStep2 = {
+  validPhoneNumberMin:  `${'7'.repeat(10)}`,
+  validPhoneNumberMax:  `${'7'.repeat(11)}`,
+  countryFieldRussia: 'Russia',
+  countryCodeRussia: '+7'
+}
+export {newUser, inputRegisterStep1, negativeRegisterStep1, negativeRegisterStep2, functionalRegisterStep2}
