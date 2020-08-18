@@ -1,48 +1,62 @@
 import axios from 'axios';
 import user from '../../testData/user';
-import { expect } from 'chai';
 const host = 'https://server-stage.pasv.us';
 let adminToken = '';
-let adminId = '';
+import { userLogin } from '../../20610/axiosTests/userLogin';
+import { newUser } from '../../qa6/helpers/faker';
 let courseId = '';
-import { newUser } from '../../20610/data/fakeData';
+
+const accessType = {
+  all: 'all',
+  members: 'members',
+};
+
+export function adminCourseCreation(token, type) {
+  return axios({
+    method: 'post',
+    url: `${host}/course`,
+    headers: {
+      Authorization: token,
+    },
+    data: {
+      name: newUser.about,
+      description: newUser.word,
+      accessType: type,
+    },
+  })
+    .then(res => res.data.payload.courseId) // res.data.payload.courseId = course ID, its' length = 24
+    .catch(err => console.log(err));
+}
+
+export function findCourse(courseId, token) {
+  return axios({
+    method: 'get',
+    url: `${host}/course/${courseId}`,
+    headers: {
+      Authorization: token,
+    },
+  });
+}
 
 describe('AXIOS', () => {
-  it('Should login as admin to get admin token', async function () {
-    const response = await axios.post(`${host}/user/login`, {
-      email: user.admin.email,
-      password: user.admin.password,
-    });
-    adminToken = response.data.token;
-    adminId = response.data.userId;
+  it('Should login as admin to get admin token', async () => {
+    const response = await userLogin(user.admin);
+    adminToken = response.token;
   });
 
-  it('Admin should be able to create a course', async () => {
-    const response = await axios.post(
-      `${host}/course`,
-      {
-        name: newUser.word,
-        description: newUser.about,
-        accessType: 'all',
-      },
-      {
-        headers: {
-          Authorization: `${adminToken}`,
-        },
-      },
-    );
-    courseId = response.data.payload.courseId;
-    expect(response.status).eq(200);
-  });
+  for (let type in accessType) {
+    it(`Admin should be able to create a course with accessType ${accessType[type]}`, async () => {
+      const response = await adminCourseCreation(adminToken, accessType[type]);
+      courseId = response;
+      expect(response.length).eq(24);
+    });
+  }
 
   it('Admin should be able to find a course by course id', async () => {
-    const response = await axios.get(`${host}/course/${courseId}`, {
-      headers: {
-        Authorization: adminToken,
-      },
-    });
+    const response = await findCourse(courseId, adminToken);
     expect(response.status).eq(200);
-   });
+    expect(response.data.payload.name).eq(newUser.about);
+  });
 
   //deletion is not working on postman as well, not working as documentation suggested
 
@@ -63,4 +77,4 @@ describe('AXIOS', () => {
   //   });
   //   expect(response.status).eq(400);
   // });
- });
+});
