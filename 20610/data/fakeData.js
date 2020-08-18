@@ -12,6 +12,7 @@ export const newUser = {
   index1: faker.random.number(10),
   index2: faker.random.number(11),
   phone: 2157777577,
+  invalidPhone9: 215777757,
   shippingStreetAddress: faker.address.streetAddress(),
   shippingCity: faker.address.city(),
   shippingPostalCode: faker.address.zipCode(),
