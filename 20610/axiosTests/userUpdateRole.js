@@ -1,4 +1,5 @@
 import axios from 'axios';
+const host = 'https://server-stage.pasv.us';
 
 export function userUpdateRole(token, userId, roleName) {
   return axios({
