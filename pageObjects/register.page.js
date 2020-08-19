@@ -86,7 +86,7 @@ class RegisterPage extends BasePage {
     this.termsAndAgreementsLinkClose.click();
   }
 
-  registerUser() {
+  registerUser(data) {
     this.firstNameInput.setValue(data.firstName);
     this.lastNameInput.setValue(data.lastName);
     this.email.setValue(data.email);
