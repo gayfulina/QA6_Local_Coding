@@ -33,13 +33,6 @@ class RegisterStep2Page extends BasePage {
     return $('.ant-btn.ant-btn-primary.ant-btn-lg');
   }
 
-  registerUserStep2(data) {
-    // this.openDropdown.click();
-    // this.countryDropdown.click();
-    this.phoneNumber.setValue(data.phone);
-    this.SubmitBtn.click();
-  }
-
   get title() {
     return $('.ant-drawer-title');
   }
@@ -66,6 +59,13 @@ class RegisterStep2Page extends BasePage {
 
   get popupDrawer() {
     return $('.ant-drawer-open');
+  }
+
+  registerUserStep2(data) {
+    // this.openDropdown.click();
+    // this.countryDropdown.click();
+    this.phoneNumber.setValue(data.phone);
+    this.SubmitBtn.click();
   }
 
   selectCountry2DigitPrefix() {
