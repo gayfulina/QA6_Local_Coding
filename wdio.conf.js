@@ -33,6 +33,7 @@ exports.config = {
       browserName: 'chrome',
       'goog:chromeOptions': {
         excludeSwitches: ['enable-automation'],
+        args: ['--headless', '--disable-gpu'],
       },
     },
   ],
