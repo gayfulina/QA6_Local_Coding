@@ -110,7 +110,7 @@ describe('TC-005 LINKS TAB ELEMENTS ACCEPT CORRECT INPUT AND SAVE CHANGES', () =
     LinksPage.saveLinks();
     ProfilePage.dropDownUserMenu.click();
     ProfilePage.profile.click();
-    expect(ProfilePage.FacebookIcon.getAttribute('href')).include(inputFacebook);
+    expect(ProfilePage.facebookIcon.getAttribute('href')).include(inputFacebook);
   });
 
   it('#15 Links LinkedIn Input accepts and saves data', function () {
@@ -136,7 +136,7 @@ describe('TC-005 LINKS TAB ELEMENTS ACCEPT CORRECT INPUT AND SAVE CHANGES', () =
     ProfilePage.dropDownUserMenu.click();
     ProfilePage.profile.click();
 
-    expect(ProfilePage.LinkedInIcon.getAttribute('href')).include(inputLin);
+    expect(ProfilePage.linkedInIcon.getAttribute('href')).include(inputLin);
   });
 
   it('#16 Links GitHub Input accepts and saves data', function () {
@@ -162,7 +162,7 @@ describe('TC-005 LINKS TAB ELEMENTS ACCEPT CORRECT INPUT AND SAVE CHANGES', () =
     ProfilePage.dropDownUserMenu.click();
     ProfilePage.profile.click();
 
-    expect(ProfilePage.GitHubIcon.getAttribute('href')).include(inputGitHub);
+    expect(ProfilePage.gitHubIcon.getAttribute('href')).include(inputGitHub);
   });
 
   it('#17 Links Codewars Input accepts and saves data', function () {
@@ -188,6 +188,6 @@ describe('TC-005 LINKS TAB ELEMENTS ACCEPT CORRECT INPUT AND SAVE CHANGES', () =
     ProfilePage.dropDownUserMenu.click();
     ProfilePage.profile.click();
 
-    expect(ProfilePage.CodewarsIcon.getAttribute('href')).include(inputCodewars);
+    expect(ProfilePage.codewarsIcon.getAttribute('href')).include(inputCodewars);
   });
 });

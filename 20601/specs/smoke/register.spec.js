@@ -9,16 +9,16 @@ describe('USER REGISTER', () => {
     RegisterPage.open();
   });
 
-  it('should verify header text', () => {
+  it('TC-03-001 Should verify header text', () => {
     expect(RegisterPage.headerRegister.getText()).eq(expected.pagesHeaders.RegisterPageHeader);
   });
 
-  it('should populate fields and submit form', () => {
-    RegisterPage.registerUser(newUser);
+  it('TC-03-002 Should populate fields and submit form', () => {
+    RegisterPage.registerUser(newUser.fakerUser);
     expect(RegisterStep2Page.headerRegisterStep2.getText()).contains(expected.pagesHeaders.RegisterStep2PageHeader);
   });
 
-  it('verify that Login Link redirect user from Register Page to Login Page', function () {
+  it('TC-03-003 Verify that Login Link redirect user from Register Page to Login Page', function () {
     RegisterPage.open();
     RegisterPage.loginLink.click();
     expect(LoginPage.header.getText()).contains(expected.pagesHeaders.LoginHeader);

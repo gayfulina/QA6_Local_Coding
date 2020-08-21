@@ -6,7 +6,7 @@ const linksSettings = {
   gitHubLabel: 'GitHub profile link',
   codewarsLabel: 'Codewars profile link',
   saveLinkBtn: 'Save',
-  resumeData: 'https://docs.google.com/spreadsheets/d/1UCIVibP8IkrA8pBlxMrIL1L-4PJsRqO6v5SCKq3HboY/edit#gid=1723043706',
+  resumeData: 'https://docs.google.com/document/',
   linkedInData: 'https://www.linkedin.com/in/bogutskii/',
   facebookData: 'https://www.facebook.com/groups/185538711998736/',
   gitHubData: 'https://github.com/bogutski',
