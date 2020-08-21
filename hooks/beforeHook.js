@@ -14,6 +14,7 @@ async function beforeHook() {
     .then(res => res.data)
     .catch(err => err.response.data);
   process.env.ADMIN_TOKEN = user.token; //We create variable for ALL folders "environment variable"
+  process.env.ADMIN_ID = user.userId;
 }
 
 module.exports = beforeHook;
